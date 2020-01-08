@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class Form1
+Public Class Login
     Dim StrConexion As String
     Friend conexion As MySqlConnection
 
@@ -19,7 +19,7 @@ Public Class Form1
             'conexion.ConnectionString = StrConexion
 
             conexion.Open()
-            MessageBox.Show("Conectado al servidor")
+            'MessageBox.Show("Conectado al servidor")
         Catch ex As MySqlException
             MessageBox.Show("No se ha podido conectar al servidor")
 
@@ -29,7 +29,9 @@ Public Class Form1
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'al clickar el boton
-        MsgBox("Click Boton")
+        Me.Hide()
+        Dim pasaralMenu As New Menu
+        pasaralMenu.Show()
 
     End Sub
     Private Sub TextBox1_User_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox1_User.KeyDown
@@ -37,7 +39,9 @@ Public Class Form1
         If e.KeyCode = Keys.Enter Then
 
             'do something here...
-            MsgBox("Enter Usuario")
+            Me.Hide()
+            Dim pasarform2 As New Menu
+            pasarform2.Show()
 
         End If
 
@@ -47,7 +51,9 @@ Public Class Form1
         If e.KeyCode = Keys.Enter Then
 
             'do something here...
-            MsgBox("Enter Password")
+            Me.Hide()
+            Dim pasarform2 As New Menu
+            pasarform2.Show()
 
         End If
 
