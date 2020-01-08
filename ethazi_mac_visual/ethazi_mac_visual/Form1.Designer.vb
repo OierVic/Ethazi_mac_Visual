@@ -22,16 +22,129 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.Label1_Login = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBox1_User = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox1_Password = New System.Windows.Forms.TextBox()
+        Me.PictureBox2_Password = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1_User = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox2_Password, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1_User, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'Label1_Login
+        '
+        Me.Label1_Login.AutoSize = True
+        Me.Label1_Login.Font = New System.Drawing.Font("MV Boli", 45.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1_Login.ForeColor = System.Drawing.Color.Blue
+        Me.Label1_Login.Location = New System.Drawing.Point(454, 69)
+        Me.Label1_Login.Name = "Label1_Login"
+        Me.Label1_Login.Size = New System.Drawing.Size(178, 79)
+        Me.Label1_Login.TabIndex = 0
+        Me.Label1_Login.Text = "Login"
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("MV Boli", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(631, 364)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(185, 56)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "OK"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("MV Boli", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.TopRight
+        Me.Label2.Location = New System.Drawing.Point(351, 195)
+        Me.Label2.Name = "Label2"
+        Me.Label2.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label2.Size = New System.Drawing.Size(118, 45)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "User :"
+        '
+        'TextBox1_User
+        '
+        Me.TextBox1_User.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1_User.Location = New System.Drawing.Point(483, 207)
+        Me.TextBox1_User.Name = "TextBox1_User"
+        Me.TextBox1_User.Size = New System.Drawing.Size(333, 30)
+        Me.TextBox1_User.TabIndex = 3
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("MV Boli", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(351, 275)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(191, 45)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "Password :"
+        '
+        'TextBox1_Password
+        '
+        Me.TextBox1_Password.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1_Password.Location = New System.Drawing.Point(548, 287)
+        Me.TextBox1_Password.Name = "TextBox1_Password"
+        Me.TextBox1_Password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBox1_Password.Size = New System.Drawing.Size(268, 30)
+        Me.TextBox1_Password.TabIndex = 5
+        '
+        'PictureBox2_Password
+        '
+        Me.PictureBox2_Password.Image = Global.ethazi_mac_visual.My.Resources.Resources.kisspng_password
+        Me.PictureBox2_Password.Location = New System.Drawing.Point(251, 275)
+        Me.PictureBox2_Password.Name = "PictureBox2_Password"
+        Me.PictureBox2_Password.Size = New System.Drawing.Size(76, 50)
+        Me.PictureBox2_Password.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2_Password.TabIndex = 7
+        Me.PictureBox2_Password.TabStop = False
+        '
+        'PictureBox1_User
+        '
+        Me.PictureBox1_User.Image = Global.ethazi_mac_visual.My.Resources.Resources.user_icon
+        Me.PictureBox1_User.Location = New System.Drawing.Point(251, 181)
+        Me.PictureBox1_User.Name = "PictureBox1_User"
+        Me.PictureBox1_User.Size = New System.Drawing.Size(76, 59)
+        Me.PictureBox1_User.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1_User.TabIndex = 6
+        Me.PictureBox1_User.TabStop = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1094, 623)
+        Me.Controls.Add(Me.PictureBox2_Password)
+        Me.Controls.Add(Me.PictureBox1_User)
+        Me.Controls.Add(Me.TextBox1_Password)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.TextBox1_User)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label1_Login)
+        Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "Form1"
         Me.Text = "Form1"
+        CType(Me.PictureBox2_Password, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1_User, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
+
+    Friend WithEvents Label1_Login As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents TextBox1_User As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TextBox1_Password As TextBox
+    Friend WithEvents PictureBox1_User As PictureBox
+    Friend WithEvents PictureBox2_Password As PictureBox
 End Class

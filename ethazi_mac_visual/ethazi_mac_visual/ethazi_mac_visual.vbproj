@@ -151,5 +151,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bitmap1.bmp" />
+    <Content Include="My Project\user-icon.jpg" />
+    <None Include="Resources\kisspng-password.jpg" />
+    <None Include="Resources\user-icon.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

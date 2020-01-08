@@ -1,7 +1,4 @@
-﻿Imports System.Data.OleDb
-Imports System.Data.OracleClient
-Imports System.Data.SqlClient
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 
 Public Class Form1
     Dim StrConexion As String
@@ -28,5 +25,39 @@ Public Class Form1
 
         End Try
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'al clickar el boton
+        MsgBox("Click Boton")
+
+    End Sub
+    Private Sub TextBox1_User_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox1_User.KeyDown
+
+        If e.KeyCode = Keys.Enter Then
+
+            'do something here...
+            MsgBox("Enter Usuario")
+
+        End If
+
+    End Sub
+    Private Sub TextBox1_Password_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox1_Password.KeyDown
+
+        If e.KeyCode = Keys.Enter Then
+
+            'do something here...
+            MsgBox("Enter Password")
+
+        End If
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1_User.Click
+        MsgBox("Escriba su usuario")
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2_Password.Click
+        MsgBox("Escriba su contraseña")
     End Sub
 End Class
