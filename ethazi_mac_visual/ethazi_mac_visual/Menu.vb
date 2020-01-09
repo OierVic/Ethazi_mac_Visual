@@ -4,38 +4,75 @@
     End Sub
 
     Private Sub Button1_Erabiltzaileak_KeyDown(sender As Object, e As KeyEventArgs) Handles Button1_Erabiltzaileak.KeyDown
-        If e.KeyCode = Keys.Escape Or e.KeyCode = Keys.Back Then
+        'If e.KeyCode = Keys.Escape Or e.KeyCode = Keys.Back Then
 
-            'do something here...
-            Me.Hide()
-            Dim pasaralLogin As New Login
-            pasaralLogin.Show()
+        '    'do something here...
+        '    Me.Hide()
+        '    Dim pasaralLogin As New Login
+        '    pasaralLogin.Show()
 
-        End If
+        'ElseIf e.KeyCode = Keys.Enter Then
+
+        '    'do something here...
+        '    Me.Hide()
+        '    Dim pasaralErabiltzaileak As New Erabiltzaileak
+        '    pasaralErabiltzaileak.Show()
+
+        'End If
+
+        Select Case e.KeyCode
+            Case Keys.Escape
+                End
+            Case Keys.Back
+                Me.Hide()
+                Dim pasaralLogin As New Login
+                pasaralLogin.Show()
+            Case Keys.Enter
+                Me.Hide()
+                Dim pasaralErabiltzaileak As New Erabiltzaileak
+                pasaralErabiltzaileak.Show()
+        End Select
+
     End Sub
     Private Sub Button1_Ostatuak_KeyDown(sender As Object, e As KeyEventArgs) Handles Button1_Ostatuak.KeyDown
-        If e.KeyCode = Keys.Escape Or e.KeyCode = Keys.Back Then
 
-            'do something here...
-            Me.Hide()
-            Dim pasaralLogin As New Login
-            pasaralLogin.Show()
+        Select Case e.KeyCode
+            Case Keys.Escape
+                End
+            Case Keys.Back
+                Me.Hide()
+                Dim pasaralLogin As New Login
+                pasaralLogin.Show()
+            Case Keys.Enter
 
-        End If
+
+
+
+        End Select
     End Sub
     Private Sub Button1_Atzera_KeyDown(sender As Object, e As KeyEventArgs) Handles Button1_Atzera.KeyDown
-        If e.KeyCode = Keys.Escape Or e.KeyCode = Keys.Back Then
 
-            'do something here...
-            Me.Hide()
-            Dim pasaralLogin As New Login
-            pasaralLogin.Show()
+        Select Case e.KeyCode
+            Case Keys.Escape
+                End
+            Case Keys.Back
+                Me.Hide()
+                Dim pasaralLogin As New Login
+                pasaralLogin.Show()
+            Case Keys.Enter
 
-        End If
+                Me.Hide()
+                Dim pasaralLogin As New Login
+                pasaralLogin.Show()
+
+
+        End Select
     End Sub
 
     Private Sub Button1_Erabiltzaileak_Click(sender As Object, e As EventArgs) Handles Button1_Erabiltzaileak.Click
-
+        Me.Hide()
+        Dim pasaralErabiltzaileak As New Erabiltzaileak
+        pasaralErabiltzaileak.Show()
     End Sub
 
     Private Sub Button1_Ostatuak_Click(sender As Object, e As EventArgs) Handles Button1_Ostatuak.Click

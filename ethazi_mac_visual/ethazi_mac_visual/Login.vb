@@ -81,60 +81,55 @@ Public Class Login
         '    pasarform2.Show()
 
         'End If
-        If e.KeyCode = Keys.Escape Then End
 
-        If e.KeyCode = Keys.Enter Then
+        Select Case e.KeyCode
+            Case Keys.Escape
+                End
+            Case Keys.Enter
+                Dim erabiltzailea As String
+                Dim pasahitza As String
+                Dim aurkituta As Boolean
 
+                Dim SQL As String = "SELECT erabiltzaile, pasahitza FROM erabiltzaile"
+                Dim cmd1 As New MySqlCommand(SQL, conexionBD)
+                Dim dr As MySqlDataReader
 
+                Try
+                    conexionBD.Open()
+                    dr = cmd1.ExecuteReader
+                Catch ex As Exception
+                    MsgBox("Errorea datu basearekin")
 
-
-
-            Dim erabiltzailea As String
-            Dim pasahitza As String
-            Dim aurkituta As Boolean
-
-            Dim SQL As String = "SELECT erabiltzaile, pasahitza FROM erabiltzaile"
-            Dim cmd1 As New MySqlCommand(SQL, conexionBD)
-            Dim dr As MySqlDataReader
-
-            Try
-                conexionBD.Open()
-                dr = cmd1.ExecuteReader
-            Catch ex As Exception
-                MsgBox("Errorea datu basearekin")
-
-            End Try
+                End Try
 
 
 
-            While dr.Read
+                While dr.Read
 
-                'MsgBox("0: " & dr.Item(0))
-                'MsgBox("1: " & dr.Item(1))
-                erabiltzailea = dr.Item(0)
-                pasahitza = dr.Item(1)
-                If TextBox1_User.Text.Equals(erabiltzailea) And TextBox1_Password.Text.Equals(pasahitza) Then
-                    aurkituta = True
+                    'MsgBox("0: " & dr.Item(0))
+                    'MsgBox("1: " & dr.Item(1))
+                    erabiltzailea = dr.Item(0)
+                    pasahitza = dr.Item(1)
+                    If TextBox1_User.Text.Equals(erabiltzailea) And TextBox1_Password.Text.Equals(pasahitza) Then
+                        aurkituta = True
 
+                    End If
+
+                End While
+
+                If aurkituta = True Then
+                    Me.Hide()
+                    Dim pasaralMenu As New Menu
+                    pasaralMenu.Show()
+                ElseIf aurkituta = False Then
+                    MsgBox("Erabiltzailea edo pasahitza txarto daude")
                 End If
 
-            End While
-
-            If aurkituta = True Then
-                Me.Hide()
-                Dim pasaralMenu As New Menu
-                pasaralMenu.Show()
-            ElseIf aurkituta = False Then
-                MsgBox("Erabiltzailea edo pasahitza txarto daude")
-            End If
-
-            If conexionBD.State = ConnectionState.Open Then
-                dr.Close()
-                conexionBD.Close()
-            End If
-
-
-        End If
+                If conexionBD.State = ConnectionState.Open Then
+                    dr.Close()
+                    conexionBD.Close()
+                End If
+        End Select
 
     End Sub
     Private Sub TextBox1_Password_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox1_Password.KeyDown
@@ -148,62 +143,64 @@ Public Class Login
 
         'End If
 
-        If e.KeyCode = Keys.Escape Then End
+        Select Case e.KeyCode
+            Case Keys.Escape
+                End
+            Case Keys.Enter
 
-        If e.KeyCode = Keys.Enter Then
+                Dim erabiltzailea As String
+                Dim pasahitza As String
+                Dim aurkituta As Boolean
 
-            Dim erabiltzailea As String
-            Dim pasahitza As String
-            Dim aurkituta As Boolean
+                Dim SQL As String = "SELECT erabiltzaile, pasahitza FROM erabiltzaile where Erabiltzaile_mota = 1"
+                Dim cmd1 As New MySqlCommand(SQL, conexionBD)
+                Dim dr As MySqlDataReader
 
-            Dim SQL As String = "SELECT erabiltzaile, pasahitza FROM erabiltzaile"
-            Dim cmd1 As New MySqlCommand(SQL, conexionBD)
-            Dim dr As MySqlDataReader
+                Try
+                    conexionBD.Open()
+                    dr = cmd1.ExecuteReader
+                Catch ex As Exception
+                    MsgBox("Errorea datu basearekin")
 
-            Try
-                conexionBD.Open()
-                dr = cmd1.ExecuteReader
-            Catch ex As Exception
-                MsgBox("Errorea datu basearekin")
-
-            End Try
+                End Try
 
 
 
-            While dr.Read
+                While dr.Read
 
-                'MsgBox("0: " & dr.Item(0))
-                'MsgBox("1: " & dr.Item(1))
-                erabiltzailea = dr.Item(0)
-                pasahitza = dr.Item(1)
-                If TextBox1_User.Text.Equals(erabiltzailea) And TextBox1_Password.Text.Equals(pasahitza) Then
-                    aurkituta = True
+                    'MsgBox("0: " & dr.Item(0))
+                    'MsgBox("1: " & dr.Item(1))
+                    erabiltzailea = dr.Item(0)
+                    pasahitza = dr.Item(1)
+                    If TextBox1_User.Text.Equals(erabiltzailea) And TextBox1_Password.Text.Equals(pasahitza) Then
+                        aurkituta = True
 
+                    End If
+
+                End While
+
+                If aurkituta = True Then
+                    Me.Hide()
+                    Dim pasaralMenu As New Menu
+                    pasaralMenu.Show()
+                ElseIf aurkituta = False Then
+                    MsgBox("Erabiltzailea edo pasahitza txarto daude")
                 End If
 
-            End While
+                If conexionBD.State = ConnectionState.Open Then
+                    dr.Close()
+                    conexionBD.Close()
+                End If
+        End Select
 
-            If aurkituta = True Then
-                Me.Hide()
-                Dim pasaralMenu As New Menu
-                pasaralMenu.Show()
-            ElseIf aurkituta = False Then
-                MsgBox("Erabiltzailea edo pasahitza txarto daude")
-            End If
-
-            If conexionBD.State = ConnectionState.Open Then
-                dr.Close()
-                conexionBD.Close()
-            End If
-        End If
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1_User.Click
-        MsgBox("Escriba su usuario")
+        MsgBox("Zure erabiltzaile idatzi")
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2_Password.Click
-        MsgBox("Escriba su contraseña")
+        MsgBox("Zure pasahitza idatzi")
     End Sub
 
     Private Sub Button1_KeyDown(sender As Object, e As KeyEventArgs) Handles Button1.KeyDown

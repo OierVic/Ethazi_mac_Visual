@@ -93,6 +93,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Erabiltzaileak.Designer.vb">
+      <DependentUpon>Erabiltzaileak.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Erabiltzaileak.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Erabiltzaileak.resx">
+      <DependentUpon>Erabiltzaileak.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +176,9 @@
     <None Include="Resources\Fondo-Imagen.jpg" />
     <None Include="Resources\kisspng-password.jpg" />
     <None Include="Resources\user-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
