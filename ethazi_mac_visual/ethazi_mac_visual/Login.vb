@@ -108,8 +108,6 @@ Public Class Login
 
             While dr.Read
 
-                'MsgBox("0: " & dr.Item(0))
-                'MsgBox("1: " & dr.Item(1))
                 erabiltzailea = dr.Item(0)
                 pasahitza = dr.Item(1)
                 If TextBox1_User.Text.Equals(erabiltzailea) And TextBox1_Password.Text.Equals(pasahitza) Then
