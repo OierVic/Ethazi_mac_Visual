@@ -172,6 +172,7 @@
   <ItemGroup>
     <Content Include="Bitmap1.bmp" />
     <Content Include="My Project\user-icon.jpg" />
+    <None Include="Resources\return-logo.jpg" />
     <None Include="Resources\Imagen-fondo2.jpg" />
     <None Include="Resources\Fondo-Imagen.jpg" />
     <None Include="Resources\kisspng-password.jpg" />

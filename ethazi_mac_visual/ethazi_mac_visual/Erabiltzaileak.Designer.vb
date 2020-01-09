@@ -30,6 +30,7 @@ Partial Class Erabiltzaileak
         Me.telefonoa = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Erabiltzaile_mota = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IzenAbizenak = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button1_Atzera = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -37,9 +38,9 @@ Partial Class Erabiltzaileak
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.erabiltzaile, Me.pasahitza, Me.mail, Me.telefonoa, Me.Erabiltzaile_mota, Me.IzenAbizenak})
-        Me.DataGridView1.Location = New System.Drawing.Point(57, 35)
+        Me.DataGridView1.Location = New System.Drawing.Point(26, 37)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(978, 543)
+        Me.DataGridView1.Size = New System.Drawing.Size(1055, 495)
         Me.DataGridView1.TabIndex = 0
         '
         'ID
@@ -78,12 +79,25 @@ Partial Class Erabiltzaileak
         Me.IzenAbizenak.HeaderText = "Izena eta Abizenak"
         Me.IzenAbizenak.Name = "IzenAbizenak"
         '
+        'Button1_Atzera
+        '
+        Me.Button1_Atzera.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.return_logo
+        Me.Button1_Atzera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1_Atzera.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1_Atzera.Location = New System.Drawing.Point(56, 538)
+        Me.Button1_Atzera.Name = "Button1_Atzera"
+        Me.Button1_Atzera.Size = New System.Drawing.Size(96, 73)
+        Me.Button1_Atzera.TabIndex = 1
+        Me.Button1_Atzera.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1_Atzera.UseVisualStyleBackColor = True
+        '
         'Erabiltzaileak
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1093, 623)
+        Me.Controls.Add(Me.Button1_Atzera)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "Erabiltzaileak"
         Me.Text = "Form1"
@@ -100,4 +114,5 @@ Partial Class Erabiltzaileak
     Friend WithEvents telefonoa As DataGridViewTextBoxColumn
     Friend WithEvents Erabiltzaile_mota As DataGridViewTextBoxColumn
     Friend WithEvents IzenAbizenak As DataGridViewTextBoxColumn
+    Friend WithEvents Button1_Atzera As Button
 End Class

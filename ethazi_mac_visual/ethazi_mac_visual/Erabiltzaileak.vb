@@ -104,4 +104,27 @@ Public Class Erabiltzaileak
         End Select
 
     End Sub
+
+    Private Sub Button1_Atzera_Click(sender As Object, e As EventArgs) Handles Button1_Atzera.Click
+        Me.Hide()
+        Dim pasaralMenu As New Menu
+        pasaralMenu.Show()
+    End Sub
+
+    Private Sub Button1_Atzera_KeyDown(sender As Object, e As KeyEventArgs) Handles Button1_Atzera.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Escape
+                End
+            Case Keys.Back
+                Me.Hide()
+                Dim pasaralMenu As New Menu
+                pasaralMenu.Show()
+            Case Keys.Enter
+                Me.Hide()
+                Dim pasaralMenu As New Menu
+                pasaralMenu.Show()
+
+        End Select
+
+    End Sub
 End Class
