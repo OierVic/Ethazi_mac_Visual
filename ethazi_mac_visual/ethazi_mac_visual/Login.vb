@@ -81,6 +81,7 @@ Public Class Login
         '    pasarform2.Show()
 
         'End If
+        If e.KeyCode = Keys.Escape Then End
 
         If e.KeyCode = Keys.Enter Then
 
@@ -108,6 +109,8 @@ Public Class Login
 
             While dr.Read
 
+                'MsgBox("0: " & dr.Item(0))
+                'MsgBox("1: " & dr.Item(1))
                 erabiltzailea = dr.Item(0)
                 pasahitza = dr.Item(1)
                 If TextBox1_User.Text.Equals(erabiltzailea) And TextBox1_Password.Text.Equals(pasahitza) Then
@@ -144,6 +147,8 @@ Public Class Login
         'pasarform2.Show()
 
         'End If
+
+        If e.KeyCode = Keys.Escape Then End
 
         If e.KeyCode = Keys.Enter Then
 
@@ -200,4 +205,11 @@ Public Class Login
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2_Password.Click
         MsgBox("Escriba su contraseña")
     End Sub
+
+    Private Sub Button1_KeyDown(sender As Object, e As KeyEventArgs) Handles Button1.KeyDown
+
+        If e.KeyCode = Keys.Escape Then End
+
+    End Sub
+
 End Class
