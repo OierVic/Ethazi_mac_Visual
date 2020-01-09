@@ -35,6 +35,7 @@ Partial Class Login
         'Label1_Login
         '
         Me.Label1_Login.AutoSize = True
+        Me.Label1_Login.BackColor = System.Drawing.Color.White
         Me.Label1_Login.Font = New System.Drawing.Font("MV Boli", 45.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1_Login.ForeColor = System.Drawing.Color.Blue
         Me.Label1_Login.Location = New System.Drawing.Point(454, 69)
@@ -96,6 +97,8 @@ Partial Class Login
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.Fondo_Imagen
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1093, 623)
         Me.Controls.Add(Me.PictureBox2_Password)
         Me.Controls.Add(Me.PictureBox1_User)

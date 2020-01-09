@@ -40,7 +40,7 @@ Partial Class Menu
         'Button1_Erabiltzaileak
         '
         Me.Button1_Erabiltzaileak.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1_Erabiltzaileak.Location = New System.Drawing.Point(438, 56)
+        Me.Button1_Erabiltzaileak.Location = New System.Drawing.Point(438, 63)
         Me.Button1_Erabiltzaileak.Name = "Button1_Erabiltzaileak"
         Me.Button1_Erabiltzaileak.Size = New System.Drawing.Size(253, 71)
         Me.Button1_Erabiltzaileak.TabIndex = 1
@@ -61,7 +61,9 @@ Partial Class Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.Imagen_fondo2
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1093, 623)
         Me.Controls.Add(Me.Button1_Atzera)
         Me.Controls.Add(Me.Button1_Erabiltzaileak)
