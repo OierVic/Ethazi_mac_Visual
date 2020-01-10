@@ -4,7 +4,7 @@ Public Class Erabiltzaileak
     Dim dataset As DataSet
     Dim adaptador As MySqlDataAdapter
     Dim conexionBD As New MySqlConnection("server=127.0.0.1 ; userid=root ; password = ; database=ethazi_mac")
-    Dim dt As DataTable
+    'Dim dt As DataTable
     Private Sub Erabiltzaileak_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Dim conexionBD As New MySqlConnection("server=127.0.0.1 ; userid=root ; password = ; database=ethazi_mac")
         'dataset = New DataSet
