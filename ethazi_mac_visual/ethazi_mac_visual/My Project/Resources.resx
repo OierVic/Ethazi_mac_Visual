@@ -121,6 +121,9 @@
   <data name="kisspng-password" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-password.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="return-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\return-logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Imagen-fondo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Imagen-fondo2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,7 +133,13 @@
   <data name="user-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user-icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="return-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\return-logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="returnLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\returnLogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="return-logo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\return-logo3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="return-logo-SinFondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\return-logo-SinFondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

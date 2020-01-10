@@ -172,6 +172,9 @@
   <ItemGroup>
     <Content Include="Bitmap1.bmp" />
     <Content Include="My Project\user-icon.jpg" />
+    <None Include="Resources\return-logo-SinFondo.png" />
+    <None Include="Resources\return-logo3.jpg" />
+    <None Include="Resources\returnLogo.jpg" />
     <None Include="Resources\return-logo.jpg" />
     <None Include="Resources\Imagen-fondo2.jpg" />
     <None Include="Resources\Fondo-Imagen.jpg" />

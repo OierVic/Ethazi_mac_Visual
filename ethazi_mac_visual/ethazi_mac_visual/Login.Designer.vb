@@ -28,6 +28,7 @@ Partial Class Login
         Me.TextBox1_Password = New System.Windows.Forms.TextBox()
         Me.PictureBox2_Password = New System.Windows.Forms.PictureBox()
         Me.PictureBox1_User = New System.Windows.Forms.PictureBox()
+        Me.Label1_Administrazio_Aplikazioa = New System.Windows.Forms.Label()
         CType(Me.PictureBox2_Password, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1_User, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -92,6 +93,17 @@ Partial Class Login
         Me.PictureBox1_User.TabIndex = 6
         Me.PictureBox1_User.TabStop = False
         '
+        'Label1_Administrazio_Aplikazioa
+        '
+        Me.Label1_Administrazio_Aplikazioa.AutoSize = True
+        Me.Label1_Administrazio_Aplikazioa.BackColor = System.Drawing.Color.White
+        Me.Label1_Administrazio_Aplikazioa.Font = New System.Drawing.Font("Segoe UI Black", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1_Administrazio_Aplikazioa.Location = New System.Drawing.Point(22, 23)
+        Me.Label1_Administrazio_Aplikazioa.Name = "Label1_Administrazio_Aplikazioa"
+        Me.Label1_Administrazio_Aplikazioa.Size = New System.Drawing.Size(349, 37)
+        Me.Label1_Administrazio_Aplikazioa.TabIndex = 8
+        Me.Label1_Administrazio_Aplikazioa.Text = "Administrazio Aplikazioa"
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -100,6 +112,7 @@ Partial Class Login
         Me.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.Fondo_Imagen
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1093, 623)
+        Me.Controls.Add(Me.Label1_Administrazio_Aplikazioa)
         Me.Controls.Add(Me.PictureBox2_Password)
         Me.Controls.Add(Me.PictureBox1_User)
         Me.Controls.Add(Me.TextBox1_Password)
@@ -122,4 +135,5 @@ Partial Class Login
     Friend WithEvents TextBox1_Password As TextBox
     Friend WithEvents PictureBox1_User As PictureBox
     Friend WithEvents PictureBox2_Password As PictureBox
+    Friend WithEvents Label1_Administrazio_Aplikazioa As Label
 End Class

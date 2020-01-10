@@ -84,4 +84,7 @@
         pasaralLogin.Show()
     End Sub
 
+    Private Sub Label1_Administrazio_Aplikazioa_Click(sender As Object, e As EventArgs) Handles Label1_Administrazio_Aplikazioa.Click
+
+    End Sub
 End Class

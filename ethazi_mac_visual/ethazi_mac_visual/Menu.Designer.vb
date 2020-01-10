@@ -25,6 +25,7 @@ Partial Class Menu
         Me.Button1_Ostatuak = New System.Windows.Forms.Button()
         Me.Button1_Erabiltzaileak = New System.Windows.Forms.Button()
         Me.Button1_Atzera = New System.Windows.Forms.Button()
+        Me.Label1_Administrazio_Aplikazioa = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Button1_Ostatuak
@@ -57,6 +58,17 @@ Partial Class Menu
         Me.Button1_Atzera.Text = "Atzera"
         Me.Button1_Atzera.UseVisualStyleBackColor = True
         '
+        'Label1_Administrazio_Aplikazioa
+        '
+        Me.Label1_Administrazio_Aplikazioa.AutoSize = True
+        Me.Label1_Administrazio_Aplikazioa.BackColor = System.Drawing.Color.White
+        Me.Label1_Administrazio_Aplikazioa.Font = New System.Drawing.Font("Segoe UI Black", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1_Administrazio_Aplikazioa.Location = New System.Drawing.Point(28, 22)
+        Me.Label1_Administrazio_Aplikazioa.Name = "Label1_Administrazio_Aplikazioa"
+        Me.Label1_Administrazio_Aplikazioa.Size = New System.Drawing.Size(349, 37)
+        Me.Label1_Administrazio_Aplikazioa.TabIndex = 9
+        Me.Label1_Administrazio_Aplikazioa.Text = "Administrazio Aplikazioa"
+        '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -65,16 +77,19 @@ Partial Class Menu
         Me.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.Imagen_fondo2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1093, 623)
+        Me.Controls.Add(Me.Label1_Administrazio_Aplikazioa)
         Me.Controls.Add(Me.Button1_Atzera)
         Me.Controls.Add(Me.Button1_Erabiltzaileak)
         Me.Controls.Add(Me.Button1_Ostatuak)
         Me.Name = "Menu"
         Me.Text = "Form2"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Button1_Ostatuak As Button
     Friend WithEvents Button1_Erabiltzaileak As Button
     Friend WithEvents Button1_Atzera As Button
+    Friend WithEvents Label1_Administrazio_Aplikazioa As Label
 End Class
