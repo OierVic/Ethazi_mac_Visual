@@ -26,12 +26,13 @@ Partial Class Menu
         Me.Button1_Erabiltzaileak = New System.Windows.Forms.Button()
         Me.Button1_Atzera = New System.Windows.Forms.Button()
         Me.Label1_Administrazio_Aplikazioa = New System.Windows.Forms.Label()
+        Me.Button1_Erreserbak = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1_Ostatuak
         '
         Me.Button1_Ostatuak.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1_Ostatuak.Location = New System.Drawing.Point(438, 251)
+        Me.Button1_Ostatuak.Location = New System.Drawing.Point(438, 194)
         Me.Button1_Ostatuak.Name = "Button1_Ostatuak"
         Me.Button1_Ostatuak.Size = New System.Drawing.Size(253, 73)
         Me.Button1_Ostatuak.TabIndex = 0
@@ -51,9 +52,9 @@ Partial Class Menu
         'Button1_Atzera
         '
         Me.Button1_Atzera.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1_Atzera.Location = New System.Drawing.Point(438, 427)
+        Me.Button1_Atzera.Location = New System.Drawing.Point(438, 441)
         Me.Button1_Atzera.Name = "Button1_Atzera"
-        Me.Button1_Atzera.Size = New System.Drawing.Size(253, 61)
+        Me.Button1_Atzera.Size = New System.Drawing.Size(253, 69)
         Me.Button1_Atzera.TabIndex = 2
         Me.Button1_Atzera.Text = "Atzera"
         Me.Button1_Atzera.UseVisualStyleBackColor = True
@@ -69,6 +70,16 @@ Partial Class Menu
         Me.Label1_Administrazio_Aplikazioa.TabIndex = 9
         Me.Label1_Administrazio_Aplikazioa.Text = "Administrazio Aplikazioa"
         '
+        'Button1_Erreserbak
+        '
+        Me.Button1_Erreserbak.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1_Erreserbak.Location = New System.Drawing.Point(438, 320)
+        Me.Button1_Erreserbak.Name = "Button1_Erreserbak"
+        Me.Button1_Erreserbak.Size = New System.Drawing.Size(253, 75)
+        Me.Button1_Erreserbak.TabIndex = 10
+        Me.Button1_Erreserbak.Text = "Erreserbak"
+        Me.Button1_Erreserbak.UseVisualStyleBackColor = True
+        '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -77,6 +88,7 @@ Partial Class Menu
         Me.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.Imagen_fondo2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1093, 623)
+        Me.Controls.Add(Me.Button1_Erreserbak)
         Me.Controls.Add(Me.Label1_Administrazio_Aplikazioa)
         Me.Controls.Add(Me.Button1_Atzera)
         Me.Controls.Add(Me.Button1_Erabiltzaileak)
@@ -92,4 +104,5 @@ Partial Class Menu
     Friend WithEvents Button1_Erabiltzaileak As Button
     Friend WithEvents Button1_Atzera As Button
     Friend WithEvents Label1_Administrazio_Aplikazioa As Label
+    Friend WithEvents Button1_Erreserbak As Button
 End Class

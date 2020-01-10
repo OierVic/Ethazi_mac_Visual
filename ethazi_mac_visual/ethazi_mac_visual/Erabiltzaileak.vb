@@ -3,7 +3,8 @@
 Public Class Erabiltzaileak
     Dim dataset As DataSet
     Dim adaptador As MySqlDataAdapter
-
+    Dim conexionBD As New MySqlConnection("server=127.0.0.1 ; userid=root ; password = ; database=ethazi_mac")
+    Dim dt As DataTable
     Private Sub Erabiltzaileak_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Dim conexionBD As New MySqlConnection("server=127.0.0.1 ; userid=root ; password = ; database=ethazi_mac")
         'dataset = New DataSet
@@ -29,7 +30,6 @@ Public Class Erabiltzaileak
         '    If conexionBD.State = ConnectionState.Open Then conexionBD.Close()
         'End Try
 
-        Dim conexionBD As New MySqlConnection("server=127.0.0.1 ; userid=root ; password = ; database=ethazi_mac")
 
         Dim SQL As String = "SELECT * FROM erabiltzaile"
         Dim cmd1 As New MySqlCommand(SQL, conexionBD)
@@ -56,7 +56,7 @@ Public Class Erabiltzaileak
         DataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
 
         'Color que se selecciona
-        DataGridView1.DefaultCellStyle.SelectionBackColor = Color.Green
+        DataGridView1.DefaultCellStyle.SelectionBackColor = Color.Aqua
         'DataGridView1.DefaultCellStyle.SelectionForeColor = Color.Black
 
         'DataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Color.Empty
@@ -127,4 +127,17 @@ Public Class Erabiltzaileak
         End Select
 
     End Sub
+
+    Private Sub TextBox1_IdBuscar_TextChanged(sender As Object, e As EventArgs) Handles TextBox1_IdBuscar.TextChanged
+        'consultaDinamica(TextBox1_IdBuscar.Text, DataGridView1)
+    End Sub
+    'Sub consultaDinamica(ByVal id As String, ByVal dgv As DataGridView)
+    '    adaptador = New MySqlDataAdapter("Select * from erabiltzaile where id like " & id + "%", conexionBD)
+    '    dt = New DataTable
+    '    adaptador.Fill(dt)
+    '    dgv.DataSource = dt
+
+
+    'End Sub
+
 End Class

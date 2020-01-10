@@ -44,7 +44,9 @@
                 Dim pasaralLogin As New Login
                 pasaralLogin.Show()
             Case Keys.Enter
-
+                Me.Hide()
+                Dim pasaralOstatuak As New Ostatuak
+                pasaralOstatuak.Show()
 
 
 
@@ -54,8 +56,7 @@
 
         Select Case e.KeyCode
             Case Keys.Escape
-                End
-            Case Keys.Back
+                End            Case Keys.Back
                 Me.Hide()
                 Dim pasaralLogin As New Login
                 pasaralLogin.Show()
@@ -76,15 +77,13 @@
     End Sub
 
     Private Sub Button1_Ostatuak_Click(sender As Object, e As EventArgs) Handles Button1_Ostatuak.Click
-
+        Me.Hide()
+        Dim pasaralOstatuak As New Ostatuak
+        pasaralOstatuak.Show()
     End Sub
     Private Sub Button1_Atzera_Click(sender As Object, e As EventArgs) Handles Button1_Atzera.Click
         Me.Hide()
         Dim pasaralLogin As New Login
         pasaralLogin.Show()
-    End Sub
-
-    Private Sub Label1_Administrazio_Aplikazioa_Click(sender As Object, e As EventArgs) Handles Label1_Administrazio_Aplikazioa.Click
-
     End Sub
 End Class
