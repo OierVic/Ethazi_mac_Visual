@@ -90,9 +90,6 @@ Public Class Erabiltzaileak
 
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
-    End Sub
 
     Private Sub DataGridView1_KeyDown(sender As Object, e As KeyEventArgs) Handles DataGridView1.KeyDown
         Select Case e.KeyCode
@@ -153,6 +150,10 @@ Public Class Erabiltzaileak
         ethazi_mac_visual.Menu.accionEnviar = "erabiltzailea kendu"
         Me.Hide()
         Aldaketak.Show()
+    End Sub
+
+    Private Sub DataGridView1_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentDoubleClick
+
     End Sub
     'Sub consultaDinamica(ByVal id As String, ByVal dgv As DataGridView)
     '    adaptador = New MySqlDataAdapter("Select * from erabiltzaile where id like " & id + "%", conexionBD)
