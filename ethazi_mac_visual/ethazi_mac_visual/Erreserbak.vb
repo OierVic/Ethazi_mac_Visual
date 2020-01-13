@@ -1,10 +1,10 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class Ostatuak
-    Private Sub Ostatuak_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+Public Class Erreserbak
+    Private Sub Erreserbak_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim conexionBD As New MySqlConnection("server=127.0.0.1 ; userid=root ; password = ; database=ethazi_mac")
 
-        Dim SQL As String = "SELECT * FROM ostatu"
+        Dim SQL As String = "SELECT * FROM erreserba"
         Dim cmd1 As New MySqlCommand(SQL, conexionBD)
         Dim dr As MySqlDataReader
 
@@ -34,8 +34,8 @@ Public Class Ostatuak
         While dr.Read
 
             Try
-                DataGridView1.Rows.Add(dr.Item(0), dr.Item(1), dr.Item(2), dr.Item(3), dr.Item(4), dr.Item(5), dr.Item(6), dr.Item(7), dr.Item(8), dr.Item(9))
-                DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige
+                DataGridView1.Rows.Add(dr.Item(0), dr.Item(1), dr.Item(2), dr.Item(3))
+                DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Chartreuse
             Catch ex As Exception
                 MsgBox("Datu baseko datuak gehiago edo gutxiago dira edo basu basea ez da zuzena")
             End Try
@@ -47,9 +47,6 @@ Public Class Ostatuak
             dr.Close()
             conexionBD.Close()
         End If
-    End Sub
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
     End Sub
 
     Private Sub Button1_Atzera_Click(sender As Object, e As EventArgs) Handles Button1_Atzera.Click

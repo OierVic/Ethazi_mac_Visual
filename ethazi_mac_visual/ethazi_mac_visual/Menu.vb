@@ -52,11 +52,29 @@
 
         End Select
     End Sub
+    Private Sub Button1_Erreserbak_KeyDown(sender As Object, e As KeyEventArgs) Handles Button1_Erreserbak.KeyDown
+
+        Select Case e.KeyCode
+            Case Keys.Escape
+                End
+            Case Keys.Back
+                Me.Hide()
+                Dim pasaralLogin As New Login
+                pasaralLogin.Show()
+            Case Keys.Enter
+                Me.Hide()
+                Dim pasaralErreserbak As New Erreserbak
+                pasaralErreserbak.Show()
+
+        End Select
+
+    End Sub
     Private Sub Button1_Atzera_KeyDown(sender As Object, e As KeyEventArgs) Handles Button1_Atzera.KeyDown
 
         Select Case e.KeyCode
             Case Keys.Escape
-                End            Case Keys.Back
+                End
+            Case Keys.Back
                 Me.Hide()
                 Dim pasaralLogin As New Login
                 pasaralLogin.Show()
@@ -81,9 +99,17 @@
         Dim pasaralOstatuak As New Ostatuak
         pasaralOstatuak.Show()
     End Sub
+    Private Sub Button1_Erreserbak_Click(sender As Object, e As EventArgs) Handles Button1_Erreserbak.Click
+        Me.Hide()
+        Dim pasaralErreserba As New Erreserbak
+        pasaralErreserba.Show()
+    End Sub
     Private Sub Button1_Atzera_Click(sender As Object, e As EventArgs) Handles Button1_Atzera.Click
         Me.Hide()
         Dim pasaralLogin As New Login
         pasaralLogin.Show()
     End Sub
+
+
+
 End Class

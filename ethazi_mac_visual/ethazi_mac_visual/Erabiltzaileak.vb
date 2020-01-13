@@ -50,9 +50,9 @@ Public Class Erabiltzaileak
         DataGridView1.MultiSelect = False
         DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None
 
-        DataGridView1.AllowUserToResizeColumns = False
+        'DataGridView1.AllowUserToResizeColumns = False
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridView1.AllowUserToResizeRows = False
+        'DataGridView1.AllowUserToResizeRows = False
         DataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
 
         'Color que se selecciona
