@@ -105,6 +105,12 @@
     <Compile Include="Erreserbak.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Aldaketak.Designer.vb">
+      <DependentUpon>Aldaketak.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aldaketak.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ostatuak.Designer.vb">
       <DependentUpon>Ostatuak.vb</DependentUpon>
     </Compile>
@@ -141,6 +147,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Aldaketak.resx">
+      <DependentUpon>Aldaketak.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Erabiltzaileak.resx">
       <DependentUpon>Erabiltzaileak.vb</DependentUpon>
     </EmbeddedResource>

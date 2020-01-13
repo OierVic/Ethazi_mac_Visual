@@ -3,9 +3,11 @@
 Public Class Login
     Dim StrConexion As String
     'Friend conexion As MySqlConnection
-    Dim conexionBD As MySqlConnection
-
-
+    Public conexionBD As MySqlConnection
+    'Public menu As New Menu
+    'Public erabiltzaileak As New Erabiltzaileak
+    'Public ostatuak As New Ostatuak
+    'Public Erreserbak As New Erreserbak
 
 
 
@@ -59,8 +61,13 @@ Public Class Login
 
         If aurkituta = True Then
             Me.Hide()
-            Dim pasaralMenu As New Menu
-            pasaralMenu.Show()
+            ethazi_mac_visual.Menu.Show()
+
+            'ethazi_mac_visual.Menu.ShowDialog()
+
+            'Dim pasaralMenu As New Menu
+            'pasaralMenu.Show()
+
         ElseIf aurkituta = False Then
             MsgBox("Erabiltzailea edo pasahitza txarto daude")
         End If
@@ -118,9 +125,12 @@ Public Class Login
                 End While
 
                 If aurkituta = True Then
+                    'Me.Hide()
+                    'Dim pasaralMenu As New Menu
+                    'pasaralMenu.Show()
+
                     Me.Hide()
-                    Dim pasaralMenu As New Menu
-                    pasaralMenu.Show()
+                    ethazi_mac_visual.Menu.Show()
                 ElseIf aurkituta = False Then
                     MsgBox("Erabiltzailea edo pasahitza txarto daude")
                 End If
@@ -180,9 +190,12 @@ Public Class Login
                 End While
 
                 If aurkituta = True Then
+
+                    'Dim pasaralMenu As New Menu
+                    'pasaralMenu.Show()
                     Me.Hide()
-                    Dim pasaralMenu As New Menu
-                    pasaralMenu.Show()
+                    ethazi_mac_visual.Menu.Show()
+
                 ElseIf aurkituta = False Then
                     MsgBox("Erabiltzailea edo pasahitza txarto daude")
                 End If

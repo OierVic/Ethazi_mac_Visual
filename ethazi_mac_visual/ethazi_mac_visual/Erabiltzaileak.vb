@@ -3,8 +3,9 @@
 Public Class Erabiltzaileak
     Dim dataset As DataSet
     Dim adaptador As MySqlDataAdapter
-    Dim conexionBD As New MySqlConnection("server=127.0.0.1 ; userid=root ; password = ; database=ethazi_mac")
+    'Dim conexionBD As New MySqlConnection("server=127.0.0.1 ; userid=root ; password = ; database=ethazi_mac")
     'Dim dt As DataTable
+
     Private Sub Erabiltzaileak_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Dim conexionBD As New MySqlConnection("server=127.0.0.1 ; userid=root ; password = ; database=ethazi_mac")
         'dataset = New DataSet
@@ -31,12 +32,12 @@ Public Class Erabiltzaileak
         'End Try
 
 
-        Dim SQL As String = "SELECT * FROM erabiltzaile"
-        Dim cmd1 As New MySqlCommand(SQL, conexionBD)
+        'Dim SQL As String = "SELECT * FROM erabiltzaile"
+        Dim cmd1 As New MySqlCommand("SELECT * FROM erabiltzaile", Login.conexionBD)
         Dim dr As MySqlDataReader
 
         Try
-            conexionBD.Open()
+            Login.conexionBD.Open()
             dr = cmd1.ExecuteReader
         Catch ex As Exception
             MsgBox("Errorea datu basearekin")
@@ -80,9 +81,9 @@ Public Class Erabiltzaileak
 
         End While
 
-        If conexionBD.State = ConnectionState.Open Then
+        If Login.conexionBD.State = ConnectionState.Open Then
             dr.Close()
-            conexionBD.Close()
+            Login.conexionBD.Close()
         End If
 
 
@@ -98,17 +99,23 @@ Public Class Erabiltzaileak
             Case Keys.Escape
                 End
             Case Keys.Back
+                'Me.Hide()
+                'Dim pasaralMenu As New Menu
+                'pasaralMenu.Show()
+
                 Me.Hide()
-                Dim pasaralMenu As New Menu
-                pasaralMenu.Show()
+                ethazi_mac_visual.Menu.Show()
         End Select
 
     End Sub
 
     Private Sub Button1_Atzera_Click(sender As Object, e As EventArgs) Handles Button1_Atzera.Click
+        'Me.Hide()
+        'Dim pasaralMenu As New Menu
+        'pasaralMenu.Show()
+
         Me.Hide()
-        Dim pasaralMenu As New Menu
-        pasaralMenu.Show()
+        ethazi_mac_visual.Menu.Show()
     End Sub
 
     Private Sub Button1_Atzera_KeyDown(sender As Object, e As KeyEventArgs) Handles Button1_Atzera.KeyDown
@@ -117,12 +124,10 @@ Public Class Erabiltzaileak
                 End
             Case Keys.Back
                 Me.Hide()
-                Dim pasaralMenu As New Menu
-                pasaralMenu.Show()
+                ethazi_mac_visual.Menu.Show()
             Case Keys.Enter
                 Me.Hide()
-                Dim pasaralMenu As New Menu
-                pasaralMenu.Show()
+                ethazi_mac_visual.Menu.Show()
 
         End Select
 
@@ -130,6 +135,24 @@ Public Class Erabiltzaileak
 
     Private Sub TextBox1_IdBuscar_TextChanged(sender As Object, e As EventArgs) Handles TextBox1_IdBuscar.TextChanged
         'consultaDinamica(TextBox1_IdBuscar.Text, DataGridView1)
+    End Sub
+
+    Private Sub Button1_Gehitu_Click(sender As Object, e As EventArgs) Handles Button1_Gehitu.Click
+        ethazi_mac_visual.Menu.accionEnviar = "erabiltzailea gehitu"
+        Me.Hide()
+        Aldaketak.Show()
+    End Sub
+
+    Private Sub Button1_Aldatu_Click(sender As Object, e As EventArgs) Handles Button1_Aldatu.Click
+        ethazi_mac_visual.Menu.accionEnviar = "erabiltzailea aldatu"
+        Me.Hide()
+        Aldaketak.Show()
+    End Sub
+
+    Private Sub Button1_Kendu_Click(sender As Object, e As EventArgs) Handles Button1_Kendu.Click
+        ethazi_mac_visual.Menu.accionEnviar = "erabiltzailea kendu"
+        Me.Hide()
+        Aldaketak.Show()
     End Sub
     'Sub consultaDinamica(ByVal id As String, ByVal dgv As DataGridView)
     '    adaptador = New MySqlDataAdapter("Select * from erabiltzaile where id like " & id + "%", conexionBD)

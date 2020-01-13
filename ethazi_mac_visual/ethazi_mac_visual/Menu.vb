@@ -1,4 +1,5 @@
 ﻿Public Class Menu
+    Public accionEnviar As String = ""
     Private Sub Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -24,13 +25,19 @@
             Case Keys.Escape
                 End
             Case Keys.Back
+                'Me.Hide()
+                'Dim pasaralLogin As New Login
+                'pasaralLogin.Show()
+
                 Me.Hide()
-                Dim pasaralLogin As New Login
-                pasaralLogin.Show()
+                Login.Show()
             Case Keys.Enter
+                'Me.Hide()
+                'Dim pasaralErabiltzaileak As New Erabiltzaileak
+                'pasaralErabiltzaileak.Show()
+
                 Me.Hide()
-                Dim pasaralErabiltzaileak As New Erabiltzaileak
-                pasaralErabiltzaileak.Show()
+                Erabiltzaileak.Show()
         End Select
 
     End Sub
@@ -40,15 +47,19 @@
             Case Keys.Escape
                 End
             Case Keys.Back
+                'Me.Hide()
+                'Dim pasaralLogin As New Login
+                'pasaralLogin.Show()
+
                 Me.Hide()
-                Dim pasaralLogin As New Login
-                pasaralLogin.Show()
+                Login.Show()
             Case Keys.Enter
+                'Me.Hide()
+                'Dim pasaralOstatuak As New Ostatuak
+                'pasaralOstatuak.Show()
+
                 Me.Hide()
-                Dim pasaralOstatuak As New Ostatuak
-                pasaralOstatuak.Show()
-
-
+                Ostatuak.Show()
 
         End Select
     End Sub
@@ -58,14 +69,19 @@
             Case Keys.Escape
                 End
             Case Keys.Back
-                Me.Hide()
-                Dim pasaralLogin As New Login
-                pasaralLogin.Show()
-            Case Keys.Enter
-                Me.Hide()
-                Dim pasaralErreserbak As New Erreserbak
-                pasaralErreserbak.Show()
+                'Me.Hide()
+                'Dim pasaralLogin As New Login
+                'pasaralLogin.Show()
 
+                Me.Hide()
+                Login.Show()
+            Case Keys.Enter
+                'Me.Hide()
+                'Dim pasaralErreserbak As New Erreserbak
+                'pasaralErreserbak.Show()
+
+                Me.Hide()
+                Erreserbak.Show()
         End Select
 
     End Sub
@@ -75,39 +91,53 @@
             Case Keys.Escape
                 End
             Case Keys.Back
+                'Me.Hide()
+                'Dim pasaralLogin As New Login
+                'pasaralLogin.Show()
+
                 Me.Hide()
-                Dim pasaralLogin As New Login
-                pasaralLogin.Show()
+                Login.Show()
             Case Keys.Enter
-
                 Me.Hide()
-                Dim pasaralLogin As New Login
-                pasaralLogin.Show()
-
+                Login.Show()
 
         End Select
     End Sub
 
     Private Sub Button1_Erabiltzaileak_Click(sender As Object, e As EventArgs) Handles Button1_Erabiltzaileak.Click
+        'Me.Hide()
+        'Dim pasaralErabiltzaileak As New Erabiltzaileak
+        'pasaralErabiltzaileak.Show()
+
         Me.Hide()
-        Dim pasaralErabiltzaileak As New Erabiltzaileak
-        pasaralErabiltzaileak.Show()
+        Erabiltzaileak.Show()
     End Sub
 
     Private Sub Button1_Ostatuak_Click(sender As Object, e As EventArgs) Handles Button1_Ostatuak.Click
+        'Me.Hide()
+        'Dim pasaralOstatuak As New Ostatuak
+        'pasaralOstatuak.Show()
+
         Me.Hide()
-        Dim pasaralOstatuak As New Ostatuak
-        pasaralOstatuak.Show()
+        Ostatuak.Show()
     End Sub
     Private Sub Button1_Erreserbak_Click(sender As Object, e As EventArgs) Handles Button1_Erreserbak.Click
+        'Me.Hide()
+        'Dim pasaralErreserba As New Erreserbak
+        'pasaralErreserba.Show()
+
         Me.Hide()
-        Dim pasaralErreserba As New Erreserbak
-        pasaralErreserba.Show()
+        Erreserbak.Show()
     End Sub
     Private Sub Button1_Atzera_Click(sender As Object, e As EventArgs) Handles Button1_Atzera.Click
         Me.Hide()
-        Dim pasaralLogin As New Login
-        pasaralLogin.Show()
+        Login.Show()
+
+        'Dim pasaralLogin As New Login
+
+
+
+
     End Sub
 
 

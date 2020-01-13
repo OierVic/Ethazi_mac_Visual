@@ -2,14 +2,14 @@
 
 Public Class Erreserbak
     Private Sub Erreserbak_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim conexionBD As New MySqlConnection("server=127.0.0.1 ; userid=root ; password = ; database=ethazi_mac")
-
-        Dim SQL As String = "SELECT * FROM erreserba"
-        Dim cmd1 As New MySqlCommand(SQL, conexionBD)
+        'Dim conexionBD As New MySqlConnection("server=127.0.0.1 ; userid=root ; password = ; database=ethazi_mac")
+        'conexionBD = Login.conexionBD
+        'Dim SQL As String = "SELECT * FROM erreserba"
+        Dim cmd1 As New MySqlCommand("SELECT * FROM erreserba", Login.conexionBD)
         Dim dr As MySqlDataReader
 
         Try
-            conexionBD.Open()
+            Login.conexionBD.Open()
             dr = cmd1.ExecuteReader
         Catch ex As Exception
             MsgBox("Errorea datu basearekin")
@@ -43,16 +43,15 @@ Public Class Erreserbak
 
         End While
 
-        If conexionBD.State = ConnectionState.Open Then
+        If Login.conexionBD.State = ConnectionState.Open Then
             dr.Close()
-            conexionBD.Close()
+            Login.conexionBD.Close()
         End If
     End Sub
 
     Private Sub Button1_Atzera_Click(sender As Object, e As EventArgs) Handles Button1_Atzera.Click
         Me.Hide()
-        Dim pasaralMenu As New Menu
-        pasaralMenu.Show()
+        ethazi_mac_visual.Menu.Show()
     End Sub
 
     Private Sub Button1_Atzera_KeyDown(sender As Object, e As KeyEventArgs) Handles Button1_Atzera.KeyDown
@@ -61,13 +60,25 @@ Public Class Erreserbak
                 End
             Case Keys.Back
                 Me.Hide()
-                Dim pasaralMenu As New Menu
-                pasaralMenu.Show()
+                ethazi_mac_visual.Menu.Show()
             Case Keys.Enter
                 Me.Hide()
-                Dim pasaralMenu As New Menu
-                pasaralMenu.Show()
+                ethazi_mac_visual.Menu.Show()
 
         End Select
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+    Private Sub DataGridView1_KeyDown(sender As Object, e As KeyEventArgs) Handles DataGridView1.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Escape
+                End
+            Case Keys.Back
+                Me.Hide()
+                ethazi_mac_visual.Menu.Show()
+        End Select
+
     End Sub
 End Class

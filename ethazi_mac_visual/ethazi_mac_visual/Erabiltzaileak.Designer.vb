@@ -23,8 +23,6 @@ Partial Class Erabiltzaileak
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label1_Administrazio_Aplikazioa = New System.Windows.Forms.Label()
-        Me.Button1_Atzera = New System.Windows.Forms.Button()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.erabiltzaile = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pasahitza = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -32,8 +30,13 @@ Partial Class Erabiltzaileak
         Me.telefonoa = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Erabiltzaile_mota = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IzenAbizenak = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label1_Administrazio_Aplikazioa = New System.Windows.Forms.Label()
         Me.Label1_IdBuscar = New System.Windows.Forms.Label()
         Me.TextBox1_IdBuscar = New System.Windows.Forms.TextBox()
+        Me.Button1_Atzera = New System.Windows.Forms.Button()
+        Me.Button1_Gehitu = New System.Windows.Forms.Button()
+        Me.Button1_Aldatu = New System.Windows.Forms.Button()
+        Me.Button1_Kendu = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -45,29 +48,6 @@ Partial Class Erabiltzaileak
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(1069, 495)
         Me.DataGridView1.TabIndex = 0
-        '
-        'Label1_Administrazio_Aplikazioa
-        '
-        Me.Label1_Administrazio_Aplikazioa.AutoSize = True
-        Me.Label1_Administrazio_Aplikazioa.BackColor = System.Drawing.Color.White
-        Me.Label1_Administrazio_Aplikazioa.Font = New System.Drawing.Font("Segoe UI Black", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1_Administrazio_Aplikazioa.Location = New System.Drawing.Point(780, 6)
-        Me.Label1_Administrazio_Aplikazioa.Name = "Label1_Administrazio_Aplikazioa"
-        Me.Label1_Administrazio_Aplikazioa.Size = New System.Drawing.Size(260, 28)
-        Me.Label1_Administrazio_Aplikazioa.TabIndex = 9
-        Me.Label1_Administrazio_Aplikazioa.Text = "Administrazio Aplikazioa"
-        '
-        'Button1_Atzera
-        '
-        Me.Button1_Atzera.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.return_logo_SinFondo
-        Me.Button1_Atzera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1_Atzera.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1_Atzera.Location = New System.Drawing.Point(65, 553)
-        Me.Button1_Atzera.Name = "Button1_Atzera"
-        Me.Button1_Atzera.Size = New System.Drawing.Size(64, 58)
-        Me.Button1_Atzera.TabIndex = 1
-        Me.Button1_Atzera.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1_Atzera.UseVisualStyleBackColor = True
         '
         'ID
         '
@@ -112,6 +92,17 @@ Partial Class Erabiltzaileak
         Me.IzenAbizenak.HeaderText = "Izena eta Abizenak"
         Me.IzenAbizenak.Name = "IzenAbizenak"
         '
+        'Label1_Administrazio_Aplikazioa
+        '
+        Me.Label1_Administrazio_Aplikazioa.AutoSize = True
+        Me.Label1_Administrazio_Aplikazioa.BackColor = System.Drawing.Color.White
+        Me.Label1_Administrazio_Aplikazioa.Font = New System.Drawing.Font("Segoe UI Black", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1_Administrazio_Aplikazioa.Location = New System.Drawing.Point(780, 6)
+        Me.Label1_Administrazio_Aplikazioa.Name = "Label1_Administrazio_Aplikazioa"
+        Me.Label1_Administrazio_Aplikazioa.Size = New System.Drawing.Size(260, 28)
+        Me.Label1_Administrazio_Aplikazioa.TabIndex = 9
+        Me.Label1_Administrazio_Aplikazioa.Text = "Administrazio Aplikazioa"
+        '
         'Label1_IdBuscar
         '
         Me.Label1_IdBuscar.AutoSize = True
@@ -128,12 +119,57 @@ Partial Class Erabiltzaileak
         Me.TextBox1_IdBuscar.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1_IdBuscar.TabIndex = 11
         '
+        'Button1_Atzera
+        '
+        Me.Button1_Atzera.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.return_logo_SinFondo
+        Me.Button1_Atzera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1_Atzera.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1_Atzera.Location = New System.Drawing.Point(65, 553)
+        Me.Button1_Atzera.Name = "Button1_Atzera"
+        Me.Button1_Atzera.Size = New System.Drawing.Size(64, 58)
+        Me.Button1_Atzera.TabIndex = 1
+        Me.Button1_Atzera.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1_Atzera.UseVisualStyleBackColor = True
+        '
+        'Button1_Gehitu
+        '
+        Me.Button1_Gehitu.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1_Gehitu.Location = New System.Drawing.Point(370, 553)
+        Me.Button1_Gehitu.Name = "Button1_Gehitu"
+        Me.Button1_Gehitu.Size = New System.Drawing.Size(115, 58)
+        Me.Button1_Gehitu.TabIndex = 12
+        Me.Button1_Gehitu.Text = "Gehitu"
+        Me.Button1_Gehitu.UseVisualStyleBackColor = True
+        '
+        'Button1_Aldatu
+        '
+        Me.Button1_Aldatu.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1_Aldatu.Location = New System.Drawing.Point(600, 553)
+        Me.Button1_Aldatu.Name = "Button1_Aldatu"
+        Me.Button1_Aldatu.Size = New System.Drawing.Size(125, 58)
+        Me.Button1_Aldatu.TabIndex = 13
+        Me.Button1_Aldatu.Text = "Aldatu"
+        Me.Button1_Aldatu.UseVisualStyleBackColor = True
+        '
+        'Button1_Kendu
+        '
+        Me.Button1_Kendu.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1_Kendu.Location = New System.Drawing.Point(828, 553)
+        Me.Button1_Kendu.Name = "Button1_Kendu"
+        Me.Button1_Kendu.Size = New System.Drawing.Size(142, 58)
+        Me.Button1_Kendu.TabIndex = 14
+        Me.Button1_Kendu.Text = "Kendu"
+        Me.Button1_Kendu.UseVisualStyleBackColor = True
+        '
         'Erabiltzaileak
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1093, 623)
+        Me.Controls.Add(Me.Button1_Kendu)
+        Me.Controls.Add(Me.Button1_Aldatu)
+        Me.Controls.Add(Me.Button1_Gehitu)
         Me.Controls.Add(Me.TextBox1_IdBuscar)
         Me.Controls.Add(Me.Label1_IdBuscar)
         Me.Controls.Add(Me.Label1_Administrazio_Aplikazioa)
@@ -159,4 +195,7 @@ Partial Class Erabiltzaileak
     Friend WithEvents IzenAbizenak As DataGridViewTextBoxColumn
     Friend WithEvents Label1_IdBuscar As Label
     Friend WithEvents TextBox1_IdBuscar As TextBox
+    Friend WithEvents Button1_Gehitu As Button
+    Friend WithEvents Button1_Aldatu As Button
+    Friend WithEvents Button1_Kendu As Button
 End Class
