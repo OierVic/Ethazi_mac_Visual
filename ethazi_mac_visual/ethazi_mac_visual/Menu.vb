@@ -1,5 +1,5 @@
 ﻿Public Class Menu
-    Public accionEnviar As String = ""
+    'Public accionEnviar As String = ""
     Private Sub Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -24,20 +24,16 @@
         Select Case e.KeyCode
             Case Keys.Escape
                 End
-            Case Keys.Back
-                'Me.Hide()
-                'Dim pasaralLogin As New Login
-                'pasaralLogin.Show()
 
+            Case Keys.Back
                 Me.Hide()
                 Login.Show()
-            Case Keys.Enter
-                'Me.Hide()
-                'Dim pasaralErabiltzaileak As New Erabiltzaileak
-                'pasaralErabiltzaileak.Show()
 
+
+            Case Keys.Enter
                 Me.Hide()
                 Erabiltzaileak.Show()
+
         End Select
 
     End Sub
@@ -47,16 +43,10 @@
             Case Keys.Escape
                 End
             Case Keys.Back
-                'Me.Hide()
-                'Dim pasaralLogin As New Login
-                'pasaralLogin.Show()
 
                 Me.Hide()
                 Login.Show()
             Case Keys.Enter
-                'Me.Hide()
-                'Dim pasaralOstatuak As New Ostatuak
-                'pasaralOstatuak.Show()
 
                 Me.Hide()
                 Ostatuak.Show()
@@ -69,16 +59,10 @@
             Case Keys.Escape
                 End
             Case Keys.Back
-                'Me.Hide()
-                'Dim pasaralLogin As New Login
-                'pasaralLogin.Show()
 
                 Me.Hide()
                 Login.Show()
             Case Keys.Enter
-                'Me.Hide()
-                'Dim pasaralErreserbak As New Erreserbak
-                'pasaralErreserbak.Show()
 
                 Me.Hide()
                 Erreserbak.Show()
@@ -91,9 +75,6 @@
             Case Keys.Escape
                 End
             Case Keys.Back
-                'Me.Hide()
-                'Dim pasaralLogin As New Login
-                'pasaralLogin.Show()
 
                 Me.Hide()
                 Login.Show()
@@ -105,26 +86,20 @@
     End Sub
 
     Private Sub Button1_Erabiltzaileak_Click(sender As Object, e As EventArgs) Handles Button1_Erabiltzaileak.Click
-        'Me.Hide()
-        'Dim pasaralErabiltzaileak As New Erabiltzaileak
-        'pasaralErabiltzaileak.Show()
+        Aldaketak.ventana = "erabiltzaileak"
 
         Me.Hide()
         Erabiltzaileak.Show()
     End Sub
 
     Private Sub Button1_Ostatuak_Click(sender As Object, e As EventArgs) Handles Button1_Ostatuak.Click
-        'Me.Hide()
-        'Dim pasaralOstatuak As New Ostatuak
-        'pasaralOstatuak.Show()
+        Aldaketak.ventana = "ostatuak"
 
         Me.Hide()
         Ostatuak.Show()
     End Sub
     Private Sub Button1_Erreserbak_Click(sender As Object, e As EventArgs) Handles Button1_Erreserbak.Click
-        'Me.Hide()
-        'Dim pasaralErreserba As New Erreserbak
-        'pasaralErreserba.Show()
+        Aldaketak.ventana = "erreserbak"
 
         Me.Hide()
         Erreserbak.Show()
@@ -132,8 +107,6 @@
     Private Sub Button1_Atzera_Click(sender As Object, e As EventArgs) Handles Button1_Atzera.Click
         Me.Hide()
         Login.Show()
-
-        'Dim pasaralLogin As New Login
 
 
 

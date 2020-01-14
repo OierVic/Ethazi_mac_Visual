@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Erabiltzaileak
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Erabiltzaileak
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -35,8 +35,6 @@ Partial Class Erabiltzaileak
         Me.TextBox1_IdBuscar = New System.Windows.Forms.TextBox()
         Me.Button1_Atzera = New System.Windows.Forms.Button()
         Me.Button1_Gehitu = New System.Windows.Forms.Button()
-        Me.Button1_Aldatu = New System.Windows.Forms.Button()
-        Me.Button1_Kendu = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -134,32 +132,12 @@ Partial Class Erabiltzaileak
         'Button1_Gehitu
         '
         Me.Button1_Gehitu.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1_Gehitu.Location = New System.Drawing.Point(370, 553)
+        Me.Button1_Gehitu.Location = New System.Drawing.Point(539, 553)
         Me.Button1_Gehitu.Name = "Button1_Gehitu"
-        Me.Button1_Gehitu.Size = New System.Drawing.Size(115, 58)
+        Me.Button1_Gehitu.Size = New System.Drawing.Size(313, 58)
         Me.Button1_Gehitu.TabIndex = 12
-        Me.Button1_Gehitu.Text = "Gehitu"
+        Me.Button1_Gehitu.Text = "Erabiltzaile bat Gehitu"
         Me.Button1_Gehitu.UseVisualStyleBackColor = True
-        '
-        'Button1_Aldatu
-        '
-        Me.Button1_Aldatu.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1_Aldatu.Location = New System.Drawing.Point(600, 553)
-        Me.Button1_Aldatu.Name = "Button1_Aldatu"
-        Me.Button1_Aldatu.Size = New System.Drawing.Size(125, 58)
-        Me.Button1_Aldatu.TabIndex = 13
-        Me.Button1_Aldatu.Text = "Aldatu"
-        Me.Button1_Aldatu.UseVisualStyleBackColor = True
-        '
-        'Button1_Kendu
-        '
-        Me.Button1_Kendu.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1_Kendu.Location = New System.Drawing.Point(828, 553)
-        Me.Button1_Kendu.Name = "Button1_Kendu"
-        Me.Button1_Kendu.Size = New System.Drawing.Size(142, 58)
-        Me.Button1_Kendu.TabIndex = 14
-        Me.Button1_Kendu.Text = "Kendu"
-        Me.Button1_Kendu.UseVisualStyleBackColor = True
         '
         'Erabiltzaileak
         '
@@ -167,8 +145,6 @@ Partial Class Erabiltzaileak
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1093, 623)
-        Me.Controls.Add(Me.Button1_Kendu)
-        Me.Controls.Add(Me.Button1_Aldatu)
         Me.Controls.Add(Me.Button1_Gehitu)
         Me.Controls.Add(Me.TextBox1_IdBuscar)
         Me.Controls.Add(Me.Label1_IdBuscar)
@@ -196,6 +172,4 @@ Partial Class Erabiltzaileak
     Friend WithEvents Label1_IdBuscar As Label
     Friend WithEvents TextBox1_IdBuscar As TextBox
     Friend WithEvents Button1_Gehitu As Button
-    Friend WithEvents Button1_Aldatu As Button
-    Friend WithEvents Button1_Kendu As Button
 End Class

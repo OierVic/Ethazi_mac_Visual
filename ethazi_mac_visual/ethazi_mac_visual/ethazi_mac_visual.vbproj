@@ -93,6 +93,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Erabiltzaile.vb" />
     <Compile Include="Erabiltzaileak.Designer.vb">
       <DependentUpon>Erabiltzaileak.vb</DependentUpon>
     </Compile>

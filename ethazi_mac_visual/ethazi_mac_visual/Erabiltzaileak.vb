@@ -6,6 +6,7 @@ Public Class Erabiltzaileak
     'Dim conexionBD As New MySqlConnection("server=127.0.0.1 ; userid=root ; password = ; database=ethazi_mac")
     'Dim dt As DataTable
 
+
     Private Sub Erabiltzaileak_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Dim conexionBD As New MySqlConnection("server=127.0.0.1 ; userid=root ; password = ; database=ethazi_mac")
         'dataset = New DataSet
@@ -135,24 +136,54 @@ Public Class Erabiltzaileak
     End Sub
 
     Private Sub Button1_Gehitu_Click(sender As Object, e As EventArgs) Handles Button1_Gehitu.Click
-        ethazi_mac_visual.Menu.accionEnviar = "erabiltzailea gehitu"
+        'ethazi_mac_visual.Menu.accionEnviar = "erabiltzailea gehitu"
         Me.Hide()
         Aldaketak.Show()
     End Sub
 
-    Private Sub Button1_Aldatu_Click(sender As Object, e As EventArgs) Handles Button1_Aldatu.Click
-        ethazi_mac_visual.Menu.accionEnviar = "erabiltzailea aldatu"
-        Me.Hide()
-        Aldaketak.Show()
-    End Sub
+    'Private Sub Button1_Aldatu_Click(sender As Object, e As EventArgs)
+    '    ethazi_mac_visual.Menu.accionEnviar = "erabiltzailea aldatu"
+    '    Me.Hide()
+    '    Aldaketak.Show()
+    'End Sub
 
-    Private Sub Button1_Kendu_Click(sender As Object, e As EventArgs) Handles Button1_Kendu.Click
-        ethazi_mac_visual.Menu.accionEnviar = "erabiltzailea kendu"
-        Me.Hide()
-        Aldaketak.Show()
-    End Sub
+    'Private Sub Button1_Kendu_Click(sender As Object, e As EventArgs)
+    '    ethazi_mac_visual.Menu.accionEnviar = "erabiltzailea kendu"
+    '    Me.Hide()
+    '    Aldaketak.Show()
+    'End Sub
 
     Private Sub DataGridView1_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentDoubleClick
+
+        Try
+
+            'Dim id As Integer = CType(DataGridView1.Item(1, e.RowIndex).Value, Integer)
+            'ethazi_mac_visual.Aldaketak.erabiltzaile.id = DataGridView1.CurrentRow.Cells(e.RowIndex).Value
+
+            'Dim value As String = DataGridView1.Rows[DataGridView.SelectedRows[0].Index].Cells[X].Value.ToString()
+            'ethazi_mac_visual.Aldaketak.erabiltzaile.id = CInt(DataGridView1.Rows[DataGridView.SelectedRows[0].Index].Cells[X].Value.ToString())
+
+            If (e.RowIndex >= 0) Then
+                MsgBox(DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString)
+                Dim idString As String = DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString
+                ethazi_mac_visual.Aldaketak.erabiltzaile.id = CInt(idString)
+            End If
+
+            'MsgBox(ethazi_mac_visual.Aldaketak.erabiltzaile.id)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+        'ethazi_mac_visual.Aldaketak.erabiltzaile.id = DataGridView1.Rows[e.RowIndex].Cells[0].Value.toString
+        'ethazi_mac_visual.Aldaketak.erabiltzaile.id = DataGridView1.CurrentRow.Cells(e.RowIndex).Value
+
+
+        Me.Hide()
+        Aldaketak.Show()
+
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
     End Sub
     'Sub consultaDinamica(ByVal id As String, ByVal dgv As DataGridView)
