@@ -131,14 +131,53 @@ Public Class Erabiltzaileak
 
     End Sub
 
-    Private Sub TextBox1_IdBuscar_TextChanged(sender As Object, e As EventArgs) Handles TextBox1_IdBuscar.TextChanged
+    Private Sub TextBox1_IdBuscar_TextChanged(sender As Object, e As EventArgs)
         'consultaDinamica(TextBox1_IdBuscar.Text, DataGridView1)
     End Sub
 
     Private Sub Button1_Gehitu_Click(sender As Object, e As EventArgs) Handles Button1_Gehitu.Click
-        'ethazi_mac_visual.Menu.accionEnviar = "erabiltzailea gehitu"
-        Me.Hide()
+
+        'Me.Hide()
+        Me.Enabled = False
         Aldaketak_Erabiltzaileak.Show()
+        ethazi_mac_visual.Aldaketak_Erabiltzaileak.Button1_Gehitu.Visible = True
+        ethazi_mac_visual.Aldaketak_Erabiltzaileak.Button1_Aldaketa.Visible = False
+        ethazi_mac_visual.Aldaketak_Erabiltzaileak.Button1_Kendu.Visible = False
+
+
+        Dim MaxCount As Integer
+        Dim cmd2 As New MySqlCommand("SELECT Count(Id_erabiltzaile) FROM erabiltzaile", Login.conexionBD)
+
+        Try
+            Login.conexionBD.Open()
+
+            MaxCount = cmd2.ExecuteScalar
+
+            Login.conexionBD.Close()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+
+            If Login.conexionBD.State = ConnectionState.Open Then
+                Login.conexionBD.Close()
+            End If
+
+        End Try
+
+        MaxCount = MaxCount + 1
+
+        ethazi_mac_visual.Aldaketak_Erabiltzaileak.Label1_Id_Insert.Text = MaxCount.ToString
+        ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Erabiltzailea.Text = ""
+        ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Pasahitza.Text = ""
+        ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Emaila.Text = ""
+        ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Telefonoa.Text = ""
+        ethazi_mac_visual.Aldaketak_Erabiltzaileak.ComboBox1_ErabiltzaileMota.Text = "Mota 1 - Altua"
+        ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_IzenaAbizenak.Text = ""
+
+
+
+
     End Sub
 
     'Private Sub Button1_Aldatu_Click(sender As Object, e As EventArgs)
@@ -168,7 +207,7 @@ Public Class Erabiltzaileak
             'ethazi_mac_visual.Aldaketak.erabiltzaile.id = DataGridView1.CurrentRow.Cells(e.RowIndex).Value
 
             If (e.RowIndex >= 0) Then
-                MsgBox(DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString & "-" & DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString & "-" & DataGridView1.Rows(e.RowIndex).Cells(2).Value.ToString & "-" & DataGridView1.Rows(e.RowIndex).Cells(3).Value.ToString & "-" & DataGridView1.Rows(e.RowIndex).Cells(4).Value.ToString & "-" & DataGridView1.Rows(e.RowIndex).Cells(5).Value.ToString & "-" & DataGridView1.Rows(e.RowIndex).Cells(6).Value.ToString)
+                'MsgBox(DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString & "-" & DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString & "-" & DataGridView1.Rows(e.RowIndex).Cells(2).Value.ToString & "-" & DataGridView1.Rows(e.RowIndex).Cells(3).Value.ToString & "-" & DataGridView1.Rows(e.RowIndex).Cells(4).Value.ToString & "-" & DataGridView1.Rows(e.RowIndex).Cells(5).Value.ToString & "-" & DataGridView1.Rows(e.RowIndex).Cells(6).Value.ToString)
 
                 Dim idString As String = DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString
                 erabiltzailea.id = CInt(idString)
@@ -180,17 +219,20 @@ Public Class Erabiltzaileak
                 erabiltzailea.IzenAbizenak = DataGridView1.Rows(e.RowIndex).Cells(6).Value.ToString
 
                 ethazi_mac_visual.Aldaketak_Erabiltzaileak.Label1_Id_Insert.Text = erabiltzailea.id
-                ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Erabiltzaileak.Text = erabiltzailea.erabiltzaile
+                ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Erabiltzailea.Text = erabiltzailea.erabiltzaile
                 ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Pasahitza.Text = erabiltzailea.pasahitza
                 ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Emaila.Text = erabiltzailea.emaila
                 ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Telefonoa.Text = erabiltzailea.telefonoa
                 ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_IzenaAbizenak.Text = erabiltzailea.IzenAbizenak
 
+                ethazi_mac_visual.Aldaketak_Erabiltzaileak.Button1_Gehitu.Visible = False
+                ethazi_mac_visual.Aldaketak_Erabiltzaileak.Button1_Aldaketa.Visible = True
+                ethazi_mac_visual.Aldaketak_Erabiltzaileak.Button1_Kendu.Visible = True
 
 
             End If
 
-            ' MsgBox(erabiltzailea.id)
+
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -198,7 +240,8 @@ Public Class Erabiltzaileak
 
 
 
-        Me.Hide()
+        'Me.Hide()
+        Me.Enabled = False
         Aldaketak_Erabiltzaileak.Show()
     End Sub
 

@@ -31,8 +31,6 @@ Partial Class Erabiltzaileak
         Me.Erabiltzaile_mota = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IzenAbizenak = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label1_Administrazio_Aplikazioa = New System.Windows.Forms.Label()
-        Me.Label1_IdBuscar = New System.Windows.Forms.Label()
-        Me.TextBox1_IdBuscar = New System.Windows.Forms.TextBox()
         Me.Button1_Gehitu = New System.Windows.Forms.Button()
         Me.Button1_Atzera = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,22 +99,6 @@ Partial Class Erabiltzaileak
         Me.Label1_Administrazio_Aplikazioa.TabIndex = 9
         Me.Label1_Administrazio_Aplikazioa.Text = "Administrazio Aplikazioa"
         '
-        'Label1_IdBuscar
-        '
-        Me.Label1_IdBuscar.AutoSize = True
-        Me.Label1_IdBuscar.Location = New System.Drawing.Point(41, 13)
-        Me.Label1_IdBuscar.Name = "Label1_IdBuscar"
-        Me.Label1_IdBuscar.Size = New System.Drawing.Size(24, 13)
-        Me.Label1_IdBuscar.TabIndex = 10
-        Me.Label1_IdBuscar.Text = "ID :"
-        '
-        'TextBox1_IdBuscar
-        '
-        Me.TextBox1_IdBuscar.Location = New System.Drawing.Point(91, 13)
-        Me.TextBox1_IdBuscar.Name = "TextBox1_IdBuscar"
-        Me.TextBox1_IdBuscar.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1_IdBuscar.TabIndex = 11
-        '
         'Button1_Gehitu
         '
         Me.Button1_Gehitu.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.SumaSymbol
@@ -147,8 +129,6 @@ Partial Class Erabiltzaileak
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1093, 623)
         Me.Controls.Add(Me.Button1_Gehitu)
-        Me.Controls.Add(Me.TextBox1_IdBuscar)
-        Me.Controls.Add(Me.Label1_IdBuscar)
         Me.Controls.Add(Me.Label1_Administrazio_Aplikazioa)
         Me.Controls.Add(Me.Button1_Atzera)
         Me.Controls.Add(Me.DataGridView1)
@@ -170,7 +150,5 @@ Partial Class Erabiltzaileak
     Friend WithEvents telefonoa As DataGridViewTextBoxColumn
     Friend WithEvents Erabiltzaile_mota As DataGridViewTextBoxColumn
     Friend WithEvents IzenAbizenak As DataGridViewTextBoxColumn
-    Friend WithEvents Label1_IdBuscar As Label
-    Friend WithEvents TextBox1_IdBuscar As TextBox
     Friend WithEvents Button1_Gehitu As Button
 End Class

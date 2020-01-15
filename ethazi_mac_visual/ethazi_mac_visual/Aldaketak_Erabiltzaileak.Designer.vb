@@ -27,7 +27,7 @@ Partial Class Aldaketak_Erabiltzaileak
         Me.Label1_Titulua = New System.Windows.Forms.Label()
         Me.Label1_Id = New System.Windows.Forms.Label()
         Me.Label1_Erabiltzaileak = New System.Windows.Forms.Label()
-        Me.TextBox1_Erabiltzaileak = New System.Windows.Forms.TextBox()
+        Me.TextBox1_Erabiltzailea = New System.Windows.Forms.TextBox()
         Me.Label1_Pasahitza = New System.Windows.Forms.Label()
         Me.TextBox1_Pasahitza = New System.Windows.Forms.TextBox()
         Me.Label1_Emaila = New System.Windows.Forms.Label()
@@ -35,13 +35,13 @@ Partial Class Aldaketak_Erabiltzaileak
         Me.Label1_Telefonoa = New System.Windows.Forms.Label()
         Me.TextBox1_Telefonoa = New System.Windows.Forms.TextBox()
         Me.Label1_ErabiltzaileMota = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox1_ErabiltzaileMota = New System.Windows.Forms.ComboBox()
         Me.Label1_IzenAbizenak = New System.Windows.Forms.Label()
         Me.TextBox1_IzenaAbizenak = New System.Windows.Forms.TextBox()
         Me.Label1_Id_Insert = New System.Windows.Forms.Label()
         Me.Button1_Atzera = New System.Windows.Forms.Button()
         Me.Button1_Kendu = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1_Aldaketa = New System.Windows.Forms.Button()
         Me.Button1_Gehitu = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -71,17 +71,17 @@ Partial Class Aldaketak_Erabiltzaileak
         Me.Label1_Erabiltzaileak.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1_Erabiltzaileak.Location = New System.Drawing.Point(216, 96)
         Me.Label1_Erabiltzaileak.Name = "Label1_Erabiltzaileak"
-        Me.Label1_Erabiltzaileak.Size = New System.Drawing.Size(111, 20)
+        Me.Label1_Erabiltzaileak.Size = New System.Drawing.Size(103, 20)
         Me.Label1_Erabiltzaileak.TabIndex = 3
-        Me.Label1_Erabiltzaileak.Text = "Erabiltzaileak :"
+        Me.Label1_Erabiltzaileak.Text = "Erabiltzailea :"
         '
-        'TextBox1_Erabiltzaileak
+        'TextBox1_Erabiltzailea
         '
-        Me.TextBox1_Erabiltzaileak.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1_Erabiltzaileak.Location = New System.Drawing.Point(333, 90)
-        Me.TextBox1_Erabiltzaileak.Name = "TextBox1_Erabiltzaileak"
-        Me.TextBox1_Erabiltzaileak.Size = New System.Drawing.Size(173, 26)
-        Me.TextBox1_Erabiltzaileak.TabIndex = 4
+        Me.TextBox1_Erabiltzailea.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1_Erabiltzailea.Location = New System.Drawing.Point(333, 90)
+        Me.TextBox1_Erabiltzailea.Name = "TextBox1_Erabiltzailea"
+        Me.TextBox1_Erabiltzailea.Size = New System.Drawing.Size(173, 26)
+        Me.TextBox1_Erabiltzailea.TabIndex = 4
         '
         'Label1_Pasahitza
         '
@@ -147,15 +147,15 @@ Partial Class Aldaketak_Erabiltzaileak
         Me.Label1_ErabiltzaileMota.TabIndex = 11
         Me.Label1_ErabiltzaileMota.Text = "Erabiltzaile Mota :"
         '
-        'ComboBox1
+        'ComboBox1_ErabiltzaileMota
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Mota 1 - Altua", "Mota 2 - Ertaina", "Mota 3 - Txikia"})
-        Me.ComboBox1.Location = New System.Drawing.Point(709, 171)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 28)
-        Me.ComboBox1.TabIndex = 12
+        Me.ComboBox1_ErabiltzaileMota.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1_ErabiltzaileMota.FormattingEnabled = True
+        Me.ComboBox1_ErabiltzaileMota.Items.AddRange(New Object() {"Mota 1 - Altua", "Mota 2 - Normala"})
+        Me.ComboBox1_ErabiltzaileMota.Location = New System.Drawing.Point(709, 171)
+        Me.ComboBox1_ErabiltzaileMota.Name = "ComboBox1_ErabiltzaileMota"
+        Me.ComboBox1_ErabiltzaileMota.Size = New System.Drawing.Size(121, 28)
+        Me.ComboBox1_ErabiltzaileMota.TabIndex = 12
         '
         'Label1_IzenAbizenak
         '
@@ -207,16 +207,16 @@ Partial Class Aldaketak_Erabiltzaileak
         Me.Button1_Kendu.TabIndex = 20
         Me.Button1_Kendu.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Button1_Aldaketa
         '
-        Me.Button2.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.CambiarSimbolo
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(493, 460)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(78, 59)
-        Me.Button2.TabIndex = 19
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button1_Aldaketa.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.CambiarSimbolo
+        Me.Button1_Aldaketa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1_Aldaketa.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1_Aldaketa.Location = New System.Drawing.Point(493, 460)
+        Me.Button1_Aldaketa.Name = "Button1_Aldaketa"
+        Me.Button1_Aldaketa.Size = New System.Drawing.Size(78, 59)
+        Me.Button1_Aldaketa.TabIndex = 19
+        Me.Button1_Aldaketa.UseVisualStyleBackColor = True
         '
         'Button1_Gehitu
         '
@@ -237,12 +237,12 @@ Partial Class Aldaketak_Erabiltzaileak
         Me.ClientSize = New System.Drawing.Size(842, 545)
         Me.Controls.Add(Me.Button1_Atzera)
         Me.Controls.Add(Me.Button1_Kendu)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1_Aldaketa)
         Me.Controls.Add(Me.Button1_Gehitu)
         Me.Controls.Add(Me.Label1_Id_Insert)
         Me.Controls.Add(Me.TextBox1_IzenaAbizenak)
         Me.Controls.Add(Me.Label1_IzenAbizenak)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.ComboBox1_ErabiltzaileMota)
         Me.Controls.Add(Me.Label1_ErabiltzaileMota)
         Me.Controls.Add(Me.TextBox1_Telefonoa)
         Me.Controls.Add(Me.Label1_Telefonoa)
@@ -250,7 +250,7 @@ Partial Class Aldaketak_Erabiltzaileak
         Me.Controls.Add(Me.Label1_Emaila)
         Me.Controls.Add(Me.TextBox1_Pasahitza)
         Me.Controls.Add(Me.Label1_Pasahitza)
-        Me.Controls.Add(Me.TextBox1_Erabiltzaileak)
+        Me.Controls.Add(Me.TextBox1_Erabiltzailea)
         Me.Controls.Add(Me.Label1_Erabiltzaileak)
         Me.Controls.Add(Me.Label1_Id)
         Me.Controls.Add(Me.Label1_Titulua)
@@ -263,7 +263,7 @@ Partial Class Aldaketak_Erabiltzaileak
     Friend WithEvents Label1_Titulua As Label
     Friend WithEvents Label1_Id As Label
     Friend WithEvents Label1_Erabiltzaileak As Label
-    Friend WithEvents TextBox1_Erabiltzaileak As TextBox
+    Friend WithEvents TextBox1_Erabiltzailea As TextBox
     Friend WithEvents Label1_Pasahitza As Label
     Friend WithEvents TextBox1_Pasahitza As TextBox
     Friend WithEvents Label1_Emaila As Label
@@ -271,12 +271,12 @@ Partial Class Aldaketak_Erabiltzaileak
     Friend WithEvents Label1_Telefonoa As Label
     Friend WithEvents TextBox1_Telefonoa As TextBox
     Friend WithEvents Label1_ErabiltzaileMota As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ComboBox1_ErabiltzaileMota As ComboBox
     Friend WithEvents Label1_IzenAbizenak As Label
     Friend WithEvents TextBox1_IzenaAbizenak As TextBox
     Friend WithEvents Label1_Id_Insert As Label
     Friend WithEvents Button1_Gehitu As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1_Aldaketa As Button
     Friend WithEvents Button1_Kendu As Button
     Friend WithEvents Button1_Atzera As Button
 End Class
