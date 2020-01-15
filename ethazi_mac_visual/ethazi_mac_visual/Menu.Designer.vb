@@ -94,7 +94,7 @@ Partial Class Menu
         Me.Controls.Add(Me.Button1_Erabiltzaileak)
         Me.Controls.Add(Me.Button1_Ostatuak)
         Me.Name = "Menu"
-        Me.Text = "Form2"
+        Me.Text = "Menu"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -33,8 +33,8 @@ Partial Class Erabiltzaileak
         Me.Label1_Administrazio_Aplikazioa = New System.Windows.Forms.Label()
         Me.Label1_IdBuscar = New System.Windows.Forms.Label()
         Me.TextBox1_IdBuscar = New System.Windows.Forms.TextBox()
-        Me.Button1_Atzera = New System.Windows.Forms.Button()
         Me.Button1_Gehitu = New System.Windows.Forms.Button()
+        Me.Button1_Atzera = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -117,6 +117,17 @@ Partial Class Erabiltzaileak
         Me.TextBox1_IdBuscar.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1_IdBuscar.TabIndex = 11
         '
+        'Button1_Gehitu
+        '
+        Me.Button1_Gehitu.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.SumaSymbol
+        Me.Button1_Gehitu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1_Gehitu.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1_Gehitu.Location = New System.Drawing.Point(561, 553)
+        Me.Button1_Gehitu.Name = "Button1_Gehitu"
+        Me.Button1_Gehitu.Size = New System.Drawing.Size(70, 58)
+        Me.Button1_Gehitu.TabIndex = 12
+        Me.Button1_Gehitu.UseVisualStyleBackColor = True
+        '
         'Button1_Atzera
         '
         Me.Button1_Atzera.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.return_logo_SinFondo
@@ -128,16 +139,6 @@ Partial Class Erabiltzaileak
         Me.Button1_Atzera.TabIndex = 1
         Me.Button1_Atzera.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button1_Atzera.UseVisualStyleBackColor = True
-        '
-        'Button1_Gehitu
-        '
-        Me.Button1_Gehitu.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1_Gehitu.Location = New System.Drawing.Point(539, 553)
-        Me.Button1_Gehitu.Name = "Button1_Gehitu"
-        Me.Button1_Gehitu.Size = New System.Drawing.Size(313, 58)
-        Me.Button1_Gehitu.TabIndex = 12
-        Me.Button1_Gehitu.Text = "Erabiltzaile bat Gehitu"
-        Me.Button1_Gehitu.UseVisualStyleBackColor = True
         '
         'Erabiltzaileak
         '
@@ -152,7 +153,7 @@ Partial Class Erabiltzaileak
         Me.Controls.Add(Me.Button1_Atzera)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "Erabiltzaileak"
-        Me.Text = "Form1"
+        Me.Text = "Erabiltzaileak"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

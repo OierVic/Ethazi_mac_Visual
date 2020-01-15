@@ -86,20 +86,20 @@
     End Sub
 
     Private Sub Button1_Erabiltzaileak_Click(sender As Object, e As EventArgs) Handles Button1_Erabiltzaileak.Click
-        Aldaketak.ventana = "erabiltzaileak"
+        Aldaketak_Erabiltzaileak.ventana = "erabiltzaileak"
 
         Me.Hide()
         Erabiltzaileak.Show()
     End Sub
 
     Private Sub Button1_Ostatuak_Click(sender As Object, e As EventArgs) Handles Button1_Ostatuak.Click
-        Aldaketak.ventana = "ostatuak"
+        Aldaketak_Erabiltzaileak.ventana = "ostatuak"
 
         Me.Hide()
         Ostatuak.Show()
     End Sub
     Private Sub Button1_Erreserbak_Click(sender As Object, e As EventArgs) Handles Button1_Erreserbak.Click
-        Aldaketak.ventana = "erreserbak"
+        Aldaketak_Erabiltzaileak.ventana = "erreserbak"
 
         Me.Hide()
         Erreserbak.Show()

@@ -5,7 +5,7 @@ Public Class Erabiltzaileak
     Dim adaptador As MySqlDataAdapter
     'Dim conexionBD As New MySqlConnection("server=127.0.0.1 ; userid=root ; password = ; database=ethazi_mac")
     'Dim dt As DataTable
-
+    Public erabiltzailea As Erabiltzaile
 
     Private Sub Erabiltzaileak_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Dim conexionBD As New MySqlConnection("server=127.0.0.1 ; userid=root ; password = ; database=ethazi_mac")
@@ -138,7 +138,7 @@ Public Class Erabiltzaileak
     Private Sub Button1_Gehitu_Click(sender As Object, e As EventArgs) Handles Button1_Gehitu.Click
         'ethazi_mac_visual.Menu.accionEnviar = "erabiltzailea gehitu"
         Me.Hide()
-        Aldaketak.Show()
+        Aldaketak_Erabiltzaileak.Show()
     End Sub
 
     'Private Sub Button1_Aldatu_Click(sender As Object, e As EventArgs)
@@ -156,6 +156,7 @@ Public Class Erabiltzaileak
     Private Sub DataGridView1_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentDoubleClick
 
         Try
+            erabiltzailea = New Erabiltzaile()
 
             'Dim id As Integer = CType(DataGridView1.Item(1, e.RowIndex).Value, Integer)
             'ethazi_mac_visual.Aldaketak.erabiltzaile.id = DataGridView1.CurrentRow.Cells(e.RowIndex).Value
@@ -163,24 +164,42 @@ Public Class Erabiltzaileak
             'Dim value As String = DataGridView1.Rows[DataGridView.SelectedRows[0].Index].Cells[X].Value.ToString()
             'ethazi_mac_visual.Aldaketak.erabiltzaile.id = CInt(DataGridView1.Rows[DataGridView.SelectedRows[0].Index].Cells[X].Value.ToString())
 
+            'ethazi_mac_visual.Aldaketak.erabiltzaile.id = DataGridView1.Rows[e.RowIndex].Cells[0].Value.toString
+            'ethazi_mac_visual.Aldaketak.erabiltzaile.id = DataGridView1.CurrentRow.Cells(e.RowIndex).Value
+
             If (e.RowIndex >= 0) Then
-                MsgBox(DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString)
+                MsgBox(DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString & "-" & DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString & "-" & DataGridView1.Rows(e.RowIndex).Cells(2).Value.ToString & "-" & DataGridView1.Rows(e.RowIndex).Cells(3).Value.ToString & "-" & DataGridView1.Rows(e.RowIndex).Cells(4).Value.ToString & "-" & DataGridView1.Rows(e.RowIndex).Cells(5).Value.ToString & "-" & DataGridView1.Rows(e.RowIndex).Cells(6).Value.ToString)
+
                 Dim idString As String = DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString
-                ethazi_mac_visual.Aldaketak.erabiltzaile.id = CInt(idString)
+                erabiltzailea.id = CInt(idString)
+                erabiltzailea.erabiltzaile = DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString
+                erabiltzailea.pasahitza = DataGridView1.Rows(e.RowIndex).Cells(2).Value.ToString
+                erabiltzailea.emaila = DataGridView1.Rows(e.RowIndex).Cells(3).Value.ToString
+                erabiltzailea.telefonoa = DataGridView1.Rows(e.RowIndex).Cells(4).Value.ToString
+                erabiltzailea.ErabiltzaileMota = DataGridView1.Rows(e.RowIndex).Cells(5).Value.ToString
+                erabiltzailea.IzenAbizenak = DataGridView1.Rows(e.RowIndex).Cells(6).Value.ToString
+
+                ethazi_mac_visual.Aldaketak_Erabiltzaileak.Label1_Id_Insert.Text = erabiltzailea.id
+                ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Erabiltzaileak.Text = erabiltzailea.erabiltzaile
+                ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Pasahitza.Text = erabiltzailea.pasahitza
+                ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Emaila.Text = erabiltzailea.emaila
+                ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Telefonoa.Text = erabiltzailea.telefonoa
+                ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_IzenaAbizenak.Text = erabiltzailea.IzenAbizenak
+
+
+
             End If
 
-            'MsgBox(ethazi_mac_visual.Aldaketak.erabiltzaile.id)
+            ' MsgBox(erabiltzailea.id)
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
 
-        'ethazi_mac_visual.Aldaketak.erabiltzaile.id = DataGridView1.Rows[e.RowIndex].Cells[0].Value.toString
-        'ethazi_mac_visual.Aldaketak.erabiltzaile.id = DataGridView1.CurrentRow.Cells(e.RowIndex).Value
+
 
 
         Me.Hide()
-        Aldaketak.Show()
-
+        Aldaketak_Erabiltzaileak.Show()
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
