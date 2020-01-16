@@ -70,6 +70,8 @@ Public Class Login
 
         ElseIf aurkituta = False Then
             MsgBox("Erabiltzailea edo pasahitza txarto daude")
+            TextBox1_User.Text = ""
+            TextBox1_Password.Text = ""
         End If
 
         If conexionBD.State = ConnectionState.Open Then
