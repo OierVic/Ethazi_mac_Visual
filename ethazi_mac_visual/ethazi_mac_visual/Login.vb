@@ -25,6 +25,8 @@ Public Class Login
             If conexionBD.State = ConnectionState.Open Then conexionBD.Close()
         End Try
 
+        'Dim hola As New Aldaketak_Ostatuak
+        'hola.Show()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

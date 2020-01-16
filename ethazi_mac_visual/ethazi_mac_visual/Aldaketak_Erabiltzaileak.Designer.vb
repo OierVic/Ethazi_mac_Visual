@@ -60,11 +60,11 @@ Partial Class Aldaketak_Erabiltzaileak
         '
         Me.Label1_Id.AutoSize = True
         Me.Label1_Id.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1_Id.Location = New System.Drawing.Point(56, 96)
+        Me.Label1_Id.Location = New System.Drawing.Point(23, 96)
         Me.Label1_Id.Name = "Label1_Id"
-        Me.Label1_Id.Size = New System.Drawing.Size(31, 20)
+        Me.Label1_Id.Size = New System.Drawing.Size(121, 20)
         Me.Label1_Id.TabIndex = 2
-        Me.Label1_Id.Text = "Id :"
+        Me.Label1_Id.Text = "Id Erabiltzailea :"
         '
         'Label1_Erabiltzaileak
         '
@@ -182,7 +182,7 @@ Partial Class Aldaketak_Erabiltzaileak
         Me.Label1_Id_Insert.AutoSize = True
         Me.Label1_Id_Insert.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1_Id_Insert.ForeColor = System.Drawing.Color.Blue
-        Me.Label1_Id_Insert.Location = New System.Drawing.Point(111, 96)
+        Me.Label1_Id_Insert.Location = New System.Drawing.Point(150, 96)
         Me.Label1_Id_Insert.Name = "Label1_Id_Insert"
         Me.Label1_Id_Insert.Size = New System.Drawing.Size(35, 20)
         Me.Label1_Id_Insert.TabIndex = 15
