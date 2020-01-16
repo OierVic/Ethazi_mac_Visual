@@ -110,10 +110,10 @@ Public Class Aldaketak_Erabiltzaileak
             TextBox1_Telefonoa.BackColor = Color.Red
             TodoLosDatosBien = False
         End If
-        If Len(Trim(ComboBox1_ErabiltzaileMota.SelectedValue)) = 0 Then
-            ComboBox1_ErabiltzaileMota.BackColor = Color.Red
-            TodoLosDatosBien = False
-        End If
+        'If Len(Trim(ComboBox1_ErabiltzaileMota.SelectedValue)) = 0 Then
+        '    ComboBox1_ErabiltzaileMota.BackColor = Color.Red
+        '    TodoLosDatosBien = False
+        'End If
         If Len(Trim(TextBox1_IzenaAbizenak.Text)) = 0 Then
             TextBox1_IzenaAbizenak.BackColor = Color.Red
             TodoLosDatosBien = False
@@ -135,6 +135,7 @@ Public Class Aldaketak_Erabiltzaileak
         'Erabiltzaile Mota
         If ComboBox1_ErabiltzaileMota.SelectedIndex = 0 Or ComboBox1_ErabiltzaileMota.SelectedIndex = 1 Then
             ComboBox1_ErabiltzaileMota.BackColor = Color.Green
+
         Else
             TodoLosDatosBien = False
             ComboBox1_ErabiltzaileMota.BackColor = Color.Red
