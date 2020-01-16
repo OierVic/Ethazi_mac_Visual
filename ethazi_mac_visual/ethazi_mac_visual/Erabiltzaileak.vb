@@ -168,6 +168,7 @@ Public Class Erabiltzaileak
 
         MaxCount = MaxCount + 1
 
+        'Vaciar TextBox
         ethazi_mac_visual.Aldaketak_Erabiltzaileak.Label1_Id_Insert.Text = MaxCount.ToString
         ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Erabiltzailea.Text = ""
         ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Pasahitza.Text = ""
@@ -177,6 +178,14 @@ Public Class Erabiltzaileak
         ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_IzenaAbizenak.Text = ""
 
 
+
+        'Quitar los colores
+        ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Erabiltzailea.BackColor = SystemColors.Window
+        ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Pasahitza.BackColor = SystemColors.Window
+        ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Emaila.BackColor = SystemColors.Window
+        ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Telefonoa.BackColor = SystemColors.Window
+        ethazi_mac_visual.Aldaketak_Erabiltzaileak.ComboBox1_ErabiltzaileMota.BackColor = SystemColors.Window
+        ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_IzenaAbizenak.BackColor = SystemColors.Window
 
 
     End Sub
@@ -229,6 +238,14 @@ Public Class Erabiltzaileak
                 ethazi_mac_visual.Aldaketak_Erabiltzaileak.Button1_Gehitu.Visible = False
                 ethazi_mac_visual.Aldaketak_Erabiltzaileak.Button1_Aldaketa.Visible = True
                 ethazi_mac_visual.Aldaketak_Erabiltzaileak.Button1_Kendu.Visible = True
+
+                'Quitar los colores
+                ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Erabiltzailea.BackColor = SystemColors.Window
+                ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Pasahitza.BackColor = SystemColors.Window
+                ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Emaila.BackColor = SystemColors.Window
+                ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Telefonoa.BackColor = SystemColors.Window
+                ethazi_mac_visual.Aldaketak_Erabiltzaileak.ComboBox1_ErabiltzaileMota.BackColor = SystemColors.Window
+                ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_IzenaAbizenak.BackColor = SystemColors.Window
 
 
             End If

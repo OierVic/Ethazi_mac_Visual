@@ -209,6 +209,15 @@ Public Class Aldaketak_Erabiltzaileak
                     Me.ComboBox1_ErabiltzaileMota.Text = "Mota 1 - Altua"
                     Me.TextBox1_IzenaAbizenak.Text = ""
 
+                    'Quitar los colores
+                    Me.TextBox1_Erabiltzailea.BackColor = SystemColors.Window
+                    Me.TextBox1_Pasahitza.BackColor = SystemColors.Window
+                    Me.TextBox1_Emaila.BackColor = Color.White
+                    Me.TextBox1_Telefonoa.BackColor = SystemColors.Window
+                    Me.ComboBox1_ErabiltzaileMota.BackColor = SystemColors.Window
+                    Me.TextBox1_IzenaAbizenak.BackColor = SystemColors.Window
+
+
                 Catch ex As Exception
                     MsgBox(ex.Message.ToString)
                 Finally
@@ -356,6 +365,23 @@ Public Class Aldaketak_Erabiltzaileak
                     ethazi_mac_visual.Erabiltzaileak.Show()
                     ethazi_mac_visual.Erabiltzaileak.Enabled = True
 
+                    'Vaciar TextBox
+                    Me.TextBox1_Erabiltzailea.Text = ""
+                    Me.TextBox1_Pasahitza.Text = ""
+                    Me.TextBox1_Emaila.Text = ""
+                    Me.TextBox1_Telefonoa.Text = ""
+                    Me.ComboBox1_ErabiltzaileMota.Text = "Mota 1 - Altua"
+                    Me.TextBox1_IzenaAbizenak.Text = ""
+
+                    'Quitar los colores
+                    Me.TextBox1_Erabiltzailea.BackColor = SystemColors.Window
+                    Me.TextBox1_Pasahitza.BackColor = SystemColors.Window
+                    Me.TextBox1_Emaila.BackColor = SystemColors.Window
+                    Me.TextBox1_Telefonoa.BackColor = SystemColors.Window
+                    Me.ComboBox1_ErabiltzaileMota.BackColor = SystemColors.Window
+                    Me.TextBox1_IzenaAbizenak.BackColor = SystemColors.Window
+
+
 
                 Catch ex As Exception
                     MsgBox(ex.Message.ToString)
@@ -441,6 +467,22 @@ Public Class Aldaketak_Erabiltzaileak
                 ethazi_mac_visual.Erabiltzaileak.Show()
                 ethazi_mac_visual.Erabiltzaileak.Enabled = True
 
+                'Vaciar TextBox
+                Me.TextBox1_Erabiltzailea.Text = ""
+                Me.TextBox1_Pasahitza.Text = ""
+                Me.TextBox1_Emaila.Text = ""
+                Me.TextBox1_Telefonoa.Text = ""
+                Me.ComboBox1_ErabiltzaileMota.Text = "Mota 1 - Altua"
+                Me.TextBox1_IzenaAbizenak.Text = ""
+
+                'Quitar los colores
+                Me.TextBox1_Erabiltzailea.BackColor = SystemColors.Window
+                Me.TextBox1_Pasahitza.BackColor = SystemColors.Window
+                Me.TextBox1_Emaila.BackColor = SystemColors.Window
+                Me.TextBox1_Telefonoa.BackColor = SystemColors.Window
+                Me.ComboBox1_ErabiltzaileMota.BackColor = SystemColors.Window
+                Me.TextBox1_IzenaAbizenak.BackColor = SystemColors.Window
+
 
             Catch ex As Exception
                 MsgBox(ex.Message.ToString)
@@ -504,6 +546,23 @@ Public Class Aldaketak_Erabiltzaileak
         Me.Hide()
         ethazi_mac_visual.Erabiltzaileak.Show()
         ethazi_mac_visual.Erabiltzaileak.Enabled = True
+
+        'Vaciar TextBox
+        Me.TextBox1_Erabiltzailea.Text = ""
+        Me.TextBox1_Pasahitza.Text = ""
+        Me.TextBox1_Emaila.Text = ""
+        Me.TextBox1_Telefonoa.Text = ""
+        Me.ComboBox1_ErabiltzaileMota.Text = "Mota 1 - Altua"
+        Me.TextBox1_IzenaAbizenak.Text = ""
+
+        'Quitar los colores
+        Me.TextBox1_Erabiltzailea.BackColor = SystemColors.Window
+        Me.TextBox1_Pasahitza.BackColor = SystemColors.Window
+        Me.TextBox1_Emaila.BackColor = SystemColors.Window
+        Me.TextBox1_Telefonoa.BackColor = SystemColors.Window
+        Me.ComboBox1_ErabiltzaileMota.BackColor = SystemColors.Window
+        Me.TextBox1_IzenaAbizenak.BackColor = SystemColors.Window
+
     End Sub
 
 End Class
