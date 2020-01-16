@@ -22,6 +22,7 @@ Partial Class Menu
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Menu))
         Me.Button1_Ostatuak = New System.Windows.Forms.Button()
         Me.Button1_Erabiltzaileak = New System.Windows.Forms.Button()
         Me.Button1_Atzera = New System.Windows.Forms.Button()
@@ -93,6 +94,7 @@ Partial Class Menu
         Me.Controls.Add(Me.Button1_Atzera)
         Me.Controls.Add(Me.Button1_Erabiltzaileak)
         Me.Controls.Add(Me.Button1_Ostatuak)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Menu"
         Me.Text = "Menu"
         Me.ResumeLayout(False)

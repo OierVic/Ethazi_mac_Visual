@@ -22,9 +22,8 @@ Partial Class Ostatuak
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ostatuak))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label1_Administrazio_Aplikazioa = New System.Windows.Forms.Label()
-        Me.Button1_Atzera = New System.Windows.Forms.Button()
         Me.ID_Ostatu = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.izena = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.deskribapena = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -35,6 +34,8 @@ Partial Class Ostatuak
         Me.Emaila = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Latitudea = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Longitudea = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label1_Administrazio_Aplikazioa = New System.Windows.Forms.Label()
+        Me.Button1_Atzera = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -46,29 +47,6 @@ Partial Class Ostatuak
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(1069, 464)
         Me.DataGridView1.TabIndex = 0
-        '
-        'Label1_Administrazio_Aplikazioa
-        '
-        Me.Label1_Administrazio_Aplikazioa.AutoSize = True
-        Me.Label1_Administrazio_Aplikazioa.BackColor = System.Drawing.Color.White
-        Me.Label1_Administrazio_Aplikazioa.Font = New System.Drawing.Font("Segoe UI Black", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1_Administrazio_Aplikazioa.Location = New System.Drawing.Point(739, 9)
-        Me.Label1_Administrazio_Aplikazioa.Name = "Label1_Administrazio_Aplikazioa"
-        Me.Label1_Administrazio_Aplikazioa.Size = New System.Drawing.Size(260, 28)
-        Me.Label1_Administrazio_Aplikazioa.TabIndex = 9
-        Me.Label1_Administrazio_Aplikazioa.Text = "Administrazio Aplikazioa"
-        '
-        'Button1_Atzera
-        '
-        Me.Button1_Atzera.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.return_logo_SinFondo
-        Me.Button1_Atzera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1_Atzera.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1_Atzera.Location = New System.Drawing.Point(62, 537)
-        Me.Button1_Atzera.Name = "Button1_Atzera"
-        Me.Button1_Atzera.Size = New System.Drawing.Size(64, 58)
-        Me.Button1_Atzera.TabIndex = 10
-        Me.Button1_Atzera.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1_Atzera.UseVisualStyleBackColor = True
         '
         'ID_Ostatu
         '
@@ -126,6 +104,29 @@ Partial Class Ostatuak
         Me.Longitudea.HeaderText = "Longitudea"
         Me.Longitudea.Name = "Longitudea"
         '
+        'Label1_Administrazio_Aplikazioa
+        '
+        Me.Label1_Administrazio_Aplikazioa.AutoSize = True
+        Me.Label1_Administrazio_Aplikazioa.BackColor = System.Drawing.Color.White
+        Me.Label1_Administrazio_Aplikazioa.Font = New System.Drawing.Font("Segoe UI Black", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1_Administrazio_Aplikazioa.Location = New System.Drawing.Point(739, 9)
+        Me.Label1_Administrazio_Aplikazioa.Name = "Label1_Administrazio_Aplikazioa"
+        Me.Label1_Administrazio_Aplikazioa.Size = New System.Drawing.Size(260, 28)
+        Me.Label1_Administrazio_Aplikazioa.TabIndex = 9
+        Me.Label1_Administrazio_Aplikazioa.Text = "Administrazio Aplikazioa"
+        '
+        'Button1_Atzera
+        '
+        Me.Button1_Atzera.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.return_logo_SinFondo
+        Me.Button1_Atzera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1_Atzera.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1_Atzera.Location = New System.Drawing.Point(62, 537)
+        Me.Button1_Atzera.Name = "Button1_Atzera"
+        Me.Button1_Atzera.Size = New System.Drawing.Size(64, 58)
+        Me.Button1_Atzera.TabIndex = 10
+        Me.Button1_Atzera.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1_Atzera.UseVisualStyleBackColor = True
+        '
         'Ostatuak
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -135,6 +136,7 @@ Partial Class Ostatuak
         Me.Controls.Add(Me.Button1_Atzera)
         Me.Controls.Add(Me.Label1_Administrazio_Aplikazioa)
         Me.Controls.Add(Me.DataGridView1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Ostatuak"
         Me.Text = "Ostatuak"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

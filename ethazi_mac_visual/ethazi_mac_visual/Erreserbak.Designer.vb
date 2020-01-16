@@ -22,6 +22,7 @@ Partial Class Erreserbak
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Erreserbak))
         Me.Label1_Administrazio_Aplikazioa = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.id_Erreserba = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -97,8 +98,9 @@ Partial Class Erreserbak
         Me.Controls.Add(Me.Button1_Atzera)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1_Administrazio_Aplikazioa)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Erreserbak"
-        Me.Text = "Form1"
+        Me.Text = "Erreserbak"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

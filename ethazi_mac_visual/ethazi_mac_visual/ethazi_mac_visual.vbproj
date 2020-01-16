@@ -93,6 +93,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aldaketak_Ostatuak.Designer.vb">
+      <DependentUpon>Aldaketak_Ostatuak.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aldaketak_Ostatuak.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ostatua.vb" />
     <Compile Include="Erabiltzaile.vb" />
     <Compile Include="Erabiltzaileak.Designer.vb">
       <DependentUpon>Erabiltzaileak.vb</DependentUpon>
@@ -156,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Erreserbak.resx">
       <DependentUpon>Erreserbak.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aldaketak_Ostatuak.resx">
+      <DependentUpon>Aldaketak_Ostatuak.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ostatuak.resx">
       <DependentUpon>Ostatuak.vb</DependentUpon>

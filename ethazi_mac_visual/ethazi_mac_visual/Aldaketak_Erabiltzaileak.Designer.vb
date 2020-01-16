@@ -24,6 +24,7 @@ Partial Class Aldaketak_Erabiltzaileak
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Aldaketak_Erabiltzaileak))
         Me.Label1_Titulua = New System.Windows.Forms.Label()
         Me.Label1_Id = New System.Windows.Forms.Label()
         Me.Label1_Erabiltzaileak = New System.Windows.Forms.Label()
@@ -255,8 +256,9 @@ Partial Class Aldaketak_Erabiltzaileak
         Me.Controls.Add(Me.Label1_Erabiltzaileak)
         Me.Controls.Add(Me.Label1_Id)
         Me.Controls.Add(Me.Label1_Titulua)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Aldaketak_Erabiltzaileak"
-        Me.Text = "Aldaketak"
+        Me.Text = "Aldaketak Erabiltzailea"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -22,6 +22,7 @@ Partial Class Login
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.Label1_Login = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1_User = New System.Windows.Forms.TextBox()
@@ -120,8 +121,9 @@ Partial Class Login
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1_Login)
         Me.ForeColor = System.Drawing.Color.Black
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Login"
-        Me.Text = "Form1"
+        Me.Text = "Login"
         CType(Me.PictureBox2_Password, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1_User, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
