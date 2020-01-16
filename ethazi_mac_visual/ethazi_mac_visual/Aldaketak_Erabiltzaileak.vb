@@ -117,10 +117,12 @@ Public Class Aldaketak_Erabiltzaileak
         If Len(Trim(TextBox1_IzenaAbizenak.Text)) = 0 Then
             TextBox1_IzenaAbizenak.BackColor = Color.Red
             TodoLosDatosBien = False
-            '''End If
+        End If
 
-            'Telefonoa
-            Try
+
+
+        'Telefonoa
+        Try
             Dim telefonovalidar As Integer
             telefonovalidar = TextBox1_Telefonoa.Text
             TextBox1_Telefonoa.BackColor = Color.Green
