@@ -23,6 +23,9 @@ Partial Class Erabiltzaileak
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label1_Administrazio_Aplikazioa = New System.Windows.Forms.Label()
+        Me.Button1_Gehitu = New System.Windows.Forms.Button()
+        Me.Button1_Atzera = New System.Windows.Forms.Button()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.erabiltzaile = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pasahitza = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -30,9 +33,6 @@ Partial Class Erabiltzaileak
         Me.telefonoa = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Erabiltzaile_mota = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IzenAbizenak = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label1_Administrazio_Aplikazioa = New System.Windows.Forms.Label()
-        Me.Button1_Gehitu = New System.Windows.Forms.Button()
-        Me.Button1_Atzera = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -44,49 +44,6 @@ Partial Class Erabiltzaileak
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(1069, 495)
         Me.DataGridView1.TabIndex = 0
-        '
-        'ID
-        '
-        Me.ID.Frozen = True
-        Me.ID.HeaderText = "ID erabiltzaile"
-        Me.ID.Name = "ID"
-        Me.ID.Width = 50
-        '
-        'erabiltzaile
-        '
-        Me.erabiltzaile.Frozen = True
-        Me.erabiltzaile.HeaderText = "Erabiltzailea"
-        Me.erabiltzaile.Name = "erabiltzaile"
-        Me.erabiltzaile.Width = 150
-        '
-        'pasahitza
-        '
-        Me.pasahitza.Frozen = True
-        Me.pasahitza.HeaderText = "pasahitza"
-        Me.pasahitza.Name = "pasahitza"
-        Me.pasahitza.Width = 250
-        '
-        'mail
-        '
-        Me.mail.HeaderText = "Emaila"
-        Me.mail.Name = "mail"
-        Me.mail.Width = 200
-        '
-        'telefonoa
-        '
-        Me.telefonoa.HeaderText = "telefonoa"
-        Me.telefonoa.Name = "telefonoa"
-        '
-        'Erabiltzaile_mota
-        '
-        Me.Erabiltzaile_mota.HeaderText = "Erabiltzaile Mota"
-        Me.Erabiltzaile_mota.Name = "Erabiltzaile_mota"
-        '
-        'IzenAbizenak
-        '
-        Me.IzenAbizenak.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.IzenAbizenak.HeaderText = "Izena eta Abizenak"
-        Me.IzenAbizenak.Name = "IzenAbizenak"
         '
         'Label1_Administrazio_Aplikazioa
         '
@@ -122,6 +79,49 @@ Partial Class Erabiltzaileak
         Me.Button1_Atzera.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button1_Atzera.UseVisualStyleBackColor = True
         '
+        'ID
+        '
+        Me.ID.Frozen = True
+        Me.ID.HeaderText = "ID erabiltzaile"
+        Me.ID.Name = "ID"
+        Me.ID.Width = 50
+        '
+        'erabiltzaile
+        '
+        Me.erabiltzaile.Frozen = True
+        Me.erabiltzaile.HeaderText = "Erabiltzailea"
+        Me.erabiltzaile.Name = "erabiltzaile"
+        Me.erabiltzaile.Width = 150
+        '
+        'pasahitza
+        '
+        Me.pasahitza.Frozen = True
+        Me.pasahitza.HeaderText = "Pasahitza"
+        Me.pasahitza.Name = "pasahitza"
+        Me.pasahitza.Width = 250
+        '
+        'mail
+        '
+        Me.mail.HeaderText = "Emaila"
+        Me.mail.Name = "mail"
+        Me.mail.Width = 200
+        '
+        'telefonoa
+        '
+        Me.telefonoa.HeaderText = "Telefonoa"
+        Me.telefonoa.Name = "telefonoa"
+        '
+        'Erabiltzaile_mota
+        '
+        Me.Erabiltzaile_mota.HeaderText = "Erabiltzaile Mota"
+        Me.Erabiltzaile_mota.Name = "Erabiltzaile_mota"
+        '
+        'IzenAbizenak
+        '
+        Me.IzenAbizenak.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.IzenAbizenak.HeaderText = "Izena eta Abizenak"
+        Me.IzenAbizenak.Name = "IzenAbizenak"
+        '
         'Erabiltzaileak
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -143,6 +143,7 @@ Partial Class Erabiltzaileak
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button1_Atzera As Button
     Friend WithEvents Label1_Administrazio_Aplikazioa As Label
+    Friend WithEvents Button1_Gehitu As Button
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents erabiltzaile As DataGridViewTextBoxColumn
     Friend WithEvents pasahitza As DataGridViewTextBoxColumn
@@ -150,5 +151,4 @@ Partial Class Erabiltzaileak
     Friend WithEvents telefonoa As DataGridViewTextBoxColumn
     Friend WithEvents Erabiltzaile_mota As DataGridViewTextBoxColumn
     Friend WithEvents IzenAbizenak As DataGridViewTextBoxColumn
-    Friend WithEvents Button1_Gehitu As Button
 End Class

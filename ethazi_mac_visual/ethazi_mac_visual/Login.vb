@@ -32,7 +32,7 @@ Public Class Login
         Dim pasahitza As String
         Dim aurkituta As Boolean
 
-        Dim SQL As String = "SELECT erabiltzaile, pasahitza FROM erabiltzaile"
+        Dim SQL As String = "SELECT erabiltzaile, pasahitza FROM erabiltzaile where Erabiltzaile_mota = 1"
         Dim cmd1 As New MySqlCommand(SQL, conexionBD)
         Dim dr As MySqlDataReader
 
