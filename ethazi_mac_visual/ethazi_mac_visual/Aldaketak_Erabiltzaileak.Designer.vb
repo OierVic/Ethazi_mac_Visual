@@ -98,6 +98,7 @@ Partial Class Aldaketak_Erabiltzaileak
         Me.TextBox1_Pasahitza.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1_Pasahitza.Location = New System.Drawing.Point(622, 87)
         Me.TextBox1_Pasahitza.Name = "TextBox1_Pasahitza"
+        Me.TextBox1_Pasahitza.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox1_Pasahitza.Size = New System.Drawing.Size(159, 26)
         Me.TextBox1_Pasahitza.TabIndex = 6
         '

@@ -71,6 +71,8 @@ Public Class Aldaketak_Erabiltzaileak
     End Sub
 
     Private Sub Button1_Gehitu_Click(sender As Object, e As EventArgs) Handles Button1_Gehitu.Click
+
+
         If MessageBox.Show("Seguru datu hauek erregistratu nahi dituzula ?", "ERABILTZAILEA GEHITU", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.OK Then
             Dim MaxCount As Integer
             Dim cmd2 As New MySqlCommand("SELECT Count(Id_erabiltzaile) FROM erabiltzaile", Login.conexionBD)
@@ -113,6 +115,13 @@ Public Class Aldaketak_Erabiltzaileak
                 ethazi_mac_visual.Erabiltzaileak.Enabled = True
                 ethazi_mac_visual.Erabiltzaileak.DataGridView1.Rows.Add(MaxCount + 1, TextBox1_Erabiltzailea.Text, TextBox1_Pasahitza.Text, TextBox1_Emaila.Text, TextBox1_Telefonoa.Text, ComboBox1_ErabiltzaileMota.SelectedIndex, TextBox1_IzenaAbizenak.Text)
 
+                Me.TextBox1_Erabiltzailea.Text = ""
+                Me.TextBox1_Pasahitza.Text = ""
+                Me.TextBox1_Emaila.Text = ""
+                Me.TextBox1_Telefonoa.Text = ""
+                Me.ComboBox1_ErabiltzaileMota.Text = "Mota 1 - Altua"
+                Me.TextBox1_IzenaAbizenak.Text = ""
+
             Catch ex As Exception
                 MsgBox(ex.Message.ToString)
             Finally
@@ -121,11 +130,89 @@ Public Class Aldaketak_Erabiltzaileak
                 End If
             End Try
 
+
+
         End If
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button1_Aldaketa.Click
         If MessageBox.Show("Seguru datu hauek aldatu nahi dituzula ?", "ERABILTZAILEA ALDATU", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.OK Then
+            Dim cmd1 As New MySqlCommand("UPDATE erabiltzaile SET erabiltzaile = '" & TextBox1_Erabiltzailea.Text & "', pasahitza = '" & TextBox1_Pasahitza.Text & "', mail = '" & TextBox1_Emaila.Text & "', telefonoa = '" & TextBox1_Telefonoa.Text & "', Erabiltzaile_mota = " & ComboBox1_ErabiltzaileMota.SelectedIndex + 1 & ", IzenAbizenak = '" & TextBox1_IzenaAbizenak.Text & "'    WHERE id_erabiltzaile = " & Label1_Id_Insert.Text, Login.conexionBD)
+
+            Try
+                Login.conexionBD.Open()
+
+            Catch ex As Exception
+                MsgBox(ex.Message.ToString)
+            End Try
+
+            Try
+
+                cmd1.ExecuteNonQuery()
+                Login.conexionBD.Close()
+                MsgBox("Datuak ondo aldatu dira")
+
+                Me.Hide()
+                ethazi_mac_visual.Erabiltzaileak.Show()
+                ethazi_mac_visual.Erabiltzaileak.Enabled = True
+
+
+            Catch ex As Exception
+                MsgBox(ex.Message.ToString)
+            Finally
+                If Login.conexionBD.State = ConnectionState.Open Then
+                    Login.conexionBD.Close()
+                End If
+            End Try
+
+
+            'Borramos todo el datagriedview y luego hacemos un select y asi actualizamos todo
+            ethazi_mac_visual.Erabiltzaileak.DataGridView1.Rows.Clear()
+
+
+
+            Dim cmd2 As New MySqlCommand("SELECT * FROM erabiltzaile", Login.conexionBD)
+            Dim dr As MySqlDataReader
+
+            Try
+                Login.conexionBD.Open()
+                dr = cmd2.ExecuteReader
+            Catch ex As Exception
+                MsgBox("Errorea datu basearekin")
+
+            End Try
+            ethazi_mac_visual.Erabiltzaileak.DataGridView1.AllowUserToAddRows = False
+            ethazi_mac_visual.Erabiltzaileak.DataGridView1.AllowUserToDeleteRows = False
+            ethazi_mac_visual.Erabiltzaileak.DataGridView1.AllowUserToOrderColumns = False
+            ethazi_mac_visual.Erabiltzaileak.DataGridView1.ReadOnly = True
+            ethazi_mac_visual.Erabiltzaileak.DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+            ethazi_mac_visual.Erabiltzaileak.DataGridView1.MultiSelect = False
+            ethazi_mac_visual.Erabiltzaileak.DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None
+
+            ethazi_mac_visual.Erabiltzaileak.DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+            ethazi_mac_visual.Erabiltzaileak.DataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
+
+            'Color que se selecciona
+            ethazi_mac_visual.Erabiltzaileak.DataGridView1.DefaultCellStyle.SelectionBackColor = Color.Aqua
+
+            While dr.Read
+
+                Try
+                    ethazi_mac_visual.Erabiltzaileak.DataGridView1.Rows.Add(dr.Item(0), dr.Item(1), dr.Item(2), dr.Item(3), dr.Item(4), dr.Item(5), dr.Item(6))
+                    ethazi_mac_visual.Erabiltzaileak.DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige
+                Catch ex As Exception
+                    MsgBox(ex.Message.ToString)
+                End Try
+
+
+            End While
+
+            If Login.conexionBD.State = ConnectionState.Open Then
+                dr.Close()
+                Login.conexionBD.Close()
+            End If
+
+
 
         End If
     End Sub

@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports Mysqlx.XDevAPI.Relational
 
 Public Class Erabiltzaileak
     Dim dataset As DataSet
