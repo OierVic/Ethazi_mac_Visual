@@ -23,7 +23,7 @@ Partial Class Aldaketak_Ostatuak
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Aldaketak_Ostatuak))
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label1_Tituloa = New System.Windows.Forms.Label()
         Me.Label1_Id_Ostatu = New System.Windows.Forms.Label()
         Me.Label1_Id_Ostatu_Insert = New System.Windows.Forms.Label()
         Me.Label1_Izena = New System.Windows.Forms.Label()
@@ -31,21 +31,32 @@ Partial Class Aldaketak_Ostatuak
         Me.Label1_Deskribapena = New System.Windows.Forms.Label()
         Me.RichTextBox1_Deskribapena = New System.Windows.Forms.RichTextBox()
         Me.Label1_Ostatu_mota = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox1_Ostatu_Mota = New System.Windows.Forms.ComboBox()
         Me.Label1_Logela_kop = New System.Windows.Forms.Label()
         Me.NumericUpDown1_Logela_kop = New System.Windows.Forms.NumericUpDown()
+        Me.Label1_Kokapena = New System.Windows.Forms.Label()
+        Me.RichTextBox1_Kokapena = New System.Windows.Forms.RichTextBox()
+        Me.Label1_Telefonoa = New System.Windows.Forms.Label()
+        Me.TextBox1_Telefonoa = New System.Windows.Forms.TextBox()
+        Me.Label1_Email = New System.Windows.Forms.Label()
+        Me.TextBox1_Email = New System.Windows.Forms.TextBox()
+        Me.Label1_Latitudea = New System.Windows.Forms.Label()
+        Me.TextBox1_Latitudea = New System.Windows.Forms.TextBox()
+        Me.Label1_Longitudea = New System.Windows.Forms.Label()
+        Me.TextBox1_Longitudea = New System.Windows.Forms.TextBox()
+        Me.Button1_Atzera = New System.Windows.Forms.Button()
         CType(Me.NumericUpDown1_Logela_kop, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label1
+        'Label1_Tituloa
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(337, 21)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(121, 46)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Titulua"
+        Me.Label1_Tituloa.AutoSize = True
+        Me.Label1_Tituloa.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1_Tituloa.Location = New System.Drawing.Point(337, 21)
+        Me.Label1_Tituloa.Name = "Label1_Tituloa"
+        Me.Label1_Tituloa.Size = New System.Drawing.Size(137, 46)
+        Me.Label1_Tituloa.TabIndex = 0
+        Me.Label1_Tituloa.Text = "Ostatua"
         '
         'Label1_Id_Ostatu
         '
@@ -73,7 +84,7 @@ Partial Class Aldaketak_Ostatuak
         '
         Me.Label1_Izena.AutoSize = True
         Me.Label1_Izena.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1_Izena.Location = New System.Drawing.Point(204, 86)
+        Me.Label1_Izena.Location = New System.Drawing.Point(175, 86)
         Me.Label1_Izena.Name = "Label1_Izena"
         Me.Label1_Izena.Size = New System.Drawing.Size(57, 20)
         Me.Label1_Izena.TabIndex = 3
@@ -82,16 +93,17 @@ Partial Class Aldaketak_Ostatuak
         'TextBox1_Izena
         '
         Me.TextBox1_Izena.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1_Izena.Location = New System.Drawing.Point(267, 83)
+        Me.TextBox1_Izena.Location = New System.Drawing.Point(238, 85)
+        Me.TextBox1_Izena.MaxLength = 45
         Me.TextBox1_Izena.Name = "TextBox1_Izena"
-        Me.TextBox1_Izena.Size = New System.Drawing.Size(213, 26)
+        Me.TextBox1_Izena.Size = New System.Drawing.Size(197, 26)
         Me.TextBox1_Izena.TabIndex = 4
         '
         'Label1_Deskribapena
         '
         Me.Label1_Deskribapena.AutoSize = True
         Me.Label1_Deskribapena.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1_Deskribapena.Location = New System.Drawing.Point(502, 83)
+        Me.Label1_Deskribapena.Location = New System.Drawing.Point(454, 86)
         Me.Label1_Deskribapena.Name = "Label1_Deskribapena"
         Me.Label1_Deskribapena.Size = New System.Drawing.Size(116, 20)
         Me.Label1_Deskribapena.TabIndex = 5
@@ -99,10 +111,11 @@ Partial Class Aldaketak_Ostatuak
         '
         'RichTextBox1_Deskribapena
         '
-        Me.RichTextBox1_Deskribapena.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Inch, CType(0, Byte))
-        Me.RichTextBox1_Deskribapena.Location = New System.Drawing.Point(635, 83)
+        Me.RichTextBox1_Deskribapena.Font = New System.Drawing.Font("Microsoft Sans Serif", 0.15!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Inch, CType(0, Byte))
+        Me.RichTextBox1_Deskribapena.Location = New System.Drawing.Point(576, 73)
+        Me.RichTextBox1_Deskribapena.MaxLength = 1500
         Me.RichTextBox1_Deskribapena.Name = "RichTextBox1_Deskribapena"
-        Me.RichTextBox1_Deskribapena.Size = New System.Drawing.Size(195, 97)
+        Me.RichTextBox1_Deskribapena.Size = New System.Drawing.Size(254, 134)
         Me.RichTextBox1_Deskribapena.TabIndex = 6
         Me.RichTextBox1_Deskribapena.Text = ""
         '
@@ -116,14 +129,14 @@ Partial Class Aldaketak_Ostatuak
         Me.Label1_Ostatu_mota.TabIndex = 7
         Me.Label1_Ostatu_mota.Text = "Ostatu Mota :"
         '
-        'ComboBox1
+        'ComboBox1_Ostatu_Mota
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Campings", "Agroturismos", "Casas Rurales", "Albergues"})
-        Me.ComboBox1.Location = New System.Drawing.Point(147, 151)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 8
+        Me.ComboBox1_Ostatu_Mota.FormattingEnabled = True
+        Me.ComboBox1_Ostatu_Mota.Items.AddRange(New Object() {"Campings", "Agroturismos", "Casas Rurales", "Albergues"})
+        Me.ComboBox1_Ostatu_Mota.Location = New System.Drawing.Point(147, 151)
+        Me.ComboBox1_Ostatu_Mota.Name = "ComboBox1_Ostatu_Mota"
+        Me.ComboBox1_Ostatu_Mota.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1_Ostatu_Mota.TabIndex = 8
         '
         'Label1_Logela_kop
         '
@@ -146,15 +159,131 @@ Partial Class Aldaketak_Ostatuak
         Me.NumericUpDown1_Logela_kop.TabIndex = 10
         Me.NumericUpDown1_Logela_kop.Value = New Decimal(New Integer() {5, 0, 0, 0})
         '
+        'Label1_Kokapena
+        '
+        Me.Label1_Kokapena.AutoSize = True
+        Me.Label1_Kokapena.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1_Kokapena.Location = New System.Drawing.Point(37, 218)
+        Me.Label1_Kokapena.Name = "Label1_Kokapena"
+        Me.Label1_Kokapena.Size = New System.Drawing.Size(89, 20)
+        Me.Label1_Kokapena.TabIndex = 11
+        Me.Label1_Kokapena.Text = "Kokapena :"
+        '
+        'RichTextBox1_Kokapena
+        '
+        Me.RichTextBox1_Kokapena.Location = New System.Drawing.Point(132, 218)
+        Me.RichTextBox1_Kokapena.MaxLength = 90
+        Me.RichTextBox1_Kokapena.Name = "RichTextBox1_Kokapena"
+        Me.RichTextBox1_Kokapena.Size = New System.Drawing.Size(286, 36)
+        Me.RichTextBox1_Kokapena.TabIndex = 12
+        Me.RichTextBox1_Kokapena.Text = ""
+        '
+        'Label1_Telefonoa
+        '
+        Me.Label1_Telefonoa.AutoSize = True
+        Me.Label1_Telefonoa.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1_Telefonoa.Location = New System.Drawing.Point(454, 225)
+        Me.Label1_Telefonoa.Name = "Label1_Telefonoa"
+        Me.Label1_Telefonoa.Size = New System.Drawing.Size(88, 20)
+        Me.Label1_Telefonoa.TabIndex = 13
+        Me.Label1_Telefonoa.Text = "Telefonoa :"
+        '
+        'TextBox1_Telefonoa
+        '
+        Me.TextBox1_Telefonoa.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1_Telefonoa.Location = New System.Drawing.Point(563, 224)
+        Me.TextBox1_Telefonoa.MaxLength = 9
+        Me.TextBox1_Telefonoa.Name = "TextBox1_Telefonoa"
+        Me.TextBox1_Telefonoa.Size = New System.Drawing.Size(100, 26)
+        Me.TextBox1_Telefonoa.TabIndex = 14
+        '
+        'Label1_Email
+        '
+        Me.Label1_Email.AutoSize = True
+        Me.Label1_Email.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1_Email.Location = New System.Drawing.Point(38, 281)
+        Me.Label1_Email.Name = "Label1_Email"
+        Me.Label1_Email.Size = New System.Drawing.Size(56, 20)
+        Me.Label1_Email.TabIndex = 15
+        Me.Label1_Email.Text = "Email :"
+        '
+        'TextBox1_Email
+        '
+        Me.TextBox1_Email.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1_Email.Location = New System.Drawing.Point(100, 281)
+        Me.TextBox1_Email.MaxLength = 80
+        Me.TextBox1_Email.Name = "TextBox1_Email"
+        Me.TextBox1_Email.Size = New System.Drawing.Size(303, 26)
+        Me.TextBox1_Email.TabIndex = 16
+        '
+        'Label1_Latitudea
+        '
+        Me.Label1_Latitudea.AutoSize = True
+        Me.Label1_Latitudea.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1_Latitudea.Location = New System.Drawing.Point(435, 281)
+        Me.Label1_Latitudea.Name = "Label1_Latitudea"
+        Me.Label1_Latitudea.Size = New System.Drawing.Size(84, 20)
+        Me.Label1_Latitudea.TabIndex = 17
+        Me.Label1_Latitudea.Text = "Latitudea :"
+        '
+        'TextBox1_Latitudea
+        '
+        Me.TextBox1_Latitudea.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1_Latitudea.Location = New System.Drawing.Point(525, 275)
+        Me.TextBox1_Latitudea.MaxLength = 45
+        Me.TextBox1_Latitudea.Name = "TextBox1_Latitudea"
+        Me.TextBox1_Latitudea.Size = New System.Drawing.Size(213, 26)
+        Me.TextBox1_Latitudea.TabIndex = 18
+        '
+        'Label1_Longitudea
+        '
+        Me.Label1_Longitudea.AutoSize = True
+        Me.Label1_Longitudea.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1_Longitudea.Location = New System.Drawing.Point(435, 329)
+        Me.Label1_Longitudea.Name = "Label1_Longitudea"
+        Me.Label1_Longitudea.Size = New System.Drawing.Size(97, 20)
+        Me.Label1_Longitudea.TabIndex = 19
+        Me.Label1_Longitudea.Text = "Longitudea :"
+        '
+        'TextBox1_Longitudea
+        '
+        Me.TextBox1_Longitudea.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1_Longitudea.Location = New System.Drawing.Point(539, 328)
+        Me.TextBox1_Longitudea.MaxLength = 45
+        Me.TextBox1_Longitudea.Name = "TextBox1_Longitudea"
+        Me.TextBox1_Longitudea.Size = New System.Drawing.Size(199, 26)
+        Me.TextBox1_Longitudea.TabIndex = 20
+        '
+        'Button1_Atzera
+        '
+        Me.Button1_Atzera.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.HouseSimbolo
+        Me.Button1_Atzera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1_Atzera.Location = New System.Drawing.Point(30, 431)
+        Me.Button1_Atzera.Name = "Button1_Atzera"
+        Me.Button1_Atzera.Size = New System.Drawing.Size(88, 75)
+        Me.Button1_Atzera.TabIndex = 22
+        Me.Button1_Atzera.UseVisualStyleBackColor = True
+        '
         'Aldaketak_Ostatuak
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(842, 545)
+        Me.Controls.Add(Me.Button1_Atzera)
+        Me.Controls.Add(Me.TextBox1_Longitudea)
+        Me.Controls.Add(Me.Label1_Longitudea)
+        Me.Controls.Add(Me.TextBox1_Latitudea)
+        Me.Controls.Add(Me.Label1_Latitudea)
+        Me.Controls.Add(Me.TextBox1_Email)
+        Me.Controls.Add(Me.Label1_Email)
+        Me.Controls.Add(Me.TextBox1_Telefonoa)
+        Me.Controls.Add(Me.Label1_Telefonoa)
+        Me.Controls.Add(Me.RichTextBox1_Kokapena)
+        Me.Controls.Add(Me.Label1_Kokapena)
         Me.Controls.Add(Me.NumericUpDown1_Logela_kop)
         Me.Controls.Add(Me.Label1_Logela_kop)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.ComboBox1_Ostatu_Mota)
         Me.Controls.Add(Me.Label1_Ostatu_mota)
         Me.Controls.Add(Me.RichTextBox1_Deskribapena)
         Me.Controls.Add(Me.Label1_Deskribapena)
@@ -162,17 +291,17 @@ Partial Class Aldaketak_Ostatuak
         Me.Controls.Add(Me.Label1_Izena)
         Me.Controls.Add(Me.Label1_Id_Ostatu_Insert)
         Me.Controls.Add(Me.Label1_Id_Ostatu)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Label1_Tituloa)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Aldaketak_Ostatuak"
-        Me.Text = "Aldaketak Erabiltzailea"
+        Me.Text = "Aldaketak Ostatuak"
         CType(Me.NumericUpDown1_Logela_kop, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Label1 As Label
+    Friend WithEvents Label1_Tituloa As Label
     Friend WithEvents Label1_Id_Ostatu As Label
     Friend WithEvents Label1_Id_Ostatu_Insert As Label
     Friend WithEvents Label1_Izena As Label
@@ -180,7 +309,18 @@ Partial Class Aldaketak_Ostatuak
     Friend WithEvents Label1_Deskribapena As Label
     Friend WithEvents RichTextBox1_Deskribapena As RichTextBox
     Friend WithEvents Label1_Ostatu_mota As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ComboBox1_Ostatu_Mota As ComboBox
     Friend WithEvents Label1_Logela_kop As Label
     Friend WithEvents NumericUpDown1_Logela_kop As NumericUpDown
+    Friend WithEvents Label1_Kokapena As Label
+    Friend WithEvents RichTextBox1_Kokapena As RichTextBox
+    Friend WithEvents Label1_Telefonoa As Label
+    Friend WithEvents TextBox1_Telefonoa As TextBox
+    Friend WithEvents Label1_Email As Label
+    Friend WithEvents TextBox1_Email As TextBox
+    Friend WithEvents Label1_Latitudea As Label
+    Friend WithEvents TextBox1_Latitudea As TextBox
+    Friend WithEvents Label1_Longitudea As Label
+    Friend WithEvents TextBox1_Longitudea As TextBox
+    Friend WithEvents Button1_Atzera As Button
 End Class

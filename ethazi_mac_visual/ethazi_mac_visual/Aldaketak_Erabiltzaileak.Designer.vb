@@ -50,11 +50,11 @@ Partial Class Aldaketak_Erabiltzaileak
         '
         Me.Label1_Titulua.AutoSize = True
         Me.Label1_Titulua.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1_Titulua.Location = New System.Drawing.Point(343, 19)
+        Me.Label1_Titulua.Location = New System.Drawing.Point(291, 21)
         Me.Label1_Titulua.Name = "Label1_Titulua"
-        Me.Label1_Titulua.Size = New System.Drawing.Size(121, 46)
+        Me.Label1_Titulua.Size = New System.Drawing.Size(197, 46)
         Me.Label1_Titulua.TabIndex = 1
-        Me.Label1_Titulua.Text = "Titulua"
+        Me.Label1_Titulua.Text = "Erabiltzailea"
         '
         'Label1_Id
         '
@@ -80,6 +80,7 @@ Partial Class Aldaketak_Erabiltzaileak
         '
         Me.TextBox1_Erabiltzailea.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1_Erabiltzailea.Location = New System.Drawing.Point(333, 90)
+        Me.TextBox1_Erabiltzailea.MaxLength = 45
         Me.TextBox1_Erabiltzailea.Name = "TextBox1_Erabiltzailea"
         Me.TextBox1_Erabiltzailea.Size = New System.Drawing.Size(173, 26)
         Me.TextBox1_Erabiltzailea.TabIndex = 4
@@ -98,6 +99,7 @@ Partial Class Aldaketak_Erabiltzaileak
         '
         Me.TextBox1_Pasahitza.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1_Pasahitza.Location = New System.Drawing.Point(622, 87)
+        Me.TextBox1_Pasahitza.MaxLength = 150
         Me.TextBox1_Pasahitza.Name = "TextBox1_Pasahitza"
         Me.TextBox1_Pasahitza.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox1_Pasahitza.Size = New System.Drawing.Size(159, 26)
@@ -117,6 +119,7 @@ Partial Class Aldaketak_Erabiltzaileak
         '
         Me.TextBox1_Emaila.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1_Emaila.Location = New System.Drawing.Point(72, 168)
+        Me.TextBox1_Emaila.MaxLength = 45
         Me.TextBox1_Emaila.Name = "TextBox1_Emaila"
         Me.TextBox1_Emaila.Size = New System.Drawing.Size(255, 26)
         Me.TextBox1_Emaila.TabIndex = 8
@@ -135,15 +138,16 @@ Partial Class Aldaketak_Erabiltzaileak
         '
         Me.TextBox1_Telefonoa.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1_Telefonoa.Location = New System.Drawing.Point(429, 171)
+        Me.TextBox1_Telefonoa.MaxLength = 9
         Me.TextBox1_Telefonoa.Name = "TextBox1_Telefonoa"
-        Me.TextBox1_Telefonoa.Size = New System.Drawing.Size(134, 26)
+        Me.TextBox1_Telefonoa.Size = New System.Drawing.Size(108, 26)
         Me.TextBox1_Telefonoa.TabIndex = 10
         '
         'Label1_ErabiltzaileMota
         '
         Me.Label1_ErabiltzaileMota.AutoSize = True
         Me.Label1_ErabiltzaileMota.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1_ErabiltzaileMota.Location = New System.Drawing.Point(569, 174)
+        Me.Label1_ErabiltzaileMota.Location = New System.Drawing.Point(543, 174)
         Me.Label1_ErabiltzaileMota.Name = "Label1_ErabiltzaileMota"
         Me.Label1_ErabiltzaileMota.Size = New System.Drawing.Size(134, 20)
         Me.Label1_ErabiltzaileMota.TabIndex = 11
@@ -154,9 +158,9 @@ Partial Class Aldaketak_Erabiltzaileak
         Me.ComboBox1_ErabiltzaileMota.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1_ErabiltzaileMota.FormattingEnabled = True
         Me.ComboBox1_ErabiltzaileMota.Items.AddRange(New Object() {"Mota 1 - Altua", "Mota 2 - Normala"})
-        Me.ComboBox1_ErabiltzaileMota.Location = New System.Drawing.Point(709, 171)
+        Me.ComboBox1_ErabiltzaileMota.Location = New System.Drawing.Point(683, 171)
         Me.ComboBox1_ErabiltzaileMota.Name = "ComboBox1_ErabiltzaileMota"
-        Me.ComboBox1_ErabiltzaileMota.Size = New System.Drawing.Size(121, 28)
+        Me.ComboBox1_ErabiltzaileMota.Size = New System.Drawing.Size(147, 28)
         Me.ComboBox1_ErabiltzaileMota.TabIndex = 12
         '
         'Label1_IzenAbizenak
@@ -173,6 +177,7 @@ Partial Class Aldaketak_Erabiltzaileak
         '
         Me.TextBox1_IzenaAbizenak.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1_IzenaAbizenak.Location = New System.Drawing.Point(200, 242)
+        Me.TextBox1_IzenaAbizenak.MaxLength = 100
         Me.TextBox1_IzenaAbizenak.Name = "TextBox1_IzenaAbizenak"
         Me.TextBox1_IzenaAbizenak.Size = New System.Drawing.Size(416, 26)
         Me.TextBox1_IzenaAbizenak.TabIndex = 14

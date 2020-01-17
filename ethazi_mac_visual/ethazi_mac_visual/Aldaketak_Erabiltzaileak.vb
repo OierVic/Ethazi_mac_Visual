@@ -2,7 +2,7 @@
 Imports MySql.Data.MySqlClient
 
 Public Class Aldaketak_Erabiltzaileak
-    Public ventana As String
+    'Public ventana As String
 
     'Erabiltzaileak
     'Public erabiltzaile As Erabiltzaile = New Erabiltzaile()
@@ -38,37 +38,37 @@ Public Class Aldaketak_Erabiltzaileak
 
         'End Select
 
-        Select Case ventana
-            Case "erabiltzaileak"
+        'Select Case ventana
+        'Case "erabiltzaileak"
 
-                Label1_Titulua.Text = "Erabiltzailea"
-                '1 bloque
-                'Label1_Id_Insert.Text = ethazi_mac_visual.Erabiltzaileak.erabiltzailea.id.ToString
-                '2 bloque
-                'TextBox1_Erabiltzaileak.Text = ethazi_mac_visual.Erabiltzaileak.erabiltzailea.erabiltzaile.ToString
-                '3 bloque
-                'TextBox1_Pasahitza.Text = ethazi_mac_visual.Erabiltzaileak.erabiltzailea.pasahitza.ToString
-                '4 bloque
-                'TextBox1_Emaila.Text = ethazi_mac_visual.Erabiltzaileak.erabiltzailea.emaila.ToString
-                '5 bloque
-                'TextBox1_Telefonoa.Text = ethazi_mac_visual.Erabiltzaileak.erabiltzailea.telefonoa.ToString
-                '6 bloque
-                'Erabiltzaile Mota da
-                'ComboBox1.Enabled = False
-                ComboBox1_ErabiltzaileMota.Text = "Mota 1 - Altua"
-                '7 bloque
-                'TextBox1_Izena.Text = ethazi_mac_visual.Erabiltzaileak.erabiltzailea.IzenAbizenak.ToString
-
-
-            Case "ostatuak"
-                Label1_Titulua.Text = "Ostatuak"
+        'Label1_Titulua.Text = "Erabiltzailea"
+        '1 bloque
+        'Label1_Id_Insert.Text = ethazi_mac_visual.Erabiltzaileak.erabiltzailea.id.ToString
+        '2 bloque
+        'TextBox1_Erabiltzaileak.Text = ethazi_mac_visual.Erabiltzaileak.erabiltzailea.erabiltzaile.ToString
+        '3 bloque
+        'TextBox1_Pasahitza.Text = ethazi_mac_visual.Erabiltzaileak.erabiltzailea.pasahitza.ToString
+        '4 bloque
+        'TextBox1_Emaila.Text = ethazi_mac_visual.Erabiltzaileak.erabiltzailea.emaila.ToString
+        '5 bloque
+        'TextBox1_Telefonoa.Text = ethazi_mac_visual.Erabiltzaileak.erabiltzailea.telefonoa.ToString
+        '6 bloque
+        'Erabiltzaile Mota da
+        'ComboBox1.Enabled = False
+        ComboBox1_ErabiltzaileMota.Text = "Mota 1 - Altua"
+        '7 bloque
+        'TextBox1_Izena.Text = ethazi_mac_visual.Erabiltzaileak.erabiltzailea.IzenAbizenak.ToString
 
 
-            Case "erreserbak"
-                Label1_Titulua.Text = "Erreserbak"
+        'Case "ostatuak"
+        'Label1_Titulua.Text = "Ostatuak"
 
 
-        End Select
+        'Case "erreserbak"
+        'Label1_Titulua.Text = "Erreserbak"
+
+
+        'End Select
     End Sub
     Private Function validar_Mail(ByVal sMail As String) As Boolean
         ' retorna true o false   
