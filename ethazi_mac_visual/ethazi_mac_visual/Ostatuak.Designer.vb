@@ -36,6 +36,7 @@ Partial Class Ostatuak
         Me.Longitudea = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label1_Administrazio_Aplikazioa = New System.Windows.Forms.Label()
         Me.Button1_Atzera = New System.Windows.Forms.Button()
+        Me.Button1_Gehitu = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -127,12 +128,24 @@ Partial Class Ostatuak
         Me.Button1_Atzera.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button1_Atzera.UseVisualStyleBackColor = True
         '
+        'Button1_Gehitu
+        '
+        Me.Button1_Gehitu.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.SumaSymbol
+        Me.Button1_Gehitu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1_Gehitu.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1_Gehitu.Location = New System.Drawing.Point(540, 537)
+        Me.Button1_Gehitu.Name = "Button1_Gehitu"
+        Me.Button1_Gehitu.Size = New System.Drawing.Size(70, 58)
+        Me.Button1_Gehitu.TabIndex = 13
+        Me.Button1_Gehitu.UseVisualStyleBackColor = True
+        '
         'Ostatuak
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1093, 623)
+        Me.Controls.Add(Me.Button1_Gehitu)
         Me.Controls.Add(Me.Button1_Atzera)
         Me.Controls.Add(Me.Label1_Administrazio_Aplikazioa)
         Me.Controls.Add(Me.DataGridView1)
@@ -158,4 +171,5 @@ Partial Class Ostatuak
     Friend WithEvents Emaila As DataGridViewTextBoxColumn
     Friend WithEvents Latitudea As DataGridViewTextBoxColumn
     Friend WithEvents Longitudea As DataGridViewTextBoxColumn
+    Friend WithEvents Button1_Gehitu As Button
 End Class

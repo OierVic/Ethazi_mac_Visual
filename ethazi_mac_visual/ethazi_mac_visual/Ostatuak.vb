@@ -146,4 +146,64 @@ Public Class Ostatuak
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
     End Sub
+
+    Private Sub Button1_Gehitu_Click(sender As Object, e As EventArgs) Handles Button1_Gehitu.Click
+
+        'Me.Hide()
+        Me.Enabled = False
+        Aldaketak_Ostatuak.Show()
+        ethazi_mac_visual.Aldaketak_Ostatuak.Button1_Gehitu.Visible = True
+        ethazi_mac_visual.Aldaketak_Ostatuak.Button1_Aldaketa.Visible = False
+        ethazi_mac_visual.Aldaketak_Ostatuak.Button1_Kendu.Visible = False
+
+
+        Dim MaxCount As Integer
+        Dim cmd2 As New MySqlCommand("SELECT Count(id_Ostatu) FROM ostatu", Login.conexionBD)
+
+        Try
+            Login.conexionBD.Open()
+
+            MaxCount = cmd2.ExecuteScalar
+
+            Login.conexionBD.Close()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+
+            If Login.conexionBD.State = ConnectionState.Open Then
+                Login.conexionBD.Close()
+            End If
+
+        End Try
+
+        'Añadir un id nuevo sumando el maximo del ultimo
+
+        MaxCount = MaxCount + 1
+
+        ethazi_mac_visual.Aldaketak_Ostatuak.Label1_Id_Ostatu_Insert.Text = MaxCount.ToString
+
+        'Vaciar TextBox
+        ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Izena.Text = ""
+        ethazi_mac_visual.Aldaketak_Ostatuak.RichTextBox1_Deskribapena.Text = ""
+        ethazi_mac_visual.Aldaketak_Ostatuak.ComboBox1_Ostatu_Mota.Text = "Campings"
+        ethazi_mac_visual.Aldaketak_Ostatuak.NumericUpDown1_Logela_kop.Value = 5
+        ethazi_mac_visual.Aldaketak_Ostatuak.RichTextBox1_Kokapena.Text = ""
+        ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Telefonoa.Text = ""
+        ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Email.Text = ""
+        ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Latitudea.Text = ""
+        ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Longitudea.Text = ""
+
+        'Quitar los colores
+        ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Izena.BackColor = SystemColors.Window
+        ethazi_mac_visual.Aldaketak_Ostatuak.RichTextBox1_Deskribapena.BackColor = SystemColors.Window
+        ethazi_mac_visual.Aldaketak_Ostatuak.ComboBox1_Ostatu_Mota.BackColor = SystemColors.Window
+        ethazi_mac_visual.Aldaketak_Ostatuak.NumericUpDown1_Logela_kop.BackColor = SystemColors.Window
+        ethazi_mac_visual.Aldaketak_Ostatuak.RichTextBox1_Kokapena.BackColor = SystemColors.Window
+        ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Telefonoa.BackColor = SystemColors.Window
+        ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Email.BackColor = SystemColors.Window
+        ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Latitudea.BackColor = SystemColors.Window
+        ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Longitudea.BackColor = SystemColors.Window
+
+    End Sub
 End Class

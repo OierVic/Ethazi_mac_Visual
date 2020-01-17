@@ -166,10 +166,14 @@ Public Class Erabiltzaileak
 
         End Try
 
+        'Añadir un id nuevo sumando el maximo del ultimo
+
         MaxCount = MaxCount + 1
 
-        'Vaciar TextBox
         ethazi_mac_visual.Aldaketak_Erabiltzaileak.Label1_Id_Insert.Text = MaxCount.ToString
+
+
+        'Vaciar TextBox
         ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Erabiltzailea.Text = ""
         ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Pasahitza.Text = ""
         ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Emaila.Text = ""
