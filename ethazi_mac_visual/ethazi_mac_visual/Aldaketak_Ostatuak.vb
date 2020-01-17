@@ -129,7 +129,7 @@ Public Class Aldaketak_Ostatuak
             TextBox1_Telefonoa.BackColor = Color.Red
         End Try
 
-        'Erabiltzaile Mota
+        'Ostatu Mota
         If ComboBox1_Ostatu_Mota.SelectedIndex = -1 Then
             ComboBox1_Ostatu_Mota.BackColor = Color.Red
             TodoLosDatosBien = False
@@ -145,6 +145,29 @@ Public Class Aldaketak_Ostatuak
         ElseIf validar_Mail(TextBox1_Email.Text) = True Then
             TextBox1_Email.BackColor = Color.Green
         End If
+
+        'Validar Latitudea
+        Try
+            Dim LatidudeaDouble As Double = CDbl(TextBox1_Latitudea.Text)
+            TextBox1_Latitudea.BackColor = Color.Green
+
+        Catch ex As Exception
+            TodoLosDatosBien = False
+            TextBox1_Latitudea.BackColor = Color.Red
+        End Try
+
+
+        'Validar Longitudea
+        Try
+            Dim LongitudeaDouble As Double = CDbl(TextBox1_Longitudea.Text)
+            TextBox1_Longitudea.BackColor = Color.Green
+
+        Catch ex As Exception
+            TodoLosDatosBien = False
+            TextBox1_Longitudea.BackColor = Color.Red
+        End Try
+
+
 
 
         If TodoLosDatosBien = False Then
