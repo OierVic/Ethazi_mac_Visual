@@ -1,10 +1,12 @@
 ﻿Public Class Aldaketak_Ostatuak
     Private Sub Aldaketak_Ostatuak_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Me.ComboBox1_Ostatu_Mota.Text = "Campings"
     End Sub
 
     Private Sub Button1_Atzera_Click(sender As Object, e As EventArgs) Handles Button1_Atzera.Click
-
+        Me.Hide()
+        ethazi_mac_visual.Ostatuak.Show()
+        ethazi_mac_visual.Ostatuak.Enabled = True
 
 
         'Vaciar TextBox
