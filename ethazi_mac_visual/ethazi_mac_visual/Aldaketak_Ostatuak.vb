@@ -1,4 +1,6 @@
-﻿Public Class Aldaketak_Ostatuak
+﻿Imports System.Text.RegularExpressions
+
+Public Class Aldaketak_Ostatuak
     Private Sub Aldaketak_Ostatuak_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.ComboBox1_Ostatu_Mota.Text = "Campings"
     End Sub
@@ -30,6 +32,23 @@
         Me.TextBox1_Email.BackColor = SystemColors.Window
         Me.TextBox1_Latitudea.BackColor = SystemColors.Window
         Me.TextBox1_Longitudea.BackColor = SystemColors.Window
+
+    End Sub
+    Private Function validar_Mail(ByVal sMail As String) As Boolean
+        ' retorna true o false   
+        Return Regex.IsMatch(sMail,
+                "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$")
+    End Function
+
+    Private Sub Button1_Gehitu_Click(sender As Object, e As EventArgs) Handles Button1_Gehitu.Click
+
+    End Sub
+
+    Private Sub Button1_Aldaketa_Click(sender As Object, e As EventArgs) Handles Button1_Aldaketa.Click
+
+    End Sub
+
+    Private Sub Button1_Kendu_Click(sender As Object, e As EventArgs) Handles Button1_Kendu.Click
 
     End Sub
 End Class
