@@ -117,6 +117,15 @@ Public Class Aldaketak_Ostatuak
 
 
 
+        If Len(Trim(TextBox1_Prezioa.Text)) = 0 Then
+            TextBox1_Prezioa.BackColor = Color.Red
+            TodoLosDatosBien = False
+        Else
+            TextBox1_Prezioa.BackColor = Color.Green
+        End If
+
+
+
 
         'Telefonoa
         Try
@@ -167,6 +176,15 @@ Public Class Aldaketak_Ostatuak
             TextBox1_Longitudea.BackColor = Color.Red
         End Try
 
+        'Validar Prezioa
+        Try
+            Dim PrezioaDouble As Double = CDbl(TextBox1_Prezioa.Text)
+            TextBox1_Prezioa.BackColor = Color.Green
+
+        Catch ex As Exception
+            TodoLosDatosBien = False
+            TextBox1_Prezioa.BackColor = Color.Red
+        End Try
 
 
 
@@ -200,7 +218,7 @@ Public Class Aldaketak_Ostatuak
                 End Try
 
 
-                Dim cmd1 As New MySqlCommand("INSERT INTO ostatu (id_Ostatu, Izena,Deskribapena,Ostatu_mota,Logela_kop,Kokapena,Telefonoa,Email,Latitudea,Longitudea) VALUES (" & MaxCount + 1 & ", '" & TextBox1_Izena.Text & "', '" & RichTextBox1_Deskribapena.Text & "', '" & ComboBox1_Ostatu_Mota.Text & "', " & NumericUpDown1_Logela_kop.Value & ", '" & RichTextBox1_Kokapena.Text & "', '" & TextBox1_Telefonoa.Text & "', '" & TextBox1_Email.Text & "', '" & TextBox1_Latitudea.Text & "', '" & TextBox1_Longitudea.Text & "')", Login.conexionBD)
+                Dim cmd1 As New MySqlCommand("INSERT INTO ostatu (id_Ostatu, Izena,Deskribapena,Ostatu_mota,Logela_kop,Kokapena,Telefonoa,Email,Latitudea,Longitudea,Prezioa) VALUES (" & MaxCount + 1 & ", '" & TextBox1_Izena.Text & "', '" & RichTextBox1_Deskribapena.Text & "', '" & ComboBox1_Ostatu_Mota.Text & "', " & NumericUpDown1_Logela_kop.Value & ", '" & RichTextBox1_Kokapena.Text & "', '" & TextBox1_Telefonoa.Text & "', '" & TextBox1_Email.Text & "', '" & TextBox1_Latitudea.Text & "', '" & TextBox1_Longitudea.Text & "', " & TextBox1_Prezioa.Text & ")", Login.conexionBD)
 
                 Try
                     Login.conexionBD.Open()
@@ -288,7 +306,7 @@ Public Class Aldaketak_Ostatuak
                 While dr.Read
 
                     Try
-                        ethazi_mac_visual.Ostatuak.DataGridView1.Rows.Add(dr.Item(0), dr.Item(1), dr.Item(2), dr.Item(3), dr.Item(4), dr.Item(5), dr.Item(6), dr.Item(7), dr.Item(8), dr.Item(9))
+                        ethazi_mac_visual.Ostatuak.DataGridView1.Rows.Add(dr.Item(0), dr.Item(1), dr.Item(2), dr.Item(3), dr.Item(4), dr.Item(5), dr.Item(6), dr.Item(7), dr.Item(8), dr.Item(9), dr.Item(10))
                         ethazi_mac_visual.Ostatuak.DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige
                     Catch ex As Exception
                         MsgBox(ex.Message.ToString)
@@ -435,6 +453,17 @@ Public Class Aldaketak_Ostatuak
             TextBox1_Longitudea.BackColor = Color.Red
         End Try
 
+        'Validar Prezioa
+        Try
+            Dim PrezioaDouble As Double = CDbl(TextBox1_Prezioa.Text)
+            TextBox1_Prezioa.BackColor = Color.Green
+
+        Catch ex As Exception
+            TodoLosDatosBien = False
+            TextBox1_Prezioa.BackColor = Color.Red
+        End Try
+
+
 
 
         If TodoLosDatosBien = False Then
@@ -449,7 +478,7 @@ Public Class Aldaketak_Ostatuak
 
             If MessageBox.Show("Seguru datu hauek aldatu nahi dituzula ?", "OSTATUA ALDATU", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.OK Then
 
-                Dim cmd1 As New MySqlCommand("UPDATE ostatu SET Izena = '" & TextBox1_Izena.Text & "', Deskribapena = '" & RichTextBox1_Deskribapena.Text & "', Ostatu_mota = '" & ComboBox1_Ostatu_Mota.Text & "', Logela_kop = '" & NumericUpDown1_Logela_kop.Text & "', Kokapena = '" & RichTextBox1_Kokapena.Text & "', Telefonoa = " & TextBox1_Telefonoa.Text & ", Email = '" & TextBox1_Email.Text & "', Latitudea = '" & TextBox1_Latitudea.Text & "', Longitudea = '" & TextBox1_Longitudea.Text & "' WHERE id_Ostatu = " & Label1_Id_Ostatu_Insert.Text, Login.conexionBD)
+                Dim cmd1 As New MySqlCommand("UPDATE ostatu SET Izena = '" & TextBox1_Izena.Text & "', Deskribapena = '" & RichTextBox1_Deskribapena.Text & "', Ostatu_mota = '" & ComboBox1_Ostatu_Mota.Text & "', Logela_kop = '" & NumericUpDown1_Logela_kop.Text & "', Kokapena = '" & RichTextBox1_Kokapena.Text & "', Telefonoa = " & TextBox1_Telefonoa.Text & ", Email = '" & TextBox1_Email.Text & "', Latitudea = '" & TextBox1_Latitudea.Text & "', Longitudea = '" & TextBox1_Longitudea.Text & "', Prezioa = " & TextBox1_Prezioa.Text & " WHERE id_Ostatu = " & Label1_Id_Ostatu_Insert.Text, Login.conexionBD)
 
                 Try
                     Login.conexionBD.Open()
@@ -533,7 +562,7 @@ Public Class Aldaketak_Ostatuak
                 While dr.Read
 
                     Try
-                        ethazi_mac_visual.Ostatuak.DataGridView1.Rows.Add(dr.Item(0), dr.Item(1), dr.Item(2), dr.Item(3), dr.Item(4), dr.Item(5), dr.Item(6), dr.Item(7), dr.Item(8), dr.Item(9))
+                        ethazi_mac_visual.Ostatuak.DataGridView1.Rows.Add(dr.Item(0), dr.Item(1), dr.Item(2), dr.Item(3), dr.Item(4), dr.Item(5), dr.Item(6), dr.Item(7), dr.Item(8), dr.Item(9), dr.Item(10))
                         ethazi_mac_visual.Ostatuak.DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige
                     Catch ex As Exception
                         MsgBox(ex.Message.ToString)
@@ -614,7 +643,7 @@ Public Class Aldaketak_Ostatuak
 
 
 
-            Dim cmd2 As New MySqlCommand("SELECT * FROM erabiltzaile", Login.conexionBD)
+            Dim cmd2 As New MySqlCommand("SELECT * FROM ostatu", Login.conexionBD)
             Dim dr As MySqlDataReader
 
             Try
@@ -641,7 +670,7 @@ Public Class Aldaketak_Ostatuak
             While dr.Read
 
                 Try
-                    ethazi_mac_visual.Ostatuak.DataGridView1.Rows.Add(dr.Item(0), dr.Item(1), dr.Item(2), dr.Item(3), dr.Item(4), dr.Item(5), dr.Item(6), dr.Item(7), dr.Item(8), dr.Item(9))
+                    ethazi_mac_visual.Ostatuak.DataGridView1.Rows.Add(dr.Item(0), dr.Item(1), dr.Item(2), dr.Item(3), dr.Item(4), dr.Item(5), dr.Item(6), dr.Item(7), dr.Item(8), dr.Item(9), dr.Item(10))
                     ethazi_mac_visual.Ostatuak.DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige
                 Catch ex As Exception
                     MsgBox(ex.Message.ToString)

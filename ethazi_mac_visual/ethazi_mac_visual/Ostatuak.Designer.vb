@@ -24,6 +24,9 @@ Partial Class Ostatuak
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ostatuak))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label1_Administrazio_Aplikazioa = New System.Windows.Forms.Label()
+        Me.Button1_Atzera = New System.Windows.Forms.Button()
+        Me.Button1_Gehitu = New System.Windows.Forms.Button()
         Me.ID_Ostatu = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.izena = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.deskribapena = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -34,20 +37,52 @@ Partial Class Ostatuak
         Me.Emaila = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Latitudea = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Longitudea = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label1_Administrazio_Aplikazioa = New System.Windows.Forms.Label()
-        Me.Button1_Atzera = New System.Windows.Forms.Button()
-        Me.Button1_Gehitu = New System.Windows.Forms.Button()
+        Me.Prezioa = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_Ostatu, Me.izena, Me.deskribapena, Me.Ostatu_Mota, Me.Logela_Kopurua, Me.Kokapena, Me.Telefonoa, Me.Emaila, Me.Latitudea, Me.Longitudea})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_Ostatu, Me.izena, Me.deskribapena, Me.Ostatu_Mota, Me.Logela_Kopurua, Me.Kokapena, Me.Telefonoa, Me.Emaila, Me.Latitudea, Me.Longitudea, Me.Prezioa})
         Me.DataGridView1.Location = New System.Drawing.Point(12, 48)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(1069, 464)
         Me.DataGridView1.TabIndex = 0
+        '
+        'Label1_Administrazio_Aplikazioa
+        '
+        Me.Label1_Administrazio_Aplikazioa.AutoSize = True
+        Me.Label1_Administrazio_Aplikazioa.BackColor = System.Drawing.Color.White
+        Me.Label1_Administrazio_Aplikazioa.Font = New System.Drawing.Font("Segoe UI Black", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1_Administrazio_Aplikazioa.Location = New System.Drawing.Point(739, 9)
+        Me.Label1_Administrazio_Aplikazioa.Name = "Label1_Administrazio_Aplikazioa"
+        Me.Label1_Administrazio_Aplikazioa.Size = New System.Drawing.Size(260, 28)
+        Me.Label1_Administrazio_Aplikazioa.TabIndex = 9
+        Me.Label1_Administrazio_Aplikazioa.Text = "Administrazio Aplikazioa"
+        '
+        'Button1_Atzera
+        '
+        Me.Button1_Atzera.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.return_logo_SinFondo
+        Me.Button1_Atzera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1_Atzera.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1_Atzera.Location = New System.Drawing.Point(62, 537)
+        Me.Button1_Atzera.Name = "Button1_Atzera"
+        Me.Button1_Atzera.Size = New System.Drawing.Size(64, 58)
+        Me.Button1_Atzera.TabIndex = 10
+        Me.Button1_Atzera.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1_Atzera.UseVisualStyleBackColor = True
+        '
+        'Button1_Gehitu
+        '
+        Me.Button1_Gehitu.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.SumaSymbol
+        Me.Button1_Gehitu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1_Gehitu.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1_Gehitu.Location = New System.Drawing.Point(540, 537)
+        Me.Button1_Gehitu.Name = "Button1_Gehitu"
+        Me.Button1_Gehitu.Size = New System.Drawing.Size(70, 58)
+        Me.Button1_Gehitu.TabIndex = 13
+        Me.Button1_Gehitu.UseVisualStyleBackColor = True
         '
         'ID_Ostatu
         '
@@ -101,43 +136,15 @@ Partial Class Ostatuak
         '
         'Longitudea
         '
-        Me.Longitudea.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Longitudea.HeaderText = "Longitudea"
         Me.Longitudea.Name = "Longitudea"
+        Me.Longitudea.Width = 101
         '
-        'Label1_Administrazio_Aplikazioa
+        'Prezioa
         '
-        Me.Label1_Administrazio_Aplikazioa.AutoSize = True
-        Me.Label1_Administrazio_Aplikazioa.BackColor = System.Drawing.Color.White
-        Me.Label1_Administrazio_Aplikazioa.Font = New System.Drawing.Font("Segoe UI Black", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1_Administrazio_Aplikazioa.Location = New System.Drawing.Point(739, 9)
-        Me.Label1_Administrazio_Aplikazioa.Name = "Label1_Administrazio_Aplikazioa"
-        Me.Label1_Administrazio_Aplikazioa.Size = New System.Drawing.Size(260, 28)
-        Me.Label1_Administrazio_Aplikazioa.TabIndex = 9
-        Me.Label1_Administrazio_Aplikazioa.Text = "Administrazio Aplikazioa"
-        '
-        'Button1_Atzera
-        '
-        Me.Button1_Atzera.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.return_logo_SinFondo
-        Me.Button1_Atzera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1_Atzera.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1_Atzera.Location = New System.Drawing.Point(62, 537)
-        Me.Button1_Atzera.Name = "Button1_Atzera"
-        Me.Button1_Atzera.Size = New System.Drawing.Size(64, 58)
-        Me.Button1_Atzera.TabIndex = 10
-        Me.Button1_Atzera.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1_Atzera.UseVisualStyleBackColor = True
-        '
-        'Button1_Gehitu
-        '
-        Me.Button1_Gehitu.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.SumaSymbol
-        Me.Button1_Gehitu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1_Gehitu.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1_Gehitu.Location = New System.Drawing.Point(540, 537)
-        Me.Button1_Gehitu.Name = "Button1_Gehitu"
-        Me.Button1_Gehitu.Size = New System.Drawing.Size(70, 58)
-        Me.Button1_Gehitu.TabIndex = 13
-        Me.Button1_Gehitu.UseVisualStyleBackColor = True
+        Me.Prezioa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Prezioa.HeaderText = "Prezioa"
+        Me.Prezioa.Name = "Prezioa"
         '
         'Ostatuak
         '
@@ -161,6 +168,7 @@ Partial Class Ostatuak
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label1_Administrazio_Aplikazioa As Label
     Friend WithEvents Button1_Atzera As Button
+    Friend WithEvents Button1_Gehitu As Button
     Friend WithEvents ID_Ostatu As DataGridViewTextBoxColumn
     Friend WithEvents izena As DataGridViewTextBoxColumn
     Friend WithEvents deskribapena As DataGridViewTextBoxColumn
@@ -171,5 +179,5 @@ Partial Class Ostatuak
     Friend WithEvents Emaila As DataGridViewTextBoxColumn
     Friend WithEvents Latitudea As DataGridViewTextBoxColumn
     Friend WithEvents Longitudea As DataGridViewTextBoxColumn
-    Friend WithEvents Button1_Gehitu As Button
+    Friend WithEvents Prezioa As DataGridViewTextBoxColumn
 End Class

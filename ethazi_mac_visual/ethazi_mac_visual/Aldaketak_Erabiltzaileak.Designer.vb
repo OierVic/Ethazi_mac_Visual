@@ -157,7 +157,7 @@ Partial Class Aldaketak_Erabiltzaileak
         '
         Me.ComboBox1_ErabiltzaileMota.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1_ErabiltzaileMota.FormattingEnabled = True
-        Me.ComboBox1_ErabiltzaileMota.Items.AddRange(New Object() {"Mota 1 - Altua", "Mota 2 - Normala"})
+        Me.ComboBox1_ErabiltzaileMota.Items.AddRange(New Object() {"Mota 0 - Super Administratzailea", "Mota 1 - Bezeroa", "Mota 2 - Bezeroentzako Arreta kontua"})
         Me.ComboBox1_ErabiltzaileMota.Location = New System.Drawing.Point(683, 171)
         Me.ComboBox1_ErabiltzaileMota.Name = "ComboBox1_ErabiltzaileMota"
         Me.ComboBox1_ErabiltzaileMota.Size = New System.Drawing.Size(147, 28)

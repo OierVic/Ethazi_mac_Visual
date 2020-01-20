@@ -48,6 +48,8 @@ Partial Class Aldaketak_Ostatuak
         Me.Button1_Gehitu = New System.Windows.Forms.Button()
         Me.Button1_Aldaketa = New System.Windows.Forms.Button()
         Me.Button1_Kendu = New System.Windows.Forms.Button()
+        Me.Label1_Prezioa = New System.Windows.Forms.Label()
+        Me.TextBox1_Prezioa = New System.Windows.Forms.TextBox()
         CType(Me.NumericUpDown1_Logela_kop, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -302,12 +304,32 @@ Partial Class Aldaketak_Ostatuak
         Me.Button1_Kendu.TabIndex = 25
         Me.Button1_Kendu.UseVisualStyleBackColor = True
         '
+        'Label1_Prezioa
+        '
+        Me.Label1_Prezioa.AutoSize = True
+        Me.Label1_Prezioa.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1_Prezioa.Location = New System.Drawing.Point(31, 423)
+        Me.Label1_Prezioa.Name = "Label1_Prezioa"
+        Me.Label1_Prezioa.Size = New System.Drawing.Size(70, 20)
+        Me.Label1_Prezioa.TabIndex = 26
+        Me.Label1_Prezioa.Text = "Prezioa :"
+        '
+        'TextBox1_Prezioa
+        '
+        Me.TextBox1_Prezioa.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1_Prezioa.Location = New System.Drawing.Point(113, 423)
+        Me.TextBox1_Prezioa.Name = "TextBox1_Prezioa"
+        Me.TextBox1_Prezioa.Size = New System.Drawing.Size(303, 26)
+        Me.TextBox1_Prezioa.TabIndex = 27
+        '
         'Aldaketak_Ostatuak
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(842, 553)
+        Me.Controls.Add(Me.TextBox1_Prezioa)
+        Me.Controls.Add(Me.Label1_Prezioa)
         Me.Controls.Add(Me.Button1_Kendu)
         Me.Controls.Add(Me.Button1_Aldaketa)
         Me.Controls.Add(Me.Button1_Gehitu)
@@ -367,4 +389,6 @@ Partial Class Aldaketak_Ostatuak
     Friend WithEvents Button1_Gehitu As Button
     Friend WithEvents Button1_Aldaketa As Button
     Friend WithEvents Button1_Kendu As Button
+    Friend WithEvents Label1_Prezioa As Label
+    Friend WithEvents TextBox1_Prezioa As TextBox
 End Class

@@ -178,7 +178,7 @@ Public Class Erabiltzaileak
         ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Pasahitza.Text = ""
         ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Emaila.Text = ""
         ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Telefonoa.Text = ""
-        ethazi_mac_visual.Aldaketak_Erabiltzaileak.ComboBox1_ErabiltzaileMota.Text = "Mota 1 - Altua"
+        ethazi_mac_visual.Aldaketak_Erabiltzaileak.ComboBox1_ErabiltzaileMota.Text = "Mota 0 - Super Administratzailea"
         ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_IzenaAbizenak.Text = ""
 
 

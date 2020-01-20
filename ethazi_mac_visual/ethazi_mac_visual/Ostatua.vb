@@ -9,6 +9,7 @@
     Private _Email As String
     Private _Latitudea As String
     Private _Longitudea As String
+    Private _Prezioa As String
 
 
     'id
@@ -104,4 +105,14 @@
             _Longitudea = value
         End Set
     End Property
+    'Prezioa
+    Public Property Prezioa() As String
+        Get
+            Return _Prezioa
+        End Get
+        Set(ByVal value As String)
+            _Prezioa = value
+        End Set
+    End Property
+
 End Class

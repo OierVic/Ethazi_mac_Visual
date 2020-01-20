@@ -55,7 +55,7 @@ Public Class Aldaketak_Erabiltzaileak
         '6 bloque
         'Erabiltzaile Mota da
         'ComboBox1.Enabled = False
-        ComboBox1_ErabiltzaileMota.Text = "Mota 1 - Altua"
+        ComboBox1_ErabiltzaileMota.Text = "Mota 0 - Super Administratzailea"
         '7 bloque
         'TextBox1_Izena.Text = ethazi_mac_visual.Erabiltzaileak.erabiltzailea.IzenAbizenak.ToString
 
@@ -79,11 +79,17 @@ Public Class Aldaketak_Erabiltzaileak
     Private Sub Button1_Gehitu_Click(sender As Object, e As EventArgs) Handles Button1_Gehitu.Click
         Dim TodoLosDatosBien As Boolean = True
 
-        If ComboBox1_ErabiltzaileMota.Text.Equals("Mota 1 - Altua") Then
+        If ComboBox1_ErabiltzaileMota.Text.Equals("Mota 0 - Super Administratzailea") Then
             ComboBox1_ErabiltzaileMota.SelectedIndex = 0
-        ElseIf ComboBox1_ErabiltzaileMota.Text.Equals("Mota 2 - Normala") Then
+        ElseIf ComboBox1_ErabiltzaileMota.Text.Equals("Mota 1 - Bezeroa") Then
             ComboBox1_ErabiltzaileMota.SelectedIndex = 1
+        ElseIf ComboBox1_ErabiltzaileMota.Text.Equals("Mota 2 - Bezeroentzako Arreta kontua") Then
+            ComboBox1_ErabiltzaileMota.SelectedIndex = 2
         End If
+
+
+
+
 
         'validacion de campos
 
@@ -133,7 +139,7 @@ Public Class Aldaketak_Erabiltzaileak
         End Try
 
         'Erabiltzaile Mota
-        If ComboBox1_ErabiltzaileMota.SelectedIndex = 0 Or ComboBox1_ErabiltzaileMota.SelectedIndex = 1 Then
+        If ComboBox1_ErabiltzaileMota.SelectedIndex = 0 Or ComboBox1_ErabiltzaileMota.SelectedIndex = 1 Or ComboBox1_ErabiltzaileMota.SelectedIndex = 2 Then
             ComboBox1_ErabiltzaileMota.BackColor = Color.Green
 
         Else
@@ -182,7 +188,7 @@ Public Class Aldaketak_Erabiltzaileak
                 End Try
 
 
-                Dim cmd1 As New MySqlCommand("INSERT INTO erabiltzaile (id_erabiltzaile, erabiltzaile,pasahitza,mail,telefonoa,Erabiltzaile_mota,IzenAbizenak) VALUES (" & MaxCount + 1 & ", '" & TextBox1_Erabiltzailea.Text & "', '" & TextBox1_Pasahitza.Text & "', '" & TextBox1_Emaila.Text & "', '" & TextBox1_Telefonoa.Text & "', " & ComboBox1_ErabiltzaileMota.SelectedIndex + 1 & ", '" & TextBox1_IzenaAbizenak.Text & "')", Login.conexionBD)
+                Dim cmd1 As New MySqlCommand("INSERT INTO erabiltzaile (id_erabiltzaile, erabiltzaile,pasahitza,mail,telefonoa,Erabiltzaile_mota,IzenAbizenak) VALUES (" & MaxCount + 1 & ", '" & TextBox1_Erabiltzailea.Text & "', '" & TextBox1_Pasahitza.Text & "', '" & TextBox1_Emaila.Text & "', '" & TextBox1_Telefonoa.Text & "', " & ComboBox1_ErabiltzaileMota.SelectedIndex & ", '" & TextBox1_IzenaAbizenak.Text & "')", Login.conexionBD)
 
                 Try
                     Login.conexionBD.Open()
@@ -206,7 +212,7 @@ Public Class Aldaketak_Erabiltzaileak
                     Me.TextBox1_Pasahitza.Text = ""
                     Me.TextBox1_Emaila.Text = ""
                     Me.TextBox1_Telefonoa.Text = ""
-                    Me.ComboBox1_ErabiltzaileMota.Text = "Mota 1 - Altua"
+                    Me.ComboBox1_ErabiltzaileMota.Text = "Mota 0 - Super Administratzailea"
                     Me.TextBox1_IzenaAbizenak.Text = ""
 
                     'Quitar los colores
@@ -285,10 +291,12 @@ Public Class Aldaketak_Erabiltzaileak
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button1_Aldaketa.Click
         Dim TodoLosDatosBien As Boolean = True
 
-        If ComboBox1_ErabiltzaileMota.Text.Equals("Mota 1 - Altua") Then
+        If ComboBox1_ErabiltzaileMota.Text.Equals("Mota 0 - Super Administratzailea") Then
             ComboBox1_ErabiltzaileMota.SelectedIndex = 0
-        ElseIf ComboBox1_ErabiltzaileMota.Text.Equals("Mota 2 - Normala") Then
+        ElseIf ComboBox1_ErabiltzaileMota.Text.Equals("Mota 1 - Bezeroa") Then
             ComboBox1_ErabiltzaileMota.SelectedIndex = 1
+        ElseIf ComboBox1_ErabiltzaileMota.Text.Equals("Mota 2 - Bezeroentzako Arreta kontua") Then
+            ComboBox1_ErabiltzaileMota.SelectedIndex = 2
         End If
 
         'validacion de campos
@@ -310,7 +318,7 @@ Public Class Aldaketak_Erabiltzaileak
         End Try
 
         'Erabiltzaile Mota
-        If ComboBox1_ErabiltzaileMota.SelectedIndex = 0 Or ComboBox1_ErabiltzaileMota.SelectedIndex = 1 Then
+        If ComboBox1_ErabiltzaileMota.SelectedIndex = 0 Or ComboBox1_ErabiltzaileMota.SelectedIndex = 1 Or ComboBox1_ErabiltzaileMota.SelectedIndex = 2 Then
             ComboBox1_ErabiltzaileMota.BackColor = Color.Green
         Else
             TodoLosDatosBien = False
@@ -339,14 +347,16 @@ Public Class Aldaketak_Erabiltzaileak
 
 
             If MessageBox.Show("Seguru datu hauek aldatu nahi dituzula ?", "ERABILTZAILEA ALDATU", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.OK Then
-                If ComboBox1_ErabiltzaileMota.Text.Equals("Mota 1 - Altua") Then
+                If ComboBox1_ErabiltzaileMota.Text.Equals("Mota 0 - Super Administratzailea") Then
                     ComboBox1_ErabiltzaileMota.SelectedIndex = 0
-                ElseIf ComboBox1_ErabiltzaileMota.Text.Equals("Mota 2 - Normala") Then
+                ElseIf ComboBox1_ErabiltzaileMota.Text.Equals("Mota 1 - Bezeroa") Then
                     ComboBox1_ErabiltzaileMota.SelectedIndex = 1
+                ElseIf ComboBox1_ErabiltzaileMota.Text.Equals("Mota 2 - Bezeroentzako Arreta kontua") Then
+                    ComboBox1_ErabiltzaileMota.SelectedIndex = 2
                 End If
 
 
-                Dim cmd1 As New MySqlCommand("UPDATE erabiltzaile SET erabiltzaile = '" & TextBox1_Erabiltzailea.Text & "', pasahitza = '" & TextBox1_Pasahitza.Text & "', mail = '" & TextBox1_Emaila.Text & "', telefonoa = '" & TextBox1_Telefonoa.Text & "', Erabiltzaile_mota = " & ComboBox1_ErabiltzaileMota.SelectedIndex + 1 & ", IzenAbizenak = '" & TextBox1_IzenaAbizenak.Text & "'    WHERE id_erabiltzaile = " & Label1_Id_Insert.Text, Login.conexionBD)
+                Dim cmd1 As New MySqlCommand("UPDATE erabiltzaile SET erabiltzaile = '" & TextBox1_Erabiltzailea.Text & "', pasahitza = '" & TextBox1_Pasahitza.Text & "', mail = '" & TextBox1_Emaila.Text & "', telefonoa = '" & TextBox1_Telefonoa.Text & "', Erabiltzaile_mota = " & ComboBox1_ErabiltzaileMota.SelectedIndex & ", IzenAbizenak = '" & TextBox1_IzenaAbizenak.Text & "'    WHERE id_erabiltzaile = " & Label1_Id_Insert.Text, Login.conexionBD)
 
                 Try
                     Login.conexionBD.Open()
@@ -370,7 +380,7 @@ Public Class Aldaketak_Erabiltzaileak
                     Me.TextBox1_Pasahitza.Text = ""
                     Me.TextBox1_Emaila.Text = ""
                     Me.TextBox1_Telefonoa.Text = ""
-                    Me.ComboBox1_ErabiltzaileMota.Text = "Mota 1 - Altua"
+                    Me.ComboBox1_ErabiltzaileMota.Text = "Mota 0 - Super Administratzailea"
                     Me.TextBox1_IzenaAbizenak.Text = ""
 
                     'Quitar los colores
@@ -472,7 +482,7 @@ Public Class Aldaketak_Erabiltzaileak
                 Me.TextBox1_Pasahitza.Text = ""
                 Me.TextBox1_Emaila.Text = ""
                 Me.TextBox1_Telefonoa.Text = ""
-                Me.ComboBox1_ErabiltzaileMota.Text = "Mota 1 - Altua"
+                Me.ComboBox1_ErabiltzaileMota.Text = "Mota 0 - Super Administratzailea"
                 Me.TextBox1_IzenaAbizenak.Text = ""
 
                 'Quitar los colores
@@ -552,7 +562,7 @@ Public Class Aldaketak_Erabiltzaileak
         Me.TextBox1_Pasahitza.Text = ""
         Me.TextBox1_Emaila.Text = ""
         Me.TextBox1_Telefonoa.Text = ""
-        Me.ComboBox1_ErabiltzaileMota.Text = "Mota 1 - Altua"
+        Me.ComboBox1_ErabiltzaileMota.Text = "Mota 0 - Super Administratzailea"
         Me.TextBox1_IzenaAbizenak.Text = ""
 
         'Quitar los colores
@@ -562,6 +572,7 @@ Public Class Aldaketak_Erabiltzaileak
         Me.TextBox1_Telefonoa.BackColor = SystemColors.Window
         Me.ComboBox1_ErabiltzaileMota.BackColor = SystemColors.Window
         Me.TextBox1_IzenaAbizenak.BackColor = SystemColors.Window
+
 
     End Sub
 
