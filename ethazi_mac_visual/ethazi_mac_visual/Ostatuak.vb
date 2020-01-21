@@ -98,7 +98,7 @@ Public Class Ostatuak
                 Ostatua.Email = Me.DataGridView1.Rows(e.RowIndex).Cells(7).Value.ToString
                 Ostatua.Latitudea = Me.DataGridView1.Rows(e.RowIndex).Cells(8).Value.ToString
                 Ostatua.Longitudea = Me.DataGridView1.Rows(e.RowIndex).Cells(9).Value.ToString
-                Ostatua.Prezioa = CInt(Me.DataGridView1.Rows(e.RowIndex).Cells(10).Value.ToString)
+                Ostatua.Prezioa = CDbl(Me.DataGridView1.Rows(e.RowIndex).Cells(10).Value.ToString)
 
 
                 ethazi_mac_visual.Aldaketak_Ostatuak.Label1_Id_Ostatu_Insert.Text = Ostatua.id
@@ -111,6 +111,7 @@ Public Class Ostatuak
                 ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Email.Text = Ostatua.Email
                 ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Latitudea.Text = Ostatua.Latitudea
                 ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Longitudea.Text = Ostatua.Longitudea
+                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Prezioa.Text = Ostatua.Prezioa
 
 
                 ethazi_mac_visual.Aldaketak_Ostatuak.Button1_Gehitu.Visible = False
@@ -127,6 +128,7 @@ Public Class Ostatuak
                 ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Email.BackColor = SystemColors.Window
                 ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Latitudea.BackColor = SystemColors.Window
                 ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Longitudea.BackColor = SystemColors.Window
+                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Prezioa.BackColor = SystemColors.Window
 
 
             End If
@@ -194,6 +196,8 @@ Public Class Ostatuak
         ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Email.Text = ""
         ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Latitudea.Text = ""
         ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Longitudea.Text = ""
+        ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Prezioa.Text = ""
+
 
         'Quitar los colores
         ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Izena.BackColor = SystemColors.Window
@@ -205,6 +209,8 @@ Public Class Ostatuak
         ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Email.BackColor = SystemColors.Window
         ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Latitudea.BackColor = SystemColors.Window
         ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Longitudea.BackColor = SystemColors.Window
+        ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Prezioa.BackColor = SystemColors.Window
+
 
     End Sub
 End Class

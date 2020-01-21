@@ -108,7 +108,8 @@
         Me.Hide()
         Login.Show()
 
-
+        ethazi_mac_visual.Login.TextBox1_User.Text = ""
+        ethazi_mac_visual.Login.TextBox1_Password.Text = ""
 
 
     End Sub

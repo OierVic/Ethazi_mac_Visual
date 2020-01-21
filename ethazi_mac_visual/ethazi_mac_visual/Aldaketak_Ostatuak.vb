@@ -22,6 +22,7 @@ Public Class Aldaketak_Ostatuak
         Me.TextBox1_Email.Text = ""
         Me.TextBox1_Latitudea.Text = ""
         Me.TextBox1_Longitudea.Text = ""
+        Me.TextBox1_Prezioa.Text = ""
 
         'Quitar los colores
         Me.TextBox1_Izena.BackColor = SystemColors.Window
@@ -33,6 +34,7 @@ Public Class Aldaketak_Ostatuak
         Me.TextBox1_Email.BackColor = SystemColors.Window
         Me.TextBox1_Latitudea.BackColor = SystemColors.Window
         Me.TextBox1_Longitudea.BackColor = SystemColors.Window
+        Me.TextBox1_Prezioa.BackColor = SystemColors.Window
 
     End Sub
     Private Function validar_Mail(ByVal sMail As String) As Boolean
@@ -186,7 +188,11 @@ Public Class Aldaketak_Ostatuak
             TextBox1_Prezioa.BackColor = Color.Red
         End Try
 
-
+        If TextBox1_Prezioa.Text.Contains(",") Then
+            TodoLosDatosBien = False
+            TextBox1_Prezioa.BackColor = Color.Red
+            MsgBox("Punto batekin '.' jarri behar da ez komarekin ")
+        End If
 
         If TodoLosDatosBien = False Then
             MsgBox("Daturen bat txarto dago. Mesedez berraztertu")
@@ -248,6 +254,7 @@ Public Class Aldaketak_Ostatuak
                     Me.TextBox1_Email.Text = ""
                     Me.TextBox1_Latitudea.Text = ""
                     Me.TextBox1_Longitudea.Text = ""
+                    Me.TextBox1_Prezioa.Text = ""
 
                     'Quitar los colores
                     Me.TextBox1_Izena.BackColor = SystemColors.Window
@@ -259,6 +266,7 @@ Public Class Aldaketak_Ostatuak
                     Me.TextBox1_Email.BackColor = SystemColors.Window
                     Me.TextBox1_Latitudea.BackColor = SystemColors.Window
                     Me.TextBox1_Longitudea.BackColor = SystemColors.Window
+                    Me.TextBox1_Prezioa.BackColor = SystemColors.Window
 
 
                 Catch ex As Exception
@@ -463,6 +471,12 @@ Public Class Aldaketak_Ostatuak
             TextBox1_Prezioa.BackColor = Color.Red
         End Try
 
+        If TextBox1_Prezioa.Text.Contains(",") Then
+            TodoLosDatosBien = False
+            TextBox1_Prezioa.BackColor = Color.Red
+            MsgBox("Punto batekin '.' jarri behar da ez komarekin ")
+        End If
+
 
 
 
@@ -507,6 +521,7 @@ Public Class Aldaketak_Ostatuak
                     Me.TextBox1_Email.Text = ""
                     Me.TextBox1_Latitudea.Text = ""
                     Me.TextBox1_Longitudea.Text = ""
+                    Me.TextBox1_Prezioa.Text = ""
 
                     'Quitar los colores
                     Me.TextBox1_Izena.BackColor = SystemColors.Window
@@ -518,6 +533,7 @@ Public Class Aldaketak_Ostatuak
                     Me.TextBox1_Email.BackColor = SystemColors.Window
                     Me.TextBox1_Latitudea.BackColor = SystemColors.Window
                     Me.TextBox1_Longitudea.BackColor = SystemColors.Window
+                    Me.TextBox1_Prezioa.BackColor = SystemColors.Window
 
 
 
@@ -616,6 +632,7 @@ Public Class Aldaketak_Ostatuak
                 Me.TextBox1_Email.Text = ""
                 Me.TextBox1_Latitudea.Text = ""
                 Me.TextBox1_Longitudea.Text = ""
+                Me.TextBox1_Prezioa.Text = ""
 
                 'Quitar los colores
                 Me.TextBox1_Izena.BackColor = SystemColors.Window
@@ -627,7 +644,7 @@ Public Class Aldaketak_Ostatuak
                 Me.TextBox1_Email.BackColor = SystemColors.Window
                 Me.TextBox1_Latitudea.BackColor = SystemColors.Window
                 Me.TextBox1_Longitudea.BackColor = SystemColors.Window
-
+                Me.TextBox1_Prezioa.BackColor = SystemColors.Window
 
             Catch ex As Exception
                 MsgBox(ex.Message.ToString)

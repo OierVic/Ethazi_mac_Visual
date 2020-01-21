@@ -99,7 +99,7 @@ Partial Class Ostatuak
         '
         Me.deskribapena.HeaderText = "Deskribapena"
         Me.deskribapena.Name = "deskribapena"
-        Me.deskribapena.Width = 225
+        Me.deskribapena.Width = 175
         '
         'Ostatu_Mota
         '
@@ -117,33 +117,36 @@ Partial Class Ostatuak
         '
         Me.Kokapena.HeaderText = "Kokapena"
         Me.Kokapena.Name = "Kokapena"
-        Me.Kokapena.Width = 125
+        Me.Kokapena.Width = 150
         '
         'Telefonoa
         '
         Me.Telefonoa.HeaderText = "Telefonoa"
         Me.Telefonoa.Name = "Telefonoa"
+        Me.Telefonoa.Width = 75
         '
         'Emaila
         '
         Me.Emaila.HeaderText = "Email"
         Me.Emaila.Name = "Emaila"
+        Me.Emaila.Width = 125
         '
         'Latitudea
         '
         Me.Latitudea.HeaderText = "Latitudea"
         Me.Latitudea.Name = "Latitudea"
+        Me.Latitudea.Width = 75
         '
         'Longitudea
         '
         Me.Longitudea.HeaderText = "Longitudea"
         Me.Longitudea.Name = "Longitudea"
-        Me.Longitudea.Width = 101
+        Me.Longitudea.Width = 75
         '
         'Prezioa
         '
         Me.Prezioa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Prezioa.HeaderText = "Prezioa"
+        Me.Prezioa.HeaderText = "Prezioa €"
         Me.Prezioa.Name = "Prezioa"
         '
         'Ostatuak
