@@ -197,9 +197,9 @@ Partial Class Aldaketak_Erabiltzaileak
         '
         Me.Button1_Atzera.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.HouseSimbolo
         Me.Button1_Atzera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1_Atzera.Location = New System.Drawing.Point(35, 444)
+        Me.Button1_Atzera.Location = New System.Drawing.Point(35, 437)
         Me.Button1_Atzera.Name = "Button1_Atzera"
-        Me.Button1_Atzera.Size = New System.Drawing.Size(88, 75)
+        Me.Button1_Atzera.Size = New System.Drawing.Size(88, 82)
         Me.Button1_Atzera.TabIndex = 21
         Me.Button1_Atzera.UseVisualStyleBackColor = True
         '
@@ -208,9 +208,9 @@ Partial Class Aldaketak_Erabiltzaileak
         Me.Button1_Kendu.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.DeleteSimbolo
         Me.Button1_Kendu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button1_Kendu.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1_Kendu.Location = New System.Drawing.Point(622, 461)
+        Me.Button1_Kendu.Location = New System.Drawing.Point(622, 437)
         Me.Button1_Kendu.Name = "Button1_Kendu"
-        Me.Button1_Kendu.Size = New System.Drawing.Size(72, 59)
+        Me.Button1_Kendu.Size = New System.Drawing.Size(84, 82)
         Me.Button1_Kendu.TabIndex = 20
         Me.Button1_Kendu.UseVisualStyleBackColor = True
         '
@@ -219,9 +219,9 @@ Partial Class Aldaketak_Erabiltzaileak
         Me.Button1_Aldaketa.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.CambiarSimbolo
         Me.Button1_Aldaketa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button1_Aldaketa.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1_Aldaketa.Location = New System.Drawing.Point(493, 460)
+        Me.Button1_Aldaketa.Location = New System.Drawing.Point(497, 437)
         Me.Button1_Aldaketa.Name = "Button1_Aldaketa"
-        Me.Button1_Aldaketa.Size = New System.Drawing.Size(78, 59)
+        Me.Button1_Aldaketa.Size = New System.Drawing.Size(84, 82)
         Me.Button1_Aldaketa.TabIndex = 19
         Me.Button1_Aldaketa.UseVisualStyleBackColor = True
         '
@@ -230,9 +230,9 @@ Partial Class Aldaketak_Erabiltzaileak
         Me.Button1_Gehitu.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.SumaSymbol
         Me.Button1_Gehitu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button1_Gehitu.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1_Gehitu.Location = New System.Drawing.Point(351, 460)
+        Me.Button1_Gehitu.Location = New System.Drawing.Point(547, 437)
         Me.Button1_Gehitu.Name = "Button1_Gehitu"
-        Me.Button1_Gehitu.Size = New System.Drawing.Size(79, 59)
+        Me.Button1_Gehitu.Size = New System.Drawing.Size(89, 82)
         Me.Button1_Gehitu.TabIndex = 18
         Me.Button1_Gehitu.UseVisualStyleBackColor = True
         '
@@ -241,7 +241,7 @@ Partial Class Aldaketak_Erabiltzaileak
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(842, 545)
+        Me.ClientSize = New System.Drawing.Size(852, 545)
         Me.Controls.Add(Me.Button1_Atzera)
         Me.Controls.Add(Me.Button1_Kendu)
         Me.Controls.Add(Me.Button1_Aldaketa)

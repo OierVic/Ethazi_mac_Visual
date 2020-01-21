@@ -682,7 +682,7 @@ Public Class Aldaketak_Ostatuak
             ethazi_mac_visual.Ostatuak.DataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
 
             'Color que se selecciona
-            ethazi_mac_visual.Erabiltzaileak.DataGridView1.DefaultCellStyle.SelectionBackColor = Color.Aqua
+            ethazi_mac_visual.Ostatuak.DataGridView1.DefaultCellStyle.SelectionBackColor = Color.Aqua
 
             While dr.Read
 

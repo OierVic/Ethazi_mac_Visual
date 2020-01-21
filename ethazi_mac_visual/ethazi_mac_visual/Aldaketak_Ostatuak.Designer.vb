@@ -44,13 +44,13 @@ Partial Class Aldaketak_Ostatuak
         Me.TextBox1_Latitudea = New System.Windows.Forms.TextBox()
         Me.Label1_Longitudea = New System.Windows.Forms.Label()
         Me.TextBox1_Longitudea = New System.Windows.Forms.TextBox()
-        Me.Button1_Atzera = New System.Windows.Forms.Button()
-        Me.Button1_Gehitu = New System.Windows.Forms.Button()
-        Me.Button1_Aldaketa = New System.Windows.Forms.Button()
-        Me.Button1_Kendu = New System.Windows.Forms.Button()
         Me.Label1_Prezioa = New System.Windows.Forms.Label()
         Me.TextBox1_Prezioa = New System.Windows.Forms.TextBox()
         Me.Label1_Euros = New System.Windows.Forms.Label()
+        Me.Button1_Kendu = New System.Windows.Forms.Button()
+        Me.Button1_Aldaketa = New System.Windows.Forms.Button()
+        Me.Button1_Gehitu = New System.Windows.Forms.Button()
+        Me.Button1_Atzera = New System.Windows.Forms.Button()
         CType(Me.NumericUpDown1_Logela_kop, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -262,49 +262,6 @@ Partial Class Aldaketak_Ostatuak
         Me.TextBox1_Longitudea.Size = New System.Drawing.Size(199, 26)
         Me.TextBox1_Longitudea.TabIndex = 20
         '
-        'Button1_Atzera
-        '
-        Me.Button1_Atzera.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.HouseSimbolo
-        Me.Button1_Atzera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1_Atzera.Location = New System.Drawing.Point(30, 458)
-        Me.Button1_Atzera.Name = "Button1_Atzera"
-        Me.Button1_Atzera.Size = New System.Drawing.Size(88, 83)
-        Me.Button1_Atzera.TabIndex = 22
-        Me.Button1_Atzera.UseVisualStyleBackColor = True
-        '
-        'Button1_Gehitu
-        '
-        Me.Button1_Gehitu.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.SumaSymbol
-        Me.Button1_Gehitu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1_Gehitu.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1_Gehitu.Location = New System.Drawing.Point(356, 473)
-        Me.Button1_Gehitu.Name = "Button1_Gehitu"
-        Me.Button1_Gehitu.Size = New System.Drawing.Size(79, 67)
-        Me.Button1_Gehitu.TabIndex = 23
-        Me.Button1_Gehitu.UseVisualStyleBackColor = True
-        '
-        'Button1_Aldaketa
-        '
-        Me.Button1_Aldaketa.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.CambiarSimbolo
-        Me.Button1_Aldaketa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1_Aldaketa.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1_Aldaketa.Location = New System.Drawing.Point(479, 474)
-        Me.Button1_Aldaketa.Name = "Button1_Aldaketa"
-        Me.Button1_Aldaketa.Size = New System.Drawing.Size(78, 67)
-        Me.Button1_Aldaketa.TabIndex = 24
-        Me.Button1_Aldaketa.UseVisualStyleBackColor = True
-        '
-        'Button1_Kendu
-        '
-        Me.Button1_Kendu.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.DeleteSimbolo
-        Me.Button1_Kendu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1_Kendu.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1_Kendu.Location = New System.Drawing.Point(607, 473)
-        Me.Button1_Kendu.Name = "Button1_Kendu"
-        Me.Button1_Kendu.Size = New System.Drawing.Size(72, 67)
-        Me.Button1_Kendu.TabIndex = 25
-        Me.Button1_Kendu.UseVisualStyleBackColor = True
-        '
         'Label1_Prezioa
         '
         Me.Label1_Prezioa.AutoSize = True
@@ -333,6 +290,49 @@ Partial Class Aldaketak_Ostatuak
         Me.Label1_Euros.Size = New System.Drawing.Size(23, 25)
         Me.Label1_Euros.TabIndex = 29
         Me.Label1_Euros.Text = "€"
+        '
+        'Button1_Kendu
+        '
+        Me.Button1_Kendu.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.DeleteSimbolo
+        Me.Button1_Kendu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1_Kendu.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1_Kendu.Location = New System.Drawing.Point(607, 473)
+        Me.Button1_Kendu.Name = "Button1_Kendu"
+        Me.Button1_Kendu.Size = New System.Drawing.Size(72, 67)
+        Me.Button1_Kendu.TabIndex = 25
+        Me.Button1_Kendu.UseVisualStyleBackColor = True
+        '
+        'Button1_Aldaketa
+        '
+        Me.Button1_Aldaketa.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.CambiarSimbolo
+        Me.Button1_Aldaketa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1_Aldaketa.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1_Aldaketa.Location = New System.Drawing.Point(479, 474)
+        Me.Button1_Aldaketa.Name = "Button1_Aldaketa"
+        Me.Button1_Aldaketa.Size = New System.Drawing.Size(78, 67)
+        Me.Button1_Aldaketa.TabIndex = 24
+        Me.Button1_Aldaketa.UseVisualStyleBackColor = True
+        '
+        'Button1_Gehitu
+        '
+        Me.Button1_Gehitu.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.SumaSymbol
+        Me.Button1_Gehitu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1_Gehitu.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1_Gehitu.Location = New System.Drawing.Point(538, 474)
+        Me.Button1_Gehitu.Name = "Button1_Gehitu"
+        Me.Button1_Gehitu.Size = New System.Drawing.Size(79, 67)
+        Me.Button1_Gehitu.TabIndex = 23
+        Me.Button1_Gehitu.UseVisualStyleBackColor = True
+        '
+        'Button1_Atzera
+        '
+        Me.Button1_Atzera.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.HouseSimbolo
+        Me.Button1_Atzera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1_Atzera.Location = New System.Drawing.Point(30, 458)
+        Me.Button1_Atzera.Name = "Button1_Atzera"
+        Me.Button1_Atzera.Size = New System.Drawing.Size(88, 83)
+        Me.Button1_Atzera.TabIndex = 22
+        Me.Button1_Atzera.UseVisualStyleBackColor = True
         '
         'Aldaketak_Ostatuak
         '

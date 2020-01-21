@@ -25,7 +25,7 @@ Public Class Login
             If conexionBD.State = ConnectionState.Open Then conexionBD.Close()
         End Try
 
-        'Dim hola As New Aldaketak_Ostatuak
+        'Dim hola As New Aldaketak_Erreserbak
         'hola.Show()
     End Sub
 

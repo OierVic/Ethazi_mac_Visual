@@ -25,11 +25,15 @@ Partial Class Erreserbak
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Erreserbak))
         Me.Label1_Administrazio_Aplikazioa = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Button1_Atzera = New System.Windows.Forms.Button()
         Me.id_Erreserba = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.id_Ostatu = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.id_Erabiltzaile = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Erreserba_data = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button1_Atzera = New System.Windows.Forms.Button()
+        Me.PrezioaGuztira = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Hasiera_data = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Amaiera_data = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button1_Gehitu = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -47,35 +51,11 @@ Partial Class Erreserbak
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_Erreserba, Me.id_Ostatu, Me.id_Erabiltzaile, Me.Erreserba_data})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_Erreserba, Me.id_Ostatu, Me.id_Erabiltzaile, Me.Erreserba_data, Me.PrezioaGuztira, Me.Hasiera_data, Me.Amaiera_data})
         Me.DataGridView1.Location = New System.Drawing.Point(51, 79)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(1015, 419)
         Me.DataGridView1.TabIndex = 11
-        '
-        'id_Erreserba
-        '
-        Me.id_Erreserba.HeaderText = "ID Erreserba"
-        Me.id_Erreserba.Name = "id_Erreserba"
-        Me.id_Erreserba.Width = 75
-        '
-        'id_Ostatu
-        '
-        Me.id_Ostatu.HeaderText = "ID Ostatu"
-        Me.id_Ostatu.Name = "id_Ostatu"
-        Me.id_Ostatu.Width = 200
-        '
-        'id_Erabiltzaile
-        '
-        Me.id_Erabiltzaile.HeaderText = "ID Erabiltzaile"
-        Me.id_Erabiltzaile.Name = "id_Erabiltzaile"
-        Me.id_Erabiltzaile.Width = 350
-        '
-        'Erreserba_data
-        '
-        Me.Erreserba_data.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Erreserba_data.HeaderText = "Erreserba Data"
-        Me.Erreserba_data.Name = "Erreserba_data"
         '
         'Button1_Atzera
         '
@@ -89,12 +69,63 @@ Partial Class Erreserbak
         Me.Button1_Atzera.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button1_Atzera.UseVisualStyleBackColor = True
         '
+        'id_Erreserba
+        '
+        Me.id_Erreserba.HeaderText = "ID Erreserba"
+        Me.id_Erreserba.Name = "id_Erreserba"
+        '
+        'id_Ostatu
+        '
+        Me.id_Ostatu.HeaderText = "ID Ostatu"
+        Me.id_Ostatu.Name = "id_Ostatu"
+        '
+        'id_Erabiltzaile
+        '
+        Me.id_Erabiltzaile.HeaderText = "ID Erabiltzaile"
+        Me.id_Erabiltzaile.Name = "id_Erabiltzaile"
+        '
+        'Erreserba_data
+        '
+        Me.Erreserba_data.HeaderText = "Erreserba Data"
+        Me.Erreserba_data.Name = "Erreserba_data"
+        Me.Erreserba_data.Width = 150
+        '
+        'PrezioaGuztira
+        '
+        Me.PrezioaGuztira.HeaderText = "PrezioaGuztira"
+        Me.PrezioaGuztira.Name = "PrezioaGuztira"
+        Me.PrezioaGuztira.Width = 150
+        '
+        'Hasiera_data
+        '
+        Me.Hasiera_data.HeaderText = "Hasiera Data"
+        Me.Hasiera_data.Name = "Hasiera_data"
+        Me.Hasiera_data.Width = 186
+        '
+        'Amaiera_data
+        '
+        Me.Amaiera_data.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Amaiera_data.HeaderText = "Amaiera Data"
+        Me.Amaiera_data.Name = "Amaiera_data"
+        '
+        'Button1_Gehitu
+        '
+        Me.Button1_Gehitu.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.SumaSymbol
+        Me.Button1_Gehitu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1_Gehitu.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1_Gehitu.Location = New System.Drawing.Point(510, 535)
+        Me.Button1_Gehitu.Name = "Button1_Gehitu"
+        Me.Button1_Gehitu.Size = New System.Drawing.Size(70, 58)
+        Me.Button1_Gehitu.TabIndex = 14
+        Me.Button1_Gehitu.UseVisualStyleBackColor = True
+        '
         'Erreserbak
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1093, 623)
+        Me.Controls.Add(Me.Button1_Gehitu)
         Me.Controls.Add(Me.Button1_Atzera)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1_Administrazio_Aplikazioa)
@@ -109,9 +140,13 @@ Partial Class Erreserbak
 
     Friend WithEvents Label1_Administrazio_Aplikazioa As Label
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Button1_Atzera As Button
     Friend WithEvents id_Erreserba As DataGridViewTextBoxColumn
     Friend WithEvents id_Ostatu As DataGridViewTextBoxColumn
     Friend WithEvents id_Erabiltzaile As DataGridViewTextBoxColumn
     Friend WithEvents Erreserba_data As DataGridViewTextBoxColumn
-    Friend WithEvents Button1_Atzera As Button
+    Friend WithEvents PrezioaGuztira As DataGridViewTextBoxColumn
+    Friend WithEvents Hasiera_data As DataGridViewTextBoxColumn
+    Friend WithEvents Amaiera_data As DataGridViewTextBoxColumn
+    Friend WithEvents Button1_Gehitu As Button
 End Class
