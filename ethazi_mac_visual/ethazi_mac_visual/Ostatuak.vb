@@ -81,69 +81,7 @@ Public Class Ostatuak
     End Sub
 
     Private Sub DataGridView1_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentDoubleClick
-        Try
-            Ostatua = New Ostatua()
 
-
-            If (e.RowIndex >= 0) Then
-
-                'Dim idString As String = DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString
-                Ostatua.id = CInt(Me.DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString)
-                Ostatua.izena = Me.DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString
-                Ostatua.deskribapena = Me.DataGridView1.Rows(e.RowIndex).Cells(2).Value.ToString
-                Ostatua.OstatuMota = Me.DataGridView1.Rows(e.RowIndex).Cells(3).Value.ToString
-                Ostatua.LogelaKop = CInt(Me.DataGridView1.Rows(e.RowIndex).Cells(4).Value.ToString)
-                Ostatua.Kokapena = Me.DataGridView1.Rows(e.RowIndex).Cells(5).Value.ToString
-                Ostatua.Telefonoa = Me.DataGridView1.Rows(e.RowIndex).Cells(6).Value.ToString
-                Ostatua.Email = Me.DataGridView1.Rows(e.RowIndex).Cells(7).Value.ToString
-                Ostatua.Latitudea = Me.DataGridView1.Rows(e.RowIndex).Cells(8).Value.ToString
-                Ostatua.Longitudea = Me.DataGridView1.Rows(e.RowIndex).Cells(9).Value.ToString
-                Ostatua.Prezioa = CDbl(Me.DataGridView1.Rows(e.RowIndex).Cells(10).Value.ToString)
-
-
-                ethazi_mac_visual.Aldaketak_Ostatuak.Label1_Id_Ostatu_Insert.Text = Ostatua.id
-                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Izena.Text = Ostatua.izena
-                ethazi_mac_visual.Aldaketak_Ostatuak.RichTextBox1_Deskribapena.Text = Ostatua.deskribapena
-                ethazi_mac_visual.Aldaketak_Ostatuak.ComboBox1_Ostatu_Mota.Text = Ostatua.OstatuMota
-                ethazi_mac_visual.Aldaketak_Ostatuak.NumericUpDown1_Logela_kop.Value = Ostatua.LogelaKop
-                ethazi_mac_visual.Aldaketak_Ostatuak.RichTextBox1_Kokapena.Text = Ostatua.Kokapena
-                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Telefonoa.Text = Ostatua.Telefonoa
-                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Email.Text = Ostatua.Email
-                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Latitudea.Text = Ostatua.Latitudea
-                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Longitudea.Text = Ostatua.Longitudea
-                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Prezioa.Text = Ostatua.Prezioa
-
-
-                ethazi_mac_visual.Aldaketak_Ostatuak.Button1_Gehitu.Visible = False
-                ethazi_mac_visual.Aldaketak_Ostatuak.Button1_Aldaketa.Visible = True
-                ethazi_mac_visual.Aldaketak_Ostatuak.Button1_Kendu.Visible = True
-
-                'Quitar los colores
-                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Izena.BackColor = SystemColors.Window
-                ethazi_mac_visual.Aldaketak_Ostatuak.RichTextBox1_Deskribapena.BackColor = SystemColors.Window
-                ethazi_mac_visual.Aldaketak_Ostatuak.ComboBox1_Ostatu_Mota.BackColor = SystemColors.Window
-                ethazi_mac_visual.Aldaketak_Ostatuak.NumericUpDown1_Logela_kop.BackColor = SystemColors.Window
-                ethazi_mac_visual.Aldaketak_Ostatuak.RichTextBox1_Kokapena.BackColor = SystemColors.Window
-                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Telefonoa.BackColor = SystemColors.Window
-                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Email.BackColor = SystemColors.Window
-                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Latitudea.BackColor = SystemColors.Window
-                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Longitudea.BackColor = SystemColors.Window
-                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Prezioa.BackColor = SystemColors.Window
-
-
-            End If
-
-
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-
-
-
-
-        'Me.Hide()
-        Me.Enabled = False
-        Aldaketak_Ostatuak.Show()
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
@@ -212,5 +150,71 @@ Public Class Ostatuak
         ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Prezioa.BackColor = SystemColors.Window
 
 
+    End Sub
+
+    Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
+        Try
+            Ostatua = New Ostatua()
+
+
+            If (e.RowIndex >= 0) Then
+
+                'Dim idString As String = DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString
+                Ostatua.id = CInt(Me.DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString)
+                Ostatua.izena = Me.DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString
+                Ostatua.deskribapena = Me.DataGridView1.Rows(e.RowIndex).Cells(2).Value.ToString
+                Ostatua.OstatuMota = Me.DataGridView1.Rows(e.RowIndex).Cells(3).Value.ToString
+                Ostatua.LogelaKop = CInt(Me.DataGridView1.Rows(e.RowIndex).Cells(4).Value.ToString)
+                Ostatua.Kokapena = Me.DataGridView1.Rows(e.RowIndex).Cells(5).Value.ToString
+                Ostatua.Telefonoa = Me.DataGridView1.Rows(e.RowIndex).Cells(6).Value.ToString
+                Ostatua.Email = Me.DataGridView1.Rows(e.RowIndex).Cells(7).Value.ToString
+                Ostatua.Latitudea = Me.DataGridView1.Rows(e.RowIndex).Cells(8).Value.ToString
+                Ostatua.Longitudea = Me.DataGridView1.Rows(e.RowIndex).Cells(9).Value.ToString
+                Ostatua.Prezioa = CDbl(Me.DataGridView1.Rows(e.RowIndex).Cells(10).Value.ToString)
+
+
+                ethazi_mac_visual.Aldaketak_Ostatuak.Label1_Id_Ostatu_Insert.Text = Ostatua.id
+                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Izena.Text = Ostatua.izena
+                ethazi_mac_visual.Aldaketak_Ostatuak.RichTextBox1_Deskribapena.Text = Ostatua.deskribapena
+                ethazi_mac_visual.Aldaketak_Ostatuak.ComboBox1_Ostatu_Mota.Text = Ostatua.OstatuMota
+                ethazi_mac_visual.Aldaketak_Ostatuak.NumericUpDown1_Logela_kop.Value = Ostatua.LogelaKop
+                ethazi_mac_visual.Aldaketak_Ostatuak.RichTextBox1_Kokapena.Text = Ostatua.Kokapena
+                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Telefonoa.Text = Ostatua.Telefonoa
+                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Email.Text = Ostatua.Email
+                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Latitudea.Text = Ostatua.Latitudea
+                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Longitudea.Text = Ostatua.Longitudea
+                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Prezioa.Text = Ostatua.Prezioa
+
+
+                ethazi_mac_visual.Aldaketak_Ostatuak.Button1_Gehitu.Visible = False
+                ethazi_mac_visual.Aldaketak_Ostatuak.Button1_Aldaketa.Visible = True
+                ethazi_mac_visual.Aldaketak_Ostatuak.Button1_Kendu.Visible = True
+
+                'Quitar los colores
+                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Izena.BackColor = SystemColors.Window
+                ethazi_mac_visual.Aldaketak_Ostatuak.RichTextBox1_Deskribapena.BackColor = SystemColors.Window
+                ethazi_mac_visual.Aldaketak_Ostatuak.ComboBox1_Ostatu_Mota.BackColor = SystemColors.Window
+                ethazi_mac_visual.Aldaketak_Ostatuak.NumericUpDown1_Logela_kop.BackColor = SystemColors.Window
+                ethazi_mac_visual.Aldaketak_Ostatuak.RichTextBox1_Kokapena.BackColor = SystemColors.Window
+                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Telefonoa.BackColor = SystemColors.Window
+                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Email.BackColor = SystemColors.Window
+                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Latitudea.BackColor = SystemColors.Window
+                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Longitudea.BackColor = SystemColors.Window
+                ethazi_mac_visual.Aldaketak_Ostatuak.TextBox1_Prezioa.BackColor = SystemColors.Window
+
+
+            End If
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+
+
+
+        'Me.Hide()
+        Me.Enabled = False
+        Aldaketak_Ostatuak.Show()
     End Sub
 End Class

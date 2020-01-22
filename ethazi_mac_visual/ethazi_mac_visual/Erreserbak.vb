@@ -70,54 +70,7 @@ Public Class Erreserbak
         End Select
     End Sub
     Private Sub DataGridView1_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentDoubleClick
-        Try
-            Erreserba = New Erreserba()
 
-
-            If (e.RowIndex >= 0) Then
-
-                Erreserba.id = CInt(Me.DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString)
-                Erreserba.id_ostatu = CInt(Me.DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString)
-                Erreserba.id_erabiltzaile = CInt(Me.DataGridView1.Rows(e.RowIndex).Cells(2).Value.ToString)
-                Erreserba.Erreserba_Data = CDate(Me.DataGridView1.Rows(e.RowIndex).Cells(3).Value.ToString)
-                Erreserba.Prezio_Guztira = CDbl(Me.DataGridView1.Rows(e.RowIndex).Cells(4).Value.ToString)
-                Erreserba.Hasiera_Data = CDate(Me.DataGridView1.Rows(e.RowIndex).Cells(5).Value.ToString)
-                Erreserba.Amaiera_Data = CDate(Me.DataGridView1.Rows(e.RowIndex).Cells(6).Value.ToString)
-
-
-                ethazi_mac_visual.Aldaketak_Erreserbak.Label1_Id_Erreserba_Insert.Text = Erreserba.id
-                ethazi_mac_visual.Aldaketak_Erreserbak.TextBox1_ID_Ostatu.Text = Erreserba.id_ostatu
-                ethazi_mac_visual.Aldaketak_Erreserbak.TextBox1_ID_Erabiltzaile.Text = Erreserba.id_erabiltzaile
-                ethazi_mac_visual.Aldaketak_Erreserbak.DateTimePicker1_Hasiera_Data.Value = Erreserba.Hasiera_Data
-                ethazi_mac_visual.Aldaketak_Erreserbak.DateTimePicker1_Amaiera_Data.Value = Erreserba.Amaiera_Data
-
-
-
-                ethazi_mac_visual.Aldaketak_Erreserbak.Button1_Gehitu.Visible = False
-                ethazi_mac_visual.Aldaketak_Erreserbak.Button1_Aldaketa.Visible = True
-                ethazi_mac_visual.Aldaketak_Erreserbak.Button1_Kendu.Visible = True
-
-                'Quitar los colores
-                ethazi_mac_visual.Aldaketak_Erreserbak.TextBox1_ID_Ostatu.BackColor = SystemColors.Window
-                ethazi_mac_visual.Aldaketak_Erreserbak.TextBox1_ID_Erabiltzaile.BackColor = SystemColors.Window
-                ethazi_mac_visual.Aldaketak_Erreserbak.DateTimePicker1_Hasiera_Data.BackColor = SystemColors.Window
-                ethazi_mac_visual.Aldaketak_Erreserbak.DateTimePicker1_Amaiera_Data.BackColor = SystemColors.Window
-
-
-
-            End If
-
-
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-
-
-
-
-        'Me.Hide()
-        Me.Enabled = False
-        Aldaketak_Erreserbak.Show()
     End Sub
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
@@ -186,4 +139,54 @@ Public Class Erreserbak
 
     End Sub
 
+    Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
+        Try
+            Erreserba = New Erreserba()
+
+
+            If (e.RowIndex >= 0) Then
+
+                Erreserba.id = CInt(Me.DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString)
+                Erreserba.id_ostatu = CInt(Me.DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString)
+                Erreserba.id_erabiltzaile = CInt(Me.DataGridView1.Rows(e.RowIndex).Cells(2).Value.ToString)
+                Erreserba.Erreserba_Data = CDate(Me.DataGridView1.Rows(e.RowIndex).Cells(3).Value.ToString)
+                Erreserba.Prezio_Guztira = CDbl(Me.DataGridView1.Rows(e.RowIndex).Cells(4).Value.ToString)
+                Erreserba.Hasiera_Data = CDate(Me.DataGridView1.Rows(e.RowIndex).Cells(5).Value.ToString)
+                Erreserba.Amaiera_Data = CDate(Me.DataGridView1.Rows(e.RowIndex).Cells(6).Value.ToString)
+
+
+                ethazi_mac_visual.Aldaketak_Erreserbak.Label1_Id_Erreserba_Insert.Text = Erreserba.id
+                ethazi_mac_visual.Aldaketak_Erreserbak.TextBox1_ID_Ostatu.Text = Erreserba.id_ostatu
+                ethazi_mac_visual.Aldaketak_Erreserbak.TextBox1_ID_Erabiltzaile.Text = Erreserba.id_erabiltzaile
+                ethazi_mac_visual.Aldaketak_Erreserbak.DateTimePicker1_Hasiera_Data.Value = Erreserba.Hasiera_Data
+                ethazi_mac_visual.Aldaketak_Erreserbak.DateTimePicker1_Amaiera_Data.Value = Erreserba.Amaiera_Data
+
+
+
+                ethazi_mac_visual.Aldaketak_Erreserbak.Button1_Gehitu.Visible = False
+                ethazi_mac_visual.Aldaketak_Erreserbak.Button1_Aldaketa.Visible = True
+                ethazi_mac_visual.Aldaketak_Erreserbak.Button1_Kendu.Visible = True
+
+                'Quitar los colores
+                ethazi_mac_visual.Aldaketak_Erreserbak.TextBox1_ID_Ostatu.BackColor = SystemColors.Window
+                ethazi_mac_visual.Aldaketak_Erreserbak.TextBox1_ID_Erabiltzaile.BackColor = SystemColors.Window
+                ethazi_mac_visual.Aldaketak_Erreserbak.DateTimePicker1_Hasiera_Data.BackColor = SystemColors.Window
+                ethazi_mac_visual.Aldaketak_Erreserbak.DateTimePicker1_Amaiera_Data.BackColor = SystemColors.Window
+
+
+
+            End If
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+
+
+
+        'Me.Hide()
+        Me.Enabled = False
+        Aldaketak_Erreserbak.Show()
+    End Sub
 End Class

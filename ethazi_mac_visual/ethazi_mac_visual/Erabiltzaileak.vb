@@ -182,7 +182,6 @@ Public Class Erabiltzaileak
         ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_IzenaAbizenak.Text = ""
 
 
-
         'Quitar los colores
         ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Erabiltzailea.BackColor = SystemColors.Window
         ethazi_mac_visual.Aldaketak_Erabiltzaileak.TextBox1_Pasahitza.BackColor = SystemColors.Window
@@ -193,21 +192,7 @@ Public Class Erabiltzaileak
 
 
     End Sub
-
-    'Private Sub Button1_Aldatu_Click(sender As Object, e As EventArgs)
-    '    ethazi_mac_visual.Menu.accionEnviar = "erabiltzailea aldatu"
-    '    Me.Hide()
-    '    Aldaketak.Show()
-    'End Sub
-
-    'Private Sub Button1_Kendu_Click(sender As Object, e As EventArgs)
-    '    ethazi_mac_visual.Menu.accionEnviar = "erabiltzailea kendu"
-    '    Me.Hide()
-    '    Aldaketak.Show()
-    'End Sub
-
-    Private Sub DataGridView1_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentDoubleClick
-
+    Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
         Try
             erabiltzailea = New Erabiltzaile()
 
@@ -267,9 +252,19 @@ Public Class Erabiltzaileak
         Aldaketak_Erabiltzaileak.Show()
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    'Private Sub Button1_Aldatu_Click(sender As Object, e As EventArgs)
+    '    ethazi_mac_visual.Menu.accionEnviar = "erabiltzailea aldatu"
+    '    Me.Hide()
+    '    Aldaketak.Show()
+    'End Sub
 
-    End Sub
+    'Private Sub Button1_Kendu_Click(sender As Object, e As EventArgs)
+    '    ethazi_mac_visual.Menu.accionEnviar = "erabiltzailea kendu"
+    '    Me.Hide()
+    '    Aldaketak.Show()
+    'End Sub
+
+
     'Sub consultaDinamica(ByVal id As String, ByVal dgv As DataGridView)
     '    adaptador = New MySqlDataAdapter("Select * from erabiltzaile where id like " & id + "%", conexionBD)
     '    dt = New DataTable
