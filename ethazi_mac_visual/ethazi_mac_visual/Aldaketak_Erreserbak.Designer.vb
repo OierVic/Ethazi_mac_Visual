@@ -143,7 +143,7 @@ Partial Class Aldaketak_Erreserbak
         Me.DateTimePicker1_Hasiera_Data.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1_Hasiera_Data.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1_Hasiera_Data.Location = New System.Drawing.Point(129, 176)
-        Me.DateTimePicker1_Hasiera_Data.MaxDate = New Date(9997, 12, 31, 0, 0, 0, 0)
+        Me.DateTimePicker1_Hasiera_Data.MaxDate = New Date(2100, 12, 31, 0, 0, 0, 0)
         Me.DateTimePicker1_Hasiera_Data.MinDate = New Date(2020, 1, 1, 0, 0, 0, 0)
         Me.DateTimePicker1_Hasiera_Data.Name = "DateTimePicker1_Hasiera_Data"
         Me.DateTimePicker1_Hasiera_Data.Size = New System.Drawing.Size(265, 23)
@@ -155,6 +155,7 @@ Partial Class Aldaketak_Erreserbak
         Me.DateTimePicker1_Amaiera_Data.Checked = False
         Me.DateTimePicker1_Amaiera_Data.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1_Amaiera_Data.Location = New System.Drawing.Point(544, 176)
+        Me.DateTimePicker1_Amaiera_Data.MaxDate = New Date(2100, 12, 31, 0, 0, 0, 0)
         Me.DateTimePicker1_Amaiera_Data.MinDate = New Date(2020, 1, 1, 0, 0, 0, 0)
         Me.DateTimePicker1_Amaiera_Data.Name = "DateTimePicker1_Amaiera_Data"
         Me.DateTimePicker1_Amaiera_Data.Size = New System.Drawing.Size(286, 23)
