@@ -172,7 +172,7 @@ Public Class Erreserbak
         ethazi_mac_visual.Aldaketak_Erreserbak.TextBox1_ID_Ostatu.Text = ""
         ethazi_mac_visual.Aldaketak_Erreserbak.TextBox1_ID_Erabiltzaile.Text = ""
         ethazi_mac_visual.Aldaketak_Erreserbak.DateTimePicker1_Hasiera_Data.Value = DateTime.Now
-        ethazi_mac_visual.Aldaketak_Erreserbak.DateTimePicker1_Amaiera_Data.Value = DateTime.Now.AddDays(5)
+        ethazi_mac_visual.Aldaketak_Erreserbak.DateTimePicker1_Amaiera_Data.Value = DateTime.Now.AddDays(1)
 
 
 

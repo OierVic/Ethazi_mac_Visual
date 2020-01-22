@@ -23,14 +23,15 @@ Public Class Aldaketak_Erreserbak
         'Quitar los colores
         Me.TextBox1_ID_Ostatu.BackColor = SystemColors.Window
         Me.TextBox1_ID_Erabiltzaile.BackColor = SystemColors.Window
-        Me.DateTimePicker1_Hasiera_Data.BackColor = SystemColors.Window
-        Me.DateTimePicker1_Amaiera_Data.BackColor = SystemColors.Window
+        Me.DateTimePicker1_Hasiera_Data.CalendarMonthBackground = SystemColors.Window
+        Me.DateTimePicker1_Amaiera_Data.CalendarMonthBackground = SystemColors.Window
 
 
     End Sub
 
     Private Sub Button1_Gehitu_Click(sender As Object, e As EventArgs) Handles Button1_Gehitu.Click
         Dim TodoLosDatosBien As Boolean = True
+        Dim TotalNoches As Integer
 
         If Len(Trim(TextBox1_ID_Ostatu.Text)) = 0 Then
             TextBox1_ID_Ostatu.BackColor = Color.Red
@@ -88,19 +89,22 @@ Public Class Aldaketak_Erreserbak
         'Validar fechas
 
         If DateTimePicker1_Hasiera_Data.Value < DateTimePicker1_Amaiera_Data.Value Then
-            DateTimePicker1_Hasiera_Data.BackColor = Color.Green
-            DateTimePicker1_Amaiera_Data.BackColor = Color.Green
+            DateTimePicker1_Hasiera_Data.CalendarMonthBackground = Color.Green
+            DateTimePicker1_Amaiera_Data.CalendarMonthBackground = Color.Green
 
             Try
-                Dim TotalNoches As Integer = DateDiff(DateInterval.Day, DateTimePicker1_Hasiera_Data.Value, DateTimePicker1_Amaiera_Data.Value) + 1
+                TotalNoches = DateDiff(DateInterval.Day, DateTimePicker1_Hasiera_Data.Value, DateTimePicker1_Amaiera_Data.Value) + 1
+
             Catch ex As Exception
                 MsgBox(ex.Message.ToString)
             End Try
 
         Else
+
             TodoLosDatosBien = False
-            DateTimePicker1_Hasiera_Data.BackColor = Color.Red
-            DateTimePicker1_Amaiera_Data.BackColor = Color.Red
+            DateTimePicker1_Hasiera_Data.CalendarMonthBackground = Color.Red
+            DateTimePicker1_Amaiera_Data.CalendarMonthBackground = Color.Red
+            MsgBox("Amaierako data edo hasierakoa txarto dago")
         End If
 
 
@@ -109,18 +113,18 @@ Public Class Aldaketak_Erreserbak
             MsgBox("Daturen bat txarto dago. Mesedez berraztertu")
         End If
 
-        If TodoLosDatosBien = True And TextBox1_ID_Ostatu.Text.Contains("Hola") Then
+        If TodoLosDatosBien = True Then
 
 
 
             If MessageBox.Show("Seguru datu hauek erregistratu nahi dituzula ?", "ERRESERBA GEHITU", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.OK Then
                 Dim MaxCount As Integer
-                Dim cmd2 As New MySqlCommand("SELECT Count(id_Erreserba) FROM erreserba", Login.conexionBD)
+                Dim cmd1 As New MySqlCommand("SELECT Count(id_Erreserba) FROM erreserba", Login.conexionBD)
 
                 Try
                     Login.conexionBD.Open()
 
-                    MaxCount = cmd2.ExecuteScalar
+                    MaxCount = cmd1.ExecuteScalar
 
                     Login.conexionBD.Close()
 
@@ -135,18 +139,35 @@ Public Class Aldaketak_Erreserbak
                 End Try
 
 
-                Dim cmd1 As New MySqlCommand("INSERT INTO erreserba (id_Erreserba, id_Ostatu,id_Erabiltzaile,Erreserba_data,PrezioaGuztira,Hasiera_data,Amaiera_data) VALUES (" & MaxCount + 1 & ", " & TextBox1_ID_Ostatu.Text & ", " & TextBox1_ID_Erabiltzaile.Text & ", '" & DateTimePicker1_Hasiera_Data.Value & "', '" & DateTimePicker1_Amaiera_Data.Value & "')", Login.conexionBD)
+                Dim PrezioOstatua As Integer
+                Dim cmd2 As New MySqlCommand("SELECT Prezioa FROM ostatu Where id_Ostatu = " & TextBox1_ID_Ostatu.Text, Login.conexionBD)
 
                 Try
                     Login.conexionBD.Open()
 
+                    PrezioOstatua = cmd2.ExecuteScalar
+
+                    Login.conexionBD.Close()
+
                 Catch ex As Exception
                     MsgBox(ex.Message.ToString)
+                Finally
+
+                    If Login.conexionBD.State = ConnectionState.Open Then
+                        Login.conexionBD.Close()
+                    End If
+
                 End Try
 
-                Try
 
-                    cmd1.ExecuteNonQuery()
+                Dim cmd3 As New MySqlCommand("INSERT INTO `erreserba` (`id_Erreserba`, `id_Ostatu`, `id_Erabiltzaile`, `Erreserba_data`, `PrezioaGuztira`, `Hasiera_data`, `Amaiera_data`) VALUES ('" & MaxCount + 1 & "', " & TextBox1_ID_Ostatu.Text & ", " & TextBox1_ID_Erabiltzaile.Text & ", current_timestamp(), " & (PrezioOstatua * TotalNoches) & ", '" & DateTimePicker1_Hasiera_Data.Value & "', '" & DateTimePicker1_Amaiera_Data.Value & "')", Login.conexionBD)
+                'Dim cmd3 As New MySqlCommand("INSERT INTO `erreserba` (`id_Erreserba`, `id_Ostatu`, `id_Erabiltzaile`, `Erreserba_data`, `PrezioaGuztira`, `Hasiera_data`, `Amaiera_data`) VALUES ('" & MaxCount + 1 & "', " & TextBox1_ID_Ostatu.Text & ", " & TextBox1_ID_Erabiltzaile.Text & ", current_timestamp(), " & (PrezioOstatua * TotalNoches) & ", '2020-01-25 12:33:32', '2020-01-27 12:33:32')", Login.conexionBD)
+
+
+                Try
+                    Login.conexionBD.Open()
+
+                    cmd3.ExecuteNonQuery()
                     Login.conexionBD.Close()
                     MsgBox("Datuak ondo gehitu dira")
 
@@ -165,8 +186,8 @@ Public Class Aldaketak_Erreserbak
                     'Quitar los colores
                     Me.TextBox1_ID_Ostatu.BackColor = SystemColors.Window
                     Me.TextBox1_ID_Erabiltzaile.BackColor = SystemColors.Window
-                    Me.DateTimePicker1_Hasiera_Data.BackColor = SystemColors.Window
-                    Me.DateTimePicker1_Amaiera_Data.BackColor = SystemColors.Window
+                    Me.DateTimePicker1_Hasiera_Data.CalendarMonthBackground = SystemColors.Window
+                    Me.DateTimePicker1_Amaiera_Data.CalendarMonthBackground = SystemColors.Window
 
 
 
@@ -188,12 +209,12 @@ Public Class Aldaketak_Erreserbak
 
 
 
-                Dim cmd3 As New MySqlCommand("SELECT * FROM erreserba", Login.conexionBD)
+                Dim cmd4 As New MySqlCommand("SELECT * FROM erreserba", Login.conexionBD)
                 Dim dr As MySqlDataReader
 
                 Try
                     Login.conexionBD.Open()
-                    dr = cmd3.ExecuteReader
+                    dr = cmd4.ExecuteReader
                 Catch ex As Exception
                     MsgBox(ex.Message.ToString)
 
@@ -271,8 +292,8 @@ Public Class Aldaketak_Erreserbak
                 'Quitar los colores
                 Me.TextBox1_ID_Ostatu.BackColor = SystemColors.Window
                 Me.TextBox1_ID_Erabiltzaile.BackColor = SystemColors.Window
-                Me.DateTimePicker1_Hasiera_Data.BackColor = SystemColors.Window
-                Me.DateTimePicker1_Amaiera_Data.BackColor = SystemColors.Window
+                Me.DateTimePicker1_Hasiera_Data.CalendarMonthBackground = SystemColors.Window
+                Me.DateTimePicker1_Amaiera_Data.CalendarMonthBackground = SystemColors.Window
 
             Catch ex As Exception
                 MsgBox(ex.Message.ToString)
@@ -332,5 +353,6 @@ Public Class Aldaketak_Erreserbak
         End If
 
     End Sub
+
 
 End Class

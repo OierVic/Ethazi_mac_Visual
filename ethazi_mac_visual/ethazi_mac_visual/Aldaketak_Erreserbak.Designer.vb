@@ -141,6 +141,8 @@ Partial Class Aldaketak_Erreserbak
         'DateTimePicker1_Hasiera_Data
         '
         Me.DateTimePicker1_Hasiera_Data.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1_Hasiera_Data.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText
+        Me.DateTimePicker1_Hasiera_Data.CalendarTitleForeColor = System.Drawing.SystemColors.Highlight
         Me.DateTimePicker1_Hasiera_Data.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1_Hasiera_Data.Location = New System.Drawing.Point(129, 176)
         Me.DateTimePicker1_Hasiera_Data.MaxDate = New Date(2100, 12, 31, 0, 0, 0, 0)
