@@ -77,7 +77,7 @@ Public Class Erabiltzaileak
                 DataGridView1.Rows.Add(dr.Item(0), dr.Item(1), dr.Item(2), dr.Item(3), dr.Item(4), dr.Item(5), dr.Item(6))
                 DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige
             Catch ex As Exception
-                MsgBox("Datu baseko datuak gehiago edo gutxiago dira edo basu basea ez da zuzena")
+                MsgBox(ex.Message.ToString)
             End Try
 
 
@@ -250,6 +250,10 @@ Public Class Erabiltzaileak
         'Me.Hide()
         Me.Enabled = False
         Aldaketak_Erabiltzaileak.Show()
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
     End Sub
 
     'Private Sub Button1_Aldatu_Click(sender As Object, e As EventArgs)

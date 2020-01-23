@@ -39,7 +39,7 @@ Public Class Erreserbak
                 DataGridView1.Rows.Add(dr.Item(0), dr.Item(1), dr.Item(2), dr.Item(3), dr.Item(4), dr.Item(5), dr.Item(6))
                 DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Chartreuse
             Catch ex As Exception
-                MsgBox("Datu baseko datuak gehiago edo gutxiago dira edo basu basea ez da zuzena")
+                MsgBox(ex.Message.ToString)
             End Try
 
 
@@ -68,9 +68,6 @@ Public Class Erreserbak
                 ethazi_mac_visual.Menu.Show()
 
         End Select
-    End Sub
-    Private Sub DataGridView1_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentDoubleClick
-
     End Sub
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
