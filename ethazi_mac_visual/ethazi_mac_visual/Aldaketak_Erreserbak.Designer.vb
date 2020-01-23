@@ -201,6 +201,7 @@ Partial Class Aldaketak_Erreserbak
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(842, 553)
         Me.Controls.Add(Me.Button1_Kendu)
@@ -218,8 +219,12 @@ Partial Class Aldaketak_Erreserbak
         Me.Controls.Add(Me.Label1_Id_Erreserba_Insert)
         Me.Controls.Add(Me.Label1_Id_Erreserba)
         Me.Controls.Add(Me.Label1_Tituloa)
+        Me.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Aldaketak_Erreserbak"
+        Me.ShowInTaskbar = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Aldaketak Erreserbak"
         Me.ResumeLayout(False)
         Me.PerformLayout()

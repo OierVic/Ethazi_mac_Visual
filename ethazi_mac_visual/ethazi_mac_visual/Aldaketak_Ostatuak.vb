@@ -2,6 +2,30 @@
 Imports MySql.Data.MySqlClient
 
 Public Class Aldaketak_Ostatuak
+
+    Dim _enabledCerrar As Boolean = False
+    <System.ComponentModel.DefaultValue(False), System.ComponentModel.Description("Definitu inprimakian itxi botoia gaitzen den edo ez")>
+    Public Property EnabledCerrar() As Boolean
+        Get
+            Return _enabledCerrar
+        End Get
+        Set(ByVal Value As Boolean)
+            If _enabledCerrar <> Value Then
+                _enabledCerrar = Value
+            End If
+        End Set
+    End Property
+    Protected Overrides ReadOnly Property CreateParams() As CreateParams
+        Get
+            Dim cp As CreateParams = MyBase.CreateParams
+            If _enabledCerrar = False Then
+                Const CS_NOCLOSE As Integer = &H200
+                cp.ClassStyle = cp.ClassStyle Or CS_NOCLOSE
+            End If
+            Return cp
+        End Get
+    End Property
+
     Private Sub Aldaketak_Ostatuak_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.ComboBox1_Ostatu_Mota.Text = "Campings"
     End Sub

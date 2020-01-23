@@ -368,8 +368,11 @@ Partial Class Aldaketak_Ostatuak
         Me.Controls.Add(Me.Label1_Id_Ostatu_Insert)
         Me.Controls.Add(Me.Label1_Id_Ostatu)
         Me.Controls.Add(Me.Label1_Tituloa)
+        Me.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Aldaketak_Ostatuak"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Aldaketak Ostatuak"
         CType(Me.NumericUpDown1_Logela_kop, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
