@@ -369,7 +369,7 @@ Partial Class Aldaketak_Ostatuak
         Me.Controls.Add(Me.Label1_Id_Ostatu)
         Me.Controls.Add(Me.Label1_Tituloa)
         Me.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Aldaketak_Ostatuak"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

@@ -39,6 +39,9 @@ Public Class Aldaketak_Erabiltzaileak
     End Property
 
     Private Sub Aldaketak_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
+
         'ventana = ethazi_mac_visual.Menu.accionEnviar
         'Select Case accion
         '    'Case "erabiltzailea gehitu"

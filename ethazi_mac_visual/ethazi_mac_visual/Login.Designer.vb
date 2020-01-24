@@ -120,6 +120,7 @@ Partial Class Login
         Me.Controls.Add(Me.TextBox1_User)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1_Login)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.Black
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Login"

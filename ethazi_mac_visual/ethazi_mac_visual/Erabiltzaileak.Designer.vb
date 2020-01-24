@@ -22,6 +22,7 @@ Partial Class Erabiltzaileak
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Erabiltzaileak))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -34,7 +35,9 @@ Partial Class Erabiltzaileak
         Me.Label1_Administrazio_Aplikazioa = New System.Windows.Forms.Label()
         Me.Button1_Gehitu = New System.Windows.Forms.Button()
         Me.Button1_Atzera = New System.Windows.Forms.Button()
+        Me.Table1BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Table1BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -137,6 +140,7 @@ Partial Class Erabiltzaileak
         Me.Name = "Erabiltzaileak"
         Me.Text = "Erabiltzaileak"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Table1BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -153,4 +157,5 @@ Partial Class Erabiltzaileak
     Friend WithEvents telefonoa As DataGridViewTextBoxColumn
     Friend WithEvents Erabiltzaile_mota As DataGridViewTextBoxColumn
     Friend WithEvents IzenAbizenak As DataGridViewTextBoxColumn
+    Friend WithEvents Table1BindingSource1 As BindingSource
 End Class

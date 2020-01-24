@@ -255,6 +255,94 @@ Public Class Erabiltzaileak
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
     End Sub
+    Private Sub dgvFill()
+
+        'TextBox1_Buscar.BackColor = Color.LightBlue
+
+        'If DataGridView1.DataSource Is Nothing Then
+        '    Exit Sub
+        'End If
+
+
+        'Dim myDGV1 As DataGridView = DataGridView1
+        'With myDGV1
+        '    .RowsDefaultCellStyle.BackColor = Color.FromName(cboDfColor.SelectedItem)
+        '    .AlternatingRowsDefaultCellStyle.BackColor = Color.FromName(cboAltColor.SelectedItem)
+        'End With
+
+    End Sub
+    Private Sub notFound()
+
+        'Dim txtS As TextBox = TextBox1_Buscar
+        'With txtS
+        '    .BackColor = Color.White
+        '    .Select()
+        '    .SelectAll()
+        'End With
+
+        'If DataGridView1.DataSource Is Nothing Then
+        '    Exit Sub
+        'End If
+
+
+        'Dim dgv As DataGridView = DataGridView1
+        'With dgv
+        '    .RowsDefaultCellStyle.BackColor = Color.White
+        '    .AlternatingRowsDefaultCellStyle.BackColor = Color.White
+        'End With
+    End Sub
+    Private Sub Button1_Buscar_Click(sender As Object, e As EventArgs)
+        '        On Error GoTo SearchErr
+
+        '        If TextBox1_Buscar.Text = "" Then
+        '            Call notFound()
+        '            Exit Sub
+
+        '        Else
+
+        '            Dim cantFind As String = TextBox1_Buscar.Text
+        '            Me.dgvFill()
+
+        '            Table1BindingSource1.Filter = "(Convert(ID erabiltzaile, 'System.String') LIKE '" & TextBox1_Buscar.Text & "')" &
+        '                "OR (erabiltzaile LIKE '" & TextBox1_Buscar.Text & "') OR (Lastname LIKE '" & TextBox1_Buscar.Text & "')" &
+        '                "OR (Phone LIKE '" & TextBox1_Buscar.Text & "') OR (Email LIKE '" & TextBox1_Buscar.Text & "')" &
+        '                "OR (Facebook LIKE '" & TextBox1_Buscar.Text & "')"
+
+        '            If Table1BindingSource1.Count <> 0 Then
+        '                With DataGridView1
+        '                    .DataSource = Table1BindingSource1
+        '                End With
+
+        '            Else
+
+        '                Me.notFound()
+
+        '                MsgBox("--> " & cantFind & vbNewLine &
+        '                       "The search item was not found.",
+        '                       MsgBoxStyle.Information, "Hey Boss!")
+
+        '                Table1BindingSource1.Filter = Nothing
+
+        '                With DataGridView1
+        '                    .ClearSelection()
+        '                    .ReadOnly = True
+        '                    .MultiSelect = False
+        '                    .DataSource = Table1BindingSource1
+        '                End With
+
+        '            End If
+
+        '        End If
+
+        'ErrExit:
+        '        Exit Sub
+        'SearchErr:
+        '        MsgBox("Error Number " & Err.Number & vbNewLine &
+        '               "Error Description " & Err.Description, MsgBoxStyle.Critical,
+        '               "Reset Error!")
+        '        Resume ErrExit
+
+    End Sub
 
     'Private Sub Button1_Aldatu_Click(sender As Object, e As EventArgs)
     '    ethazi_mac_visual.Menu.accionEnviar = "erabiltzailea aldatu"

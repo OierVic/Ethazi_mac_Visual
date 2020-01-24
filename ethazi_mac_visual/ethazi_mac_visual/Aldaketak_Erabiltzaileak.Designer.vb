@@ -262,10 +262,9 @@ Partial Class Aldaketak_Erabiltzaileak
         Me.Controls.Add(Me.Label1_Id)
         Me.Controls.Add(Me.Label1_Titulua)
         Me.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.HelpButton = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Name = "Aldaketak_Erabiltzaileak"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Aldaketak Erabiltzailea"

@@ -220,7 +220,7 @@ Partial Class Aldaketak_Erreserbak
         Me.Controls.Add(Me.Label1_Id_Erreserba)
         Me.Controls.Add(Me.Label1_Tituloa)
         Me.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Aldaketak_Erreserbak"
         Me.ShowInTaskbar = False
