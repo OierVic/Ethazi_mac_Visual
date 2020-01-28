@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property cambiar_icono_lapiz() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("cambiar-icono-lapiz", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property CambiarSimbolo() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("CambiarSimbolo", resourceCulture)
@@ -126,6 +136,16 @@ Namespace My.Resources
         Friend ReadOnly Property kisspng_password() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("kisspng-password", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Papelera_Borrar() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Papelera-Borrar", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

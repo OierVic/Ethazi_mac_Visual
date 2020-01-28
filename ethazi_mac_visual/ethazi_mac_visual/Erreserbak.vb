@@ -147,9 +147,9 @@ Public Class Erreserbak
                 Erreserba.id_ostatu = CInt(Me.DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString)
                 Erreserba.id_erabiltzaile = CInt(Me.DataGridView1.Rows(e.RowIndex).Cells(2).Value.ToString)
                 Erreserba.Erreserba_Data = CDate(Me.DataGridView1.Rows(e.RowIndex).Cells(3).Value.ToString)
-                Erreserba.Prezio_Guztira = CDbl(Me.DataGridView1.Rows(e.RowIndex).Cells(4).Value.ToString)
-                Erreserba.Hasiera_Data = CDate(Me.DataGridView1.Rows(e.RowIndex).Cells(5).Value.ToString)
-                Erreserba.Amaiera_Data = CDate(Me.DataGridView1.Rows(e.RowIndex).Cells(6).Value.ToString)
+                Erreserba.Hasiera_Data = CDate(Me.DataGridView1.Rows(e.RowIndex).Cells(4).Value.ToString)
+                Erreserba.Amaiera_Data = CDate(Me.DataGridView1.Rows(e.RowIndex).Cells(5).Value.ToString)
+                Erreserba.Prezio_Guztira = CDbl(Me.DataGridView1.Rows(e.RowIndex).Cells(6).Value.ToString)
 
 
                 ethazi_mac_visual.Aldaketak_Erreserbak.Label1_Id_Erreserba_Insert.Text = Erreserba.id

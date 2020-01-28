@@ -32,12 +32,12 @@ Partial Class Aldaketak_Erreserbak
         Me.TextBox1_ID_Erabiltzaile = New System.Windows.Forms.TextBox()
         Me.Label1_Hasiera_Data = New System.Windows.Forms.Label()
         Me.Label1_Amaiera_Data = New System.Windows.Forms.Label()
-        Me.Button1_Atzera = New System.Windows.Forms.Button()
         Me.DateTimePicker1_Hasiera_Data = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker1_Amaiera_Data = New System.Windows.Forms.DateTimePicker()
-        Me.Button1_Gehitu = New System.Windows.Forms.Button()
-        Me.Button1_Aldaketa = New System.Windows.Forms.Button()
         Me.Button1_Kendu = New System.Windows.Forms.Button()
+        Me.Button1_Aldaketa = New System.Windows.Forms.Button()
+        Me.Button1_Gehitu = New System.Windows.Forms.Button()
+        Me.Button1_Atzera = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1_Tituloa
@@ -128,16 +128,6 @@ Partial Class Aldaketak_Erreserbak
         Me.Label1_Amaiera_Data.TabIndex = 10
         Me.Label1_Amaiera_Data.Text = "Amaiera Data :"
         '
-        'Button1_Atzera
-        '
-        Me.Button1_Atzera.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.HouseSimbolo
-        Me.Button1_Atzera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1_Atzera.Location = New System.Drawing.Point(34, 431)
-        Me.Button1_Atzera.Name = "Button1_Atzera"
-        Me.Button1_Atzera.Size = New System.Drawing.Size(88, 83)
-        Me.Button1_Atzera.TabIndex = 23
-        Me.Button1_Atzera.UseVisualStyleBackColor = True
-        '
         'DateTimePicker1_Hasiera_Data
         '
         Me.DateTimePicker1_Hasiera_Data.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -164,6 +154,28 @@ Partial Class Aldaketak_Erreserbak
         Me.DateTimePicker1_Amaiera_Data.TabIndex = 25
         Me.DateTimePicker1_Amaiera_Data.Value = New Date(2020, 1, 21, 0, 0, 0, 0)
         '
+        'Button1_Kendu
+        '
+        Me.Button1_Kendu.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.Papelera_Borrar
+        Me.Button1_Kendu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1_Kendu.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1_Kendu.Location = New System.Drawing.Point(578, 438)
+        Me.Button1_Kendu.Name = "Button1_Kendu"
+        Me.Button1_Kendu.Size = New System.Drawing.Size(72, 67)
+        Me.Button1_Kendu.TabIndex = 28
+        Me.Button1_Kendu.UseVisualStyleBackColor = True
+        '
+        'Button1_Aldaketa
+        '
+        Me.Button1_Aldaketa.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.cambiar_icono_lapiz
+        Me.Button1_Aldaketa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1_Aldaketa.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1_Aldaketa.Location = New System.Drawing.Point(437, 437)
+        Me.Button1_Aldaketa.Name = "Button1_Aldaketa"
+        Me.Button1_Aldaketa.Size = New System.Drawing.Size(78, 67)
+        Me.Button1_Aldaketa.TabIndex = 27
+        Me.Button1_Aldaketa.UseVisualStyleBackColor = True
+        '
         'Button1_Gehitu
         '
         Me.Button1_Gehitu.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.SumaSymbol
@@ -175,27 +187,15 @@ Partial Class Aldaketak_Erreserbak
         Me.Button1_Gehitu.TabIndex = 26
         Me.Button1_Gehitu.UseVisualStyleBackColor = True
         '
-        'Button1_Aldaketa
+        'Button1_Atzera
         '
-        Me.Button1_Aldaketa.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.CambiarSimbolo
-        Me.Button1_Aldaketa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1_Aldaketa.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1_Aldaketa.Location = New System.Drawing.Point(437, 437)
-        Me.Button1_Aldaketa.Name = "Button1_Aldaketa"
-        Me.Button1_Aldaketa.Size = New System.Drawing.Size(78, 67)
-        Me.Button1_Aldaketa.TabIndex = 27
-        Me.Button1_Aldaketa.UseVisualStyleBackColor = True
-        '
-        'Button1_Kendu
-        '
-        Me.Button1_Kendu.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.DeleteSimbolo
-        Me.Button1_Kendu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1_Kendu.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1_Kendu.Location = New System.Drawing.Point(578, 438)
-        Me.Button1_Kendu.Name = "Button1_Kendu"
-        Me.Button1_Kendu.Size = New System.Drawing.Size(72, 67)
-        Me.Button1_Kendu.TabIndex = 28
-        Me.Button1_Kendu.UseVisualStyleBackColor = True
+        Me.Button1_Atzera.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.HouseSimbolo
+        Me.Button1_Atzera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1_Atzera.Location = New System.Drawing.Point(34, 431)
+        Me.Button1_Atzera.Name = "Button1_Atzera"
+        Me.Button1_Atzera.Size = New System.Drawing.Size(88, 83)
+        Me.Button1_Atzera.TabIndex = 23
+        Me.Button1_Atzera.UseVisualStyleBackColor = True
         '
         'Aldaketak_Erreserbak
         '

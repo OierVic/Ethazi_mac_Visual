@@ -220,6 +220,8 @@
   <ItemGroup>
     <Content Include="Bitmap1.bmp" />
     <Content Include="My Project\user-icon.jpg" />
+    <None Include="Resources\Papelera-Borrar.jpg" />
+    <None Include="Resources\cambiar-icono-lapiz.png" />
     <None Include="Resources\HouseSimbolo.png" />
     <None Include="Resources\House.png" />
     <None Include="Resources\DeleteSimbolo.png" />

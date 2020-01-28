@@ -293,7 +293,7 @@ Partial Class Aldaketak_Ostatuak
         '
         'Button1_Kendu
         '
-        Me.Button1_Kendu.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.DeleteSimbolo
+        Me.Button1_Kendu.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.Papelera_Borrar
         Me.Button1_Kendu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button1_Kendu.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1_Kendu.Location = New System.Drawing.Point(607, 473)
@@ -304,7 +304,7 @@ Partial Class Aldaketak_Ostatuak
         '
         'Button1_Aldaketa
         '
-        Me.Button1_Aldaketa.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.CambiarSimbolo
+        Me.Button1_Aldaketa.BackgroundImage = Global.ethazi_mac_visual.My.Resources.Resources.cambiar_icono_lapiz
         Me.Button1_Aldaketa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button1_Aldaketa.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1_Aldaketa.Location = New System.Drawing.Point(479, 474)

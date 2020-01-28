@@ -184,7 +184,7 @@ Public Class Aldaketak_Erreserbak
                 End Try
 
 
-                Dim cmd3 As New MySqlCommand("INSERT INTO `erreserba` (`id_Erreserba`, `id_Ostatu`, `id_Erabiltzaile`, `Erreserba_data`, `PrezioaGuztira`, `Hasiera_data`, `Amaiera_data`) VALUES ('" & MaxCount + 1 & "', " & TextBox1_ID_Ostatu.Text & ", " & TextBox1_ID_Erabiltzaile.Text & ", current_timestamp(), " & (PrezioOstatua * TotalNoches) & ", '" & DateTimePicker1_Hasiera_Data.Value & "', '" & DateTimePicker1_Amaiera_Data.Value & "')", Login.conexionBD)
+                Dim cmd3 As New MySqlCommand("INSERT INTO `erreserba` (`id_Erreserba`, `id_Ostatu`, `id_Erabiltzaile`, `Erreserba_data`, `prezioGuztira`, `hasieraData`, `amaieraData`) VALUES ('" & MaxCount + 1 & "', " & TextBox1_ID_Ostatu.Text & ", " & TextBox1_ID_Erabiltzaile.Text & ", current_timestamp(), " & (PrezioOstatua * TotalNoches) & ", '" & DateTimePicker1_Hasiera_Data.Value & "', '" & DateTimePicker1_Amaiera_Data.Value & "')", Login.conexionBD)
 
 
                 Try
@@ -392,7 +392,7 @@ Public Class Aldaketak_Erreserbak
 
 
 
-                Dim cmd2 As New MySqlCommand("UPDATE erreserba SET id_Ostatu = " & TextBox1_ID_Ostatu.Text & ", id_Erabiltzaile = " & TextBox1_ID_Erabiltzaile.Text & ", Erreserba_data = current_timestamp() , PrezioaGuztira = " & (PrezioOstatua * TotalNoches) & ", Hasiera_data = '" & DateTimePicker1_Hasiera_Data.Value & "', Amaiera_data = '" & DateTimePicker1_Amaiera_Data.Value & "' WHERE id_Erreserba = " & Label1_Id_Erreserba_Insert.Text, Login.conexionBD)
+                Dim cmd2 As New MySqlCommand("UPDATE erreserba SET id_Ostatu = " & TextBox1_ID_Ostatu.Text & ", id_Erabiltzaile = " & TextBox1_ID_Erabiltzaile.Text & ", Erreserba_data = current_timestamp() , prezioGuztira = " & (PrezioOstatua * TotalNoches) & ", hasieraData = '" & DateTimePicker1_Hasiera_Data.Value & "', amaieraData = '" & DateTimePicker1_Amaiera_Data.Value & "' WHERE id_Erreserba = " & Label1_Id_Erreserba_Insert.Text, Login.conexionBD)
 
                 Try
                     Login.conexionBD.Open()

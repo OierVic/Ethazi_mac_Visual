@@ -31,9 +31,9 @@ Partial Class Erreserbak
         Me.id_Ostatu = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.id_Erabiltzaile = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Erreserba_data = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PrezioaGuztira = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Hasiera_data = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Amaiera_data = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrezioaGuztira = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -51,7 +51,7 @@ Partial Class Erreserbak
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_Erreserba, Me.id_Ostatu, Me.id_Erabiltzaile, Me.Erreserba_data, Me.PrezioaGuztira, Me.Hasiera_data, Me.Amaiera_data})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_Erreserba, Me.id_Ostatu, Me.id_Erabiltzaile, Me.Erreserba_data, Me.Hasiera_data, Me.Amaiera_data, Me.PrezioaGuztira})
         Me.DataGridView1.Location = New System.Drawing.Point(51, 79)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(1015, 419)
@@ -101,12 +101,6 @@ Partial Class Erreserbak
         Me.Erreserba_data.Name = "Erreserba_data"
         Me.Erreserba_data.Width = 150
         '
-        'PrezioaGuztira
-        '
-        Me.PrezioaGuztira.HeaderText = "PrezioaGuztira €"
-        Me.PrezioaGuztira.Name = "PrezioaGuztira"
-        Me.PrezioaGuztira.Width = 150
-        '
         'Hasiera_data
         '
         Me.Hasiera_data.HeaderText = "Hasiera Data"
@@ -118,6 +112,12 @@ Partial Class Erreserbak
         Me.Amaiera_data.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Amaiera_data.HeaderText = "Amaiera Data"
         Me.Amaiera_data.Name = "Amaiera_data"
+        '
+        'PrezioaGuztira
+        '
+        Me.PrezioaGuztira.HeaderText = "PrezioaGuztira €"
+        Me.PrezioaGuztira.Name = "PrezioaGuztira"
+        Me.PrezioaGuztira.Width = 150
         '
         'Erreserbak
         '
@@ -146,7 +146,7 @@ Partial Class Erreserbak
     Friend WithEvents id_Ostatu As DataGridViewTextBoxColumn
     Friend WithEvents id_Erabiltzaile As DataGridViewTextBoxColumn
     Friend WithEvents Erreserba_data As DataGridViewTextBoxColumn
-    Friend WithEvents PrezioaGuztira As DataGridViewTextBoxColumn
     Friend WithEvents Hasiera_data As DataGridViewTextBoxColumn
     Friend WithEvents Amaiera_data As DataGridViewTextBoxColumn
+    Friend WithEvents PrezioaGuztira As DataGridViewTextBoxColumn
 End Class
